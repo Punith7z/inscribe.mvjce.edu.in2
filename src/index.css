@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply m-0 p-0 overflow-x-hidden;
+    background: #fcf4d7;
+    color: theme('colors.accent-2');
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px) saturate(110%);
+    -webkit-backdrop-filter: blur(12px) saturate(110%);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  
+  .card-gradient {
+    background: radial-gradient(650px 650px at 0% 0%, rgba(193,131,93,0.22), transparent 70%),
+                radial-gradient(650px 650px at 100% 100%, rgba(193,131,93,0.18), transparent 70%),
+                linear-gradient(135deg, #FFF5D6 0%, #FFF9E3 55%, #E9D2A7 100%);
+  }
+}
+
+
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #E7C8A0, #D4A373);
+  opacity: 0.25;
+  animation: floatShape 20s infinite linear;
+  box-shadow: 0 0 40px 20px #D4A373, 0 0 60px 30px #E7C8A0;
+}
+
+@keyframes floatShape {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+  }
+}
+

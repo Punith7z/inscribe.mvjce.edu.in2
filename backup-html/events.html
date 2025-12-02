@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Events - Inscribe</title>
+    <link rel="shortcut icon" href="images/inslogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #FFFCE0;
+            color: #D4A373;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #73634F;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 24px;
+            background: #D4A373;
+            color: #fff;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+        .back-link:hover {
+            background: #b88a4a;
+        }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .event-item {
+            /* Use the About Us beige background instead of plain white */
+            background: #FFFCE0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .event-item:hover {
+            box-shadow: 0 20px 40px rgba(212,163,115,0.18);
+        }
+        .event-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        .event-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .event-info {
+            padding: 25px;
+        }
+        .event-title {
+            font-size: 1.3rem;
+            color: #D4A373;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .event-tagline {
+            font-style: italic;
+            color: #73634F;
+            margin-bottom: 10px;
+        }
+        .event-description {
+            color: #333;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .event-image-container {
+    position: relative;
+}
+.event-image {
+    transition: transform 0.5s, filter 0.3s;
+}
+.event-item:hover .event-image {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+.event-image-container::after {
+    content: 'Click to view';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(212,163,115,0.45);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    letter-spacing: 1px;
+}
+.event-item:hover .event-image-container::after {
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="inscribe.html" class="back-link">← Back to Home</a>
+        <h2 class="section-title">Our Events</h2>
+        <div class="events-grid">
+            <div class="event-item" onclick="openEventModal('images/Animaze.jpg', 'Animaze – Anime Quiz Competition', 'Where fandom met friendly fire.', 'Animaze brought anime fans together for an epic quiz showdown filled with laughter, debates, and pure fandom energy. From Naruto timelines to power battles, it was chaos — and we loved every moment!')">
+                <div class="event-image-container">
+                    <img src="images/Animaze.jpg" alt="Tech Workshop" class="event-image">
+                </div>
+                <div class="event-info">
+                    <h3 class="event-title">Animaze – Anime Quiz Competition</h3>
+                    <p class="event-tagline">Where fandom met friendly fire.</p>
+                    <p class="event-description">Animaze brought anime fans together for an epic quiz showdown filled with laughter, debates, and pure fandom energy. From Naruto timelines to power battles, it was chaos — and we loved every moment!</p>
+                </div>
+            </div>
+            <div class="event-item" onclick="openEventModal('images/posture palooza.jpg', 'Poster Palooza – Poster Design Competition', 'Fast. Creative. Aesthetic chaos', 'Poster Palooza turned design into a high-speed creative showdown — where imagination met the ticking clock. From sleek aesthetics to hilarious memes, every poster was pure magic under pressure!')">
+                <div class="event-image-container">
+                    <img src="images/posture palooza.jpg" alt="Coding Competition" class="event-image">
+                </div>
+                <div class="event-info">
+                    <h3 class="event-title">Poster Palooza – Poster Design Competition</h3>
+                    <p class="event-tagline">Fast. Creative. Aesthetic chaos</p>
+                    <p class="event-description">Poster Palooza turned design into a high-speed creative showdown — where imagination met the ticking clock. From sleek aesthetics to hilarious memes, every poster was pure magic under pressure!</p>
+                </div>
+            </div>
+            <div class="event-item" onclick="openEventModal('images/3D forge.jpg', '3D Forge – 3D Modeling & Animation Workshop', 'From cube to dragon. Literally.', '3D Forge was where creativity met technology — participants brought ideas to life in Blender, from cube to creature. It was hands-on, fun, and a true glimpse into the magic of 3D creation!')">
+                <div class="event-image-container">
+                    <img src="images/3D forge.jpg" alt="Tech Talk" class="event-image">
+                </div>
+                <div class="event-info">
+                    <h3 class="event-title">3D Forge – 3D Modeling & Animation Workshop</h3>
+                    <p class="event-tagline">From cube to dragon. Literally.</p>
+                    <p class="event-description">3D Forge was where creativity met technology — participants brought ideas to life in Blender, from cube to creature. It was hands-on, fun, and a true glimpse into the magic of 3D creation!</p>
+                </div>
+            </div>
+            <div class="event-item" onclick="openEventModal('images/Tech titan.png', 'Tech Titan – Machine Learning Quiz', 'Not your average quiz.', 'Tech Titan was a high-stakes ML-powered quiz that put coding and logic skills to the ultimate test.A true battle of brains where techies competed to claim the Titan title!')">
+                <div class="event-image-container">
+                    <img src="images/Tech titan.png" alt="Hackathon" class="event-image">
+                </div>
+                <div class="event-info">
+                    <h3 class="event-title">Tech Titan – Machine Learning Quiz</h3>
+                    <p class="event-tagline">Not your average quiz.</p>
+                    <p class="event-description">Tech Titan was a high-stakes ML-powered quiz that put coding and logic skills to the ultimate test.A true battle of brains where techies competed to claim the Titan title!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Popup -->
+        <div id="eventModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+            <div style="background:#fff; border-radius:20px; max-width:500px; width:90%; box-shadow:0 10px 40px rgba(0,0,0,0.2); position:relative; padding:32px 24px; text-align:center;">
+                <span onclick="closeEventModal()" style="position:absolute; top:18px; right:24px; font-size:2rem; color:#D4A373; cursor:pointer; font-weight:bold;">&times;</span>
+                <img id="modalEventImage" src="" alt="Event" style="width:100%; max-height:250px; object-fit:cover; border-radius:12px; margin-bottom:18px;">
+                <h3 id="modalEventTitle" style="color:#D4A373; font-size:1.3rem; margin-bottom:10px;"></h3>
+                <p id="modalEventTagline" style="font-style:italic; color:#73634F; margin-bottom:10px;"></p>
+                <p id="modalEventDescription" style="color:#333; font-size:1rem;"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openEventModal(img, title, tagline, desc) {
+            document.getElementById('modalEventImage').src = img;
+            document.getElementById('modalEventTitle').textContent = title;
+            document.getElementById('modalEventTagline').textContent = tagline;
+            document.getElementById('modalEventDescription').textContent = desc;
+            document.getElementById('eventModal').style.display = 'flex';
+        }
+        function closeEventModal() {
+            document.getElementById('eventModal').style.display = 'none';
+        }
+        // Close modal when clicking outside the modal box
+        document.getElementById('eventModal').addEventListener('click', function(e) {
+            if (e.target === this) closeEventModal();
+        });
+    </script>
+</body>
+</html>
