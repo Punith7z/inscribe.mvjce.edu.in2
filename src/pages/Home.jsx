@@ -27,7 +27,7 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#fcf4d7', position: 'relative' }}>
+    <div className="min-h-screen home-root" style={{ position: 'relative' }}>
       <AnimatedBackground />
       <Hero onVideoEnd={handleVideoEnd} />
       <Navbar videoEnded={videoEnded} />

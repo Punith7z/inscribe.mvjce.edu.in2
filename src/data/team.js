@@ -24,7 +24,7 @@ export const leadership = [
     social: {
       linkedin:"https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
       github: "https://github.com/anuv90730",
-      instagram: ,
+      instagram: "",
     }
   },
   {

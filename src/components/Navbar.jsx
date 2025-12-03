@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { scrollToSection } from '../utils/scrollToSection'
 
@@ -6,6 +6,34 @@ const Navbar = ({ videoEnded = false }) => {
   const location = useLocation()
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSystemDark, setIsSystemDark] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+    const handleChange = (event) => {
+      setIsSystemDark(event.matches)
+    }
+
+    // Set initial value
+    setIsSystemDark(mediaQuery.matches)
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleChange)
+    }
+
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', handleChange)
+      } else if (mediaQuery.removeListener) {
+        mediaQuery.removeListener(handleChange)
+      }
+    }
+  }, [])
 
   const isHomePage = location.pathname === '/'
   const shouldShow = isHomePage ? videoEnded : true
@@ -35,7 +63,9 @@ const Navbar = ({ videoEnded = false }) => {
           shouldShow ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
         }`}
         style={{
-          background: 'linear-gradient(135deg, rgba(255,245,214,0.92), rgba(233,210,167,0.92))',
+          background: isSystemDark
+            ? 'linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9))'
+            : 'linear-gradient(135deg, rgba(255,245,214,0.92), rgba(233,210,167,0.92))',
           backdropFilter: 'blur(6px)',
           WebkitBackdropFilter: 'blur(6px)',
           borderBottom: '1px solid rgba(0,0,0,0.04)',
@@ -71,15 +101,24 @@ const Navbar = ({ videoEnded = false }) => {
           <NavLink onClick={() => handleNavClick('contact')}>Contact</NavLink>
         </div>
 
-        {/* Menu Icon */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:gap-2 transition-all group"
-        >
-          <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-        </button>
+        <div className="flex items-center gap-3">
+          {isSystemDark && (
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/5 text-[11px] font-medium text-heading">
+              <i className="fas fa-moon text-accent-2 text-xs"></i>
+              <span>Dark mode</span>
+            </div>
+          )}
+
+          {/* Menu Icon */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:gap-2 transition-all group"
+          >
+            <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-heading transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
       </nav>
 
       {/* Dropdown Menu */}

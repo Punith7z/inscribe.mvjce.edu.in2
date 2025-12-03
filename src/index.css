@@ -18,6 +18,53 @@
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
   }
+
+  .home-root {
+    background-color: #fcf4d7;
+  }
+
+  .hero-bg {
+    background-color: #fcf4d7;
+  }
+}
+
+/* Automatic dark mode based on system theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #020617; /* near-black slate */
+    color: #f9fafb;      /* light text */
+  }
+
+  .home-root {
+    background-color: #020617;
+  }
+
+  .hero-bg {
+    background-color: #020617;
+  }
+
+  .bg-bg-1,
+  .bg-gradient-bg {
+    background-color: #020617 !important;
+    background-image: none !important;
+  }
+
+  .card-gradient {
+    background: radial-gradient(650px 650px at 0% 0%, rgba(15,23,42,0.75), transparent 70%),
+                radial-gradient(650px 650px at 100% 100%, rgba(30,64,175,0.55), transparent 70%),
+                linear-gradient(135deg, #020617 0%, #020617 55%, #020617 100%);
+  }
+
+  .glass-effect {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    border-color: rgba(148, 163, 184, 0.35);
+  }
+
+  .animated-bg {
+    opacity: 0.25;
+  }
 }
 
 @layer utilities {

@@ -144,9 +144,8 @@ const Hero = ({ onVideoEnd }) => {
         {/* Background color after video - always present but behind video initially */}
         {!showVideo && (
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 hero-bg"
             style={{ 
-              backgroundColor: '#fcf4d7',
               zIndex: 0
             }}
           ></div>
