@@ -22,9 +22,9 @@ export const leadership = [
     image: '/images/Anu.jpg',
     domain: '',
     social: {
-      linkedin: 'https://www.linkedin.com/in/veena-mam-02/',
-      github: 'https://github.com/veena-mam-02',
-      instagram: 'https://www.instagram.com/veena_mam_02/',
+      linkedin:"https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+      github: "https://github.com/anuv90730",
+      instagram: ,
     }
   },
   {
@@ -34,9 +34,9 @@ export const leadership = [
     image: '/images/nithish.jpg',
     domain: '',
     social: {
-      linkedin: 'https://www.linkedin.com/in/veena-mam-02/',
-      github: 'https://github.com/veena-mam-02',
-      instagram: 'https://www.instagram.com/veena_mam_02/',
+      linkedin:"https://www.linkedin.com/in/nitesh-patil-11b338297/" ,
+      github:"https://github.com/Nitishkumar-eng ",
+      instagram: "https://www.instagram.com/niteshpatil_5518/",
     }
   }
 ]
@@ -61,9 +61,9 @@ export const domainLeads = [
     domain: "Animation",
     image: "/images/manjula.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "https://www.instagram.com/mount_dragon67?igsh=dWN3NXMyMGJmeXVt",
+      github:"https://github.com/ManjulaP1563" ,
+      linkedin: "https://www.linkedin.com/in/manjula-p-bb1924340",
     }
   },
   {
@@ -73,9 +73,9 @@ export const domainLeads = [
     domain: "Design & Arts",
     image: "/images/diya.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "https://www.instagram.com/torrous_29/",
+      github: "https://github.com/D1yaMO",
+      linkedin: "http://www.linkedin.com/in/diya-oommen-428279302",
     }
   },
   {
@@ -97,9 +97,9 @@ export const domainLeads = [
     domain: "Photography & Videography",
     image: "/images/dev.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
+      github: "https://github.com/dev-1708",
+      linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275",
     }
   },
   {
@@ -109,9 +109,9 @@ export const domainLeads = [
     domain: "Hackathon",
     image: "/images/sahib.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "https://www.instagram.com/sahifmohammad12",
+      github:"https://github.com/sahifmohammad12 ",
+      linkedin: "https://www.linkedin.com/in/mohammad-sahif-beary-53983230a",
     }
   }
 ];
@@ -139,7 +139,7 @@ export const teamMembers = [
         social: {
           instagram: "https://www.instagram.com/arts.ncats?igsh=M2xta2hibDBtcDdk",
           github: "",
-          linkedin: ""
+          linkedin: "",
         }
       },
       {
@@ -149,7 +149,7 @@ export const teamMembers = [
         social: {
           instagram: "https://www.instagram.com/sree_lak05?igsh=bjlqdWhsM2wxd2Y0",
           github: "",
-          linkedin: ""
+          linkedin: "",
         }
       },
       {
@@ -159,7 +159,7 @@ export const teamMembers = [
         social: {
           instagram: "https://www.instagram.com/miles_morales004?igsh=MXY5bmRndzNqdjVzYw==",
           github: "https://github.com/kamalsrinivasan04",
-          linkedin: "https://www.linkedin.com/in/kamal-nayan-579445259"
+          linkedin: "https://www.linkedin.com/in/kamal-nayan-579445259",
         }
       }
     ],
@@ -208,7 +208,7 @@ export const teamMembers = [
         social: {
           instagram: "https://www.instagram.com/nityashree_shanbhag/",
           github: "https://github.com/Nityashree0921",
-          linkedin: ""
+          linkedin: "https://www.linkedin.com/in/nityashree-shanbhag-bb684a300/"
         }
       },
       {
@@ -287,8 +287,8 @@ export const teamMembers = [
         image: "/images/Chitra.jpg",
         social: {
           instagram: "https://www.instagram.com/chithra_r_?igsh=MWNvbnMwaWJ4bXBhNw==",
-          github: "chith-123",
-          linkedin: ""
+          github: "https://github.com/chith-123",
+          linkedin: "https://www.linkedin.com/in/chithra-r-7a646828a/",
         }
       },
       {
@@ -369,7 +369,9 @@ export const teamMembers = [
         id: 24,
         name: "GURUDEV S HIREMATH",
         image: "/images/sahib.jpg",
-        social: { instagram: "", github: "", linkedin: "" }
+        social: { instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
+           github: "https://github.com/dev-1708", 
+          linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275" }
       },
       {
         id: 25,
