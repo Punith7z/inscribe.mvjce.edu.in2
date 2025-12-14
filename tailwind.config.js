@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
@@ -16,6 +17,10 @@ export default {
         'beige-soft': '#FFF5D6',
         'beige-cream': '#FFF9E3',
         'heading': '#73634F',
+        // New Brand Colors for Dark Mode
+        'brand-red': '#FF4B4B',
+        'brand-blue': '#4B7BFF',
+        'brand-dark': '#0a0a0a',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
@@ -26,6 +31,9 @@ export default {
         'gradient-primary': 'linear-gradient(135deg, #C1835D, #FFF5D6)',
         'card-gradient': 'linear-gradient(135deg, #FFF5D6 0%, #C1835D 100%)',
         'card-light-corners': 'radial-gradient(650px 650px at 0% 0%, rgba(193,131,93,0.22), transparent 70%), radial-gradient(650px 650px at 100% 100%, rgba(193,131,93,0.18), transparent 70%), linear-gradient(135deg, #FFF5D6 0%, #FFF9E3 55%, #E9D2A7 100%)',
+        // Dark mode gradients
+        'dark-card-gradient': 'linear-gradient(135deg, rgba(255, 75, 75, 0.05) 0%, rgba(75, 123, 255, 0.05) 100%)',
+        'dark-blend-gradient': 'linear-gradient(135deg, #FF4B4B 0%, #7B4BFF 50%, #4B7BFF 100%)',
       },
     },
   },

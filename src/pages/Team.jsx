@@ -68,22 +68,22 @@ const TeamPage = () => {
   return (
     <div className="min-h-screen bg-gradient-bg">
       <Navbar />
-      
+
       <div className="container mx-auto px-5 py-10 pt-24 max-w-7xl">
         {/* Back Button */}
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 mb-8 px-6 py-2.5 bg-accent-2 text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg"
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 mb-8 px-6 py-2.5 bg-accent-2 dark:bg-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg"
         >
           <i className="fas fa-arrow-left"></i>
           Back to Home
         </Link>
-        
-        <h2 className="text-5xl text-center mb-16 font-montserrat font-extrabold relative pb-4" style={{ color: '#8B7355' }}>
+
+        <h2 className="text-5xl text-center mb-16 font-montserrat font-extrabold relative pb-4 text-[#8B7355] dark:text-white">
           Our Domains
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-primary rounded"></span>
         </h2>
-        
+
         {/* Domain Cards with Bouncing Animation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <style>{`
@@ -107,7 +107,7 @@ const TeamPage = () => {
               animation-play-state: paused;
             }
           `}</style>
-          
+
           {domainConfig.map((domain) => (
             <div
               key={domain.id}
@@ -115,7 +115,7 @@ const TeamPage = () => {
               className="bounce-card card-gradient rounded-[2rem] p-8 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-accent-2/30 border border-black/5 group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent-2/5 via-transparent to-accent-2/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               <div className="relative z-10">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-accent-2 shadow-lg">
                   <img
@@ -131,7 +131,7 @@ const TeamPage = () => {
                     <i className={`fas ${domain.icon} text-5xl text-accent-2`}></i>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold mb-2 text-heading font-montserrat">
                   {domain.title}
                 </h3>
@@ -170,7 +170,7 @@ const TeamPage = () => {
                 animation: slideIn 0.3s ease-out;
               }
             `}</style>
-            
+
             {/* Close Button */}
             <button
               onClick={closeModal}
@@ -189,14 +189,14 @@ const TeamPage = () => {
                 Back to Domains
               </button>
             </div>
-            
+
             {/* Domain Title */}
             <div className="px-8 pt-6 pb-4">
               <h2 className="text-4xl font-bold text-center mb-2 font-montserrat" style={{ color: '#8B7355' }}>
                 {selectedDomainConfig.title} Team
               </h2>
             </div>
-            
+
             {/* Team Photo */}
             <div className="px-8 pb-6">
               <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-accent-2/20">
@@ -211,7 +211,7 @@ const TeamPage = () => {
                 />
               </div>
             </div>
-            
+
             {/* Team Members */}
             <div className="px-8 pb-8">
               <div className="flex gap-6 overflow-x-auto p-4 justify-center flex-wrap">
@@ -242,13 +242,13 @@ const MemberCard = ({ member }) => {
           }}
         />
       </div>
-      
+
       {/* Name and Social */}
       <div className="p-4 text-center flex flex-col flex-1">
         <h4 className="text-heading font-bold mb-3 text-base leading-tight">
           {member.name}
         </h4>
-        
+
         {/* Social Links */}
         {(member.social?.instagram || member.social?.github || member.social?.linkedin) && (
           <div className="flex justify-center gap-3 mt-auto">

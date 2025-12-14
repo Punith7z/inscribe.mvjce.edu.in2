@@ -5,77 +5,76 @@ const Team = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
 
   return (
-    <section 
-      id="team" 
+    <section
+      id="team"
       ref={ref}
       className="py-16 px-5 relative min-h-screen flex flex-col items-center justify-center"
     >
-      <div 
-        className={`transition-all duration-1000 ease-out ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
+      <div
+        className={`transition-all duration-1000 ease-out ${isVisible
+            ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10'
-        }`}
+          }`}
       >
         <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
           Meet Our Team
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
-        
+
         <div className="max-w-7xl mx-auto w-full">
-        {/* Faculty Coordinator */}
-        {facultyCoordinator.length > 0 && (
-          <div className="mb-20">
-            <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
-              Faculty Coordinator
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
-            </h3>
-            <div className="flex justify-center gap-8 flex-wrap">
-              {facultyCoordinator.map((member) => (
-                <TeamCard key={member.id} member={member} />
-              ))}
+          {/* Faculty Coordinator */}
+          {facultyCoordinator.length > 0 && (
+            <div className="mb-20">
+              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
+                Faculty Coordinator
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+              </h3>
+              <div className="flex justify-center gap-8 flex-wrap">
+                {facultyCoordinator.map((member) => (
+                  <TeamCard key={member.id} member={member} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Leadership */}
-        {leadership.length > 0 && (
-          <div className="mb-20">
-            <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
-              Leadership
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
-            </h3>
-            <div className="flex justify-center gap-10 max-w-4xl mx-auto">
-              {leadership.map((member) => (
-                <TeamCard key={member.id} member={member} />
-              ))}
+          {/* Leadership */}
+          {leadership.length > 0 && (
+            <div className="mb-20">
+              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
+                Leadership
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+              </h3>
+              <div className="flex justify-center gap-10 max-w-4xl mx-auto">
+                {leadership.map((member) => (
+                  <TeamCard key={member.id} member={member} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Domain Leads */}
-        {domainLeads.length > 0 && (
-          <div className="mb-20">
-            <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
-              Domain Leads
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {domainLeads.map((member) => (
-                <TeamCard key={member.id} member={member} />
-              ))}
+          {/* Domain Leads */}
+          {domainLeads.length > 0 && (
+            <div className="mb-20">
+              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
+                Domain Leads
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {domainLeads.map((member) => (
+                  <TeamCard key={member.id} member={member} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Team Members by Domain */}
-        {teamMembers.length > 0 && teamMembers.map((domainGroup, index) => (
-          <div key={index} className="mb-20">
-            <h3 className="text-2xl text-center mb-8 text-accent-2 font-montserrat font-bold">
-              {domainGroup.domain}
-            </h3>
-            <div className="flex gap-6 overflow-x-auto pb-5 scrollbar-hide">
-              <style>{`
+          {/* Team Members by Domain */}
+          {teamMembers.length > 0 && teamMembers.map((domainGroup, index) => (
+            <div key={index} className="mb-20">
+              <h3 className="text-2xl text-center mb-8 text-accent-2 font-montserrat font-bold">
+                {domainGroup.domain}
+              </h3>
+              <div className="flex gap-6 overflow-x-auto pb-5 scrollbar-hide">
+                <style>{`
                 .scrollbar-hide::-webkit-scrollbar {
                   display: none;
                 }
@@ -84,13 +83,13 @@ const Team = () => {
                   scrollbar-width: none;
                 }
               `}</style>
-              {domainGroup.members.map((member) => (
-                <TeamCard key={member.id} member={member} compact />
-              ))}
+                {domainGroup.members.map((member) => (
+                  <TeamCard key={member.id} member={member} compact />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -99,9 +98,8 @@ const Team = () => {
 const TeamCard = ({ member, compact = false }) => {
   return (
     <div
-      className={`card-gradient rounded-3xl overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:shadow-accent-2/20 border border-black/5 cursor-pointer flex flex-col ${
-        compact ? 'min-w-[220px]' : 'w-full max-w-[280px]'
-      }`}
+      className={`card-gradient rounded-3xl overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:shadow-accent-2/20 border border-black/5 cursor-pointer flex flex-col ${compact ? 'min-w-[220px]' : 'w-full max-w-[280px]'
+        }`}
     >
       <div className={`relative w-full ${compact ? 'h-48' : 'h-56'} overflow-hidden`}>
         <img
@@ -111,7 +109,7 @@ const TeamCard = ({ member, compact = false }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full transition-transform duration-600 group-hover:translate-x-full"></div>
       </div>
-      
+
       <div className={`p-6 text-center flex flex-col flex-1 ${compact ? 'p-4' : ''}`}>
         <h4 className={`text-heading font-bold mb-2 ${compact ? 'text-lg' : 'text-xl'}`}>
           {member.name}
@@ -124,7 +122,7 @@ const TeamCard = ({ member, compact = false }) => {
             {member.domain}
           </p>
         )}
-        
+
         {/* Social Links */}
         {(member.social?.instagram || member.social?.github || member.social?.linkedin) && (
           <div className="flex justify-center gap-4 mt-auto">

@@ -5,30 +5,29 @@ const Leadership = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
 
   return (
-    <section 
-      id="leadership" 
+    <section
+      id="leadership"
       ref={ref}
       className="py-16 px-5 relative min-h-screen flex flex-col items-center justify-center"
     >
-      <div 
-        className={`transition-all duration-1000 ease-out ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
+      <div
+        className={`transition-all duration-1000 ease-out ${isVisible
+            ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10'
-        }`}
+          }`}
       >
         <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
           Meet Our Team
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
-        
+
         <div className="max-w-7xl mx-auto w-full">
           {/* Faculty Coordinator */}
           {facultyCoordinator.length > 0 && (
             <div className="mb-20">
               <h3 className="text-2xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
                 Faculty Coordinator
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
               </h3>
               <div className="flex justify-center gap-8 flex-wrap">
                 {facultyCoordinator.map((member) => (
@@ -43,7 +42,7 @@ const Leadership = () => {
             <div>
               <h3 className="text-2xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4">
                 Leadership
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
               </h3>
               <div className="flex flex-col md:flex-row justify-center gap-10 max-w-4xl mx-auto items-center">
                 {leadership.map((member) => (
@@ -70,7 +69,7 @@ const TeamCard = ({ member }) => {
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       <div className="p-6 text-center flex flex-col flex-1">
         <h4 className="text-heading font-bold mb-2 text-xl">
           {member.name}
@@ -83,7 +82,7 @@ const TeamCard = ({ member }) => {
             {member.domain}
           </p>
         )}
-        
+
         {/* Social Links */}
         {(member.social?.instagram || member.social?.github || member.social?.linkedin) && (
           <div className="flex justify-center gap-4 mt-auto">
