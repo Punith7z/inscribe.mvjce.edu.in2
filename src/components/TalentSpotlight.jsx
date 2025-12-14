@@ -5,23 +5,22 @@ const TalentSpotlight = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
 
   return (
-    <section 
-      id="talent-spotlight" 
+    <section
+      id="talent-spotlight"
       ref={ref}
       className="py-16 px-5 relative min-h-[60vh] flex flex-col items-center justify-center"
     >
-      <div 
-        className={`transition-all duration-1000 ease-out w-full ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
+      <div
+        className={`transition-all duration-1000 ease-out w-full ${isVisible
+            ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10'
-        }`}
+          }`}
       >
         <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
           Domain Leads
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
-        
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {domainLeads.map((lead) => (
             <LeadCard key={lead.id} lead={lead} />
@@ -46,7 +45,7 @@ const LeadCard = ({ lead }) => {
           }}
         />
       </div>
-      
+
       {/* Content Section */}
       <div className="p-6 text-center flex flex-col flex-1">
         <h4 className="text-heading font-bold mb-2 text-xl">
@@ -60,7 +59,7 @@ const LeadCard = ({ lead }) => {
             {lead.domain}
           </p>
         )}
-        
+
         {/* Social Links */}
         {(lead.social?.instagram || lead.social?.github || lead.social?.linkedin) && (
           <div className="flex justify-center gap-4 mt-auto">

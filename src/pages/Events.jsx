@@ -21,7 +21,7 @@ const Events = () => {
       <div className="container mx-auto px-5 py-10 pt-24 max-w-6xl">
         <Link 
           to="/" 
-          className="inline-block mb-8 px-6 py-2.5 bg-accent-2 text-white rounded-full no-underline font-semibold text-lg transition-colors hover:bg-[#b88a4a]"
+          className="inline-block mb-8 px-6 py-2.5 bg-accent-2 dark:bg-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-colors hover:bg-[#b88a4a] dark:hover:bg-blue-600"
         >
           ← Back to Home
         </Link>

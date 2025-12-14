@@ -1,8 +1,11 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 
 const WhyJoin = () => {
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
-  
+  const [ref, isVisible] = useScrollAnimationEnhanced({
+    threshold: 0.1,
+    type: 'fade-in'
+  })
+
   const reasons = [
     {
       icon: 'fa-lightbulb',
@@ -32,16 +35,10 @@ const WhyJoin = () => {
       ref={ref}
       className="py-16 px-5 relative overflow-hidden"
     >
-      <div
-        className={`transition-all duration-1000 ease-out ${
-          isVisible
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10'
-        }`}
-      >
+      <div>
         <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
           Why Join Us
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
         <div className="max-w-7xl mx-auto overflow-hidden">
@@ -69,9 +66,9 @@ const WhyJoin = () => {
               {[...reasons, ...reasons].map((reason, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-[350px] card-gradient rounded-3xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:shadow-accent-2/15 border border-black/5 relative overflow-hidden cursor-pointer group"
+                  className="flex-shrink-0 w-[350px] glass-effect card-gradient rounded-3xl p-8 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
 
                   <div className="relative z-10">
                     <div className="text-4xl text-accent-2 mb-5 drop-shadow-lg transition-transform duration-300 group-hover:scale-110">

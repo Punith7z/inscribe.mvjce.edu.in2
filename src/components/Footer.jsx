@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { scrollToSection } from '../utils/scrollToSection'
+import { useTheme } from '../contexts/ThemeContext'
 
 const Footer = () => {
+  const { theme } = useTheme()
+  
   const handleNavClick = (sectionId) => {
     if (window.location.pathname !== '/') {
       window.location.href = '/'
@@ -14,7 +17,16 @@ const Footer = () => {
   }
 
   return (
-    <footer className="w-full py-12 px-5 border-t border-black/10" style={{ backgroundColor: '#fcf4d7' }}>
+    <footer 
+      className={`w-full py-12 px-5 border-t transition-all duration-300 ${
+        theme === 'dark' 
+          ? 'border-green-500/20' 
+          : 'border-black/10'
+      }`}
+      style={{ 
+        backgroundColor: theme === 'dark' ? '#0a0f1c' : '#fcf4d7'
+      }}
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {/* Left Section - Logo and Info */}
         <div className="flex flex-col items-start">
@@ -28,16 +40,30 @@ const Footer = () => {
               }}
             />
             <div>
-              <h3 className="text-2xl font-bold text-heading font-montserrat">INSCRIBE</h3>
-              <p className="text-sm text-gray-600">MVJ College of Engineering</p>
+              <h3 className={`text-2xl font-bold font-montserrat ${
+                theme === 'dark' ? 'text-green-400' : 'text-heading'
+              }`}>
+                INSCRIBE
+              </h3>
+              <p className={`text-sm ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                MVJ College of Engineering
+              </p>
             </div>
           </div>
-          <p className="text-sm text-gray-600 mb-2">
+          <p className={`text-sm mb-2 ${
+            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+          }`}>
             Near ITPB, Channasandra, Bangalore – 560067
           </p>
           <a 
             href="mailto:inscribe.mvjce@gmail.com" 
-            className="text-accent-2 hover:text-heading transition-colors text-sm font-medium"
+            className={`footer-link text-sm font-medium inline-block ${
+              theme === 'dark' 
+                ? 'text-gray-300' 
+                : 'text-accent-2 hover:text-heading'
+            }`}
           >
             inscribe.mvjce@gmail.com
           </a>
@@ -45,12 +71,20 @@ const Footer = () => {
 
         {/* Middle Section - Quick Links */}
         <div>
-          <h4 className="text-lg font-bold text-heading mb-4 font-montserrat">Quick Links</h4>
+          <h4 className={`text-lg font-bold mb-4 font-montserrat ${
+            theme === 'dark' ? 'text-green-400' : 'text-heading'
+          }`}>
+            Quick Links
+          </h4>
           <ul className="space-y-2">
             <li>
               <Link 
                 to="/team" 
-                className="text-accent-2 hover:text-heading transition-colors text-sm no-underline"
+                className={`footer-link text-sm no-underline inline-block ${
+                  theme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-accent-2 hover:text-heading'
+                }`}
               >
                 Our Domains
               </Link>
@@ -58,7 +92,11 @@ const Footer = () => {
             <li>
               <button 
                 onClick={() => handleNavClick('leadership')}
-                className="text-accent-2 hover:text-heading transition-colors text-sm cursor-pointer bg-transparent border-none p-0"
+                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${
+                  theme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-accent-2 hover:text-heading'
+                }`}
               >
                 Meet Our Team
               </button>
@@ -66,7 +104,11 @@ const Footer = () => {
             <li>
               <Link 
                 to="/events" 
-                className="text-accent-2 hover:text-heading transition-colors text-sm no-underline"
+                className={`footer-link text-sm no-underline inline-block ${
+                  theme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-accent-2 hover:text-heading'
+                }`}
               >
                 Events
               </Link>
@@ -74,7 +116,11 @@ const Footer = () => {
             <li>
               <Link 
                 to="/register" 
-                className="text-accent-2 hover:text-heading transition-colors text-sm no-underline"
+                className={`footer-link text-sm no-underline inline-block ${
+                  theme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-accent-2 hover:text-heading'
+                }`}
               >
                 Registration
               </Link>
@@ -82,7 +128,11 @@ const Footer = () => {
             <li>
               <button 
                 onClick={() => handleNavClick('contact')}
-                className="text-accent-2 hover:text-heading transition-colors text-sm cursor-pointer bg-transparent border-none p-0"
+                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${
+                  theme === 'dark' 
+                    ? 'text-gray-300' 
+                    : 'text-accent-2 hover:text-heading'
+                }`}
               >
                 Contact Us
               </button>
@@ -92,13 +142,21 @@ const Footer = () => {
 
         {/* Right Section - Social Media or Additional Info */}
         <div>
-          <h4 className="text-lg font-bold text-heading mb-4 font-montserrat">Connect With Us</h4>
+          <h4 className={`text-lg font-bold mb-4 font-montserrat ${
+            theme === 'dark' ? 'text-green-400' : 'text-heading'
+          }`}>
+            Connect With Us
+          </h4>
           <div className="flex gap-4">
             <a
               href="https://www.linkedin.com/company/inscribe-mvjce"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-accent-2/10 hover:bg-[#0077B5] flex items-center justify-center text-accent-2 hover:text-white transition-all hover:scale-110"
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
+                theme === 'dark'
+                  ? 'bg-green-500/20 hover:bg-[#0077B5] text-green-400 hover:text-white'
+                  : 'bg-accent-2/10 hover:bg-[#0077B5] text-accent-2 hover:text-white'
+              }`}
             >
               <i className="fab fa-linkedin text-lg"></i>
             </a>
@@ -106,7 +164,11 @@ const Footer = () => {
               href="https://github.com/inscribe-mvjce"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-accent-2/10 hover:bg-[#333] flex items-center justify-center text-accent-2 hover:text-white transition-all hover:scale-110"
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
+                theme === 'dark'
+                  ? 'bg-green-500/20 hover:bg-[#333] text-green-400 hover:text-white'
+                  : 'bg-accent-2/10 hover:bg-[#333] text-accent-2 hover:text-white'
+              }`}
             >
               <i className="fab fa-github text-lg"></i>
             </a>
@@ -114,7 +176,11 @@ const Footer = () => {
               href="https://www.instagram.com/inscribe_mvjce"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-accent-2/10 hover:bg-[#E1306C] flex items-center justify-center text-accent-2 hover:text-white transition-all hover:scale-110"
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
+                theme === 'dark'
+                  ? 'bg-green-500/20 hover:bg-[#E1306C] text-green-400 hover:text-white'
+                  : 'bg-accent-2/10 hover:bg-[#E1306C] text-accent-2 hover:text-white'
+              }`}
             >
               <i className="fab fa-instagram text-lg"></i>
             </a>
@@ -123,22 +189,36 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section - Copyright */}
-      <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-sm text-gray-600">
+      <div className={`max-w-7xl mx-auto mt-8 pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4 ${
+        theme === 'dark' ? 'border-green-500/20' : 'border-black/10'
+      }`}>
+        <p className={`text-sm ${
+          theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+        }`}>
           &copy; {new Date().getFullYear()} Inscribe Club. All rights reserved.
         </p>
-        <p className="text-sm text-accent-2 font-medium">
+        <p className={`text-sm font-medium ${
+          theme === 'dark' ? 'text-green-400' : 'text-accent-2'
+        }`}>
           "Engineered by Inscribe minds"
         </p>
         <div className="flex gap-6 text-sm">
           <button 
-            className="text-accent-2 hover:text-heading transition-colors cursor-pointer bg-transparent border-none p-0"
+            className={`footer-link cursor-pointer bg-transparent border-none p-0 ${
+              theme === 'dark' 
+                ? 'text-gray-300' 
+                : 'text-accent-2 hover:text-heading'
+            }`}
           >
             Privacy Policy
           </button>
-          <span className="text-gray-400">•</span>
+          <span className={theme === 'dark' ? 'text-gray-600' : 'text-gray-400'}>•</span>
           <button 
-            className="text-accent-2 hover:text-heading transition-colors cursor-pointer bg-transparent border-none p-0"
+            className={`footer-link cursor-pointer bg-transparent border-none p-0 ${
+              theme === 'dark' 
+                ? 'text-gray-300' 
+                : 'text-accent-2 hover:text-heading'
+            }`}
           >
             Terms of Service
           </button>
