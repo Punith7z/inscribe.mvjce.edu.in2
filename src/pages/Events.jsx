@@ -19,17 +19,17 @@ const Events = () => {
     <div className="min-h-screen bg-bg-1">
       <Navbar />
       <div className="container mx-auto px-5 py-10 pt-24 max-w-6xl">
-        <Link 
-          to="/" 
-          className="inline-block mb-8 px-6 py-2.5 bg-accent-2 dark:bg-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-colors hover:bg-[#b88a4a] dark:hover:bg-blue-600"
+        <Link
+          to="/"
+          className="inline-block mb-8 px-6 py-2.5 bg-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-colors hover:font-bold"
         >
           ← Back to Home
         </Link>
-        
+
         <h2 className="text-4xl text-center mb-12 text-heading font-montserrat font-bold">
           Our Events
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {events.map((event) => (
             <div
@@ -63,12 +63,12 @@ const Events = () => {
             onClick={closeModal}
           >
             <div
-              className="bg-white rounded-3xl max-w-md w-full shadow-2xl relative p-8 text-center"
+              className="bg-white dark:bg-black/90 dark:border dark:border-white/10 rounded-3xl max-w-md w-full shadow-2xl relative p-8 text-center"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={closeModal}
-                className="absolute top-5 right-6 text-3xl text-accent-2 font-bold cursor-pointer hover:text-heading transition-colors"
+                className="absolute top-5 right-6 text-3xl text-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:bg-clip-text dark:text-transparent font-bold cursor-pointer hover:text-heading transition-colors"
               >
                 &times;
               </button>
@@ -77,9 +77,9 @@ const Events = () => {
                 alt={selectedEvent.title}
                 className="w-full max-h-64 object-cover rounded-xl mb-4"
               />
-              <h3 className="text-accent-2 text-xl mb-2.5 font-bold">{selectedEvent.title}</h3>
-              <p className="italic text-heading mb-2.5">{selectedEvent.tagline}</p>
-              <p className="text-gray-800 text-base">{selectedEvent.description}</p>
+              <h3 className="text-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:bg-clip-text dark:text-transparent text-xl mb-2.5 font-bold">{selectedEvent.title}</h3>
+              <p className="italic text-heading dark:text-white/90 mb-2.5">{selectedEvent.tagline}</p>
+              <p className="text-gray-800 dark:text-gray-300 text-base">{selectedEvent.description}</p>
             </div>
           </div>
         )}

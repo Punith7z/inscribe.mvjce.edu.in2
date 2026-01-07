@@ -28,7 +28,7 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="mailto:contact@inscribe.com"
-                className="flex items-center gap-2 text-accent-2 hover:text-heading transition-colors no-underline"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-white bg-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1"
               >
                 <i className="fas fa-envelope text-2xl"></i>
                 <span className="text-lg">Email Us</span>
@@ -37,7 +37,7 @@ const Contact = () => {
                 href="https://www.instagram.com/inscribe.mvjce/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-accent-2 hover:text-heading transition-colors no-underline"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-white bg-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1"
               >
                 <i className="fab fa-instagram text-2xl"></i>
                 <span className="text-lg">Instagram</span>
@@ -46,7 +46,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/inscribe-mvjce24/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-accent-2 hover:text-heading transition-colors no-underline"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-white bg-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1"
               >
                 <i className="fab fa-linkedin text-2xl"></i>
                 <span className="text-lg">LinkedIn</span>

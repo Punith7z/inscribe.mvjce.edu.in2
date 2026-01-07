@@ -117,11 +117,12 @@ const Navbar = ({ videoEnded = false }) => {
       >
         <Link
           to="/"
-          className={`text-2xl font-black font-montserrat uppercase tracking-wide no-underline transition-colors ${theme === 'dark'
+          className={`flex items-center gap-3 text-2xl font-black font-montserrat uppercase tracking-wide no-underline transition-colors ${theme === 'dark'
             ? 'text-white hover:text-gray-200'
             : 'text-heading hover:text-accent-2'
             }`}
         >
+          <img src="/images/inslogo.jpg" alt="Inscribe Logo" className="h-10 w-10 rounded-full object-cover shadow-md" />
           INSCRIBE
         </Link>
 

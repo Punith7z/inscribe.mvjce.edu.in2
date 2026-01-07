@@ -73,15 +73,15 @@ const TeamPage = () => {
         {/* Back Button */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 mb-8 px-6 py-2.5 bg-accent-2 dark:bg-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg"
+          className="inline-flex items-center gap-2 mb-8 px-6 py-2.5 bg-accent-2 dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg"
         >
           <i className="fas fa-arrow-left"></i>
           Back to Home
         </Link>
 
-        <h2 className="text-5xl text-center mb-16 font-montserrat font-extrabold relative pb-4 text-[#8B7355] dark:text-white">
+        <h2 className="text-5xl text-center mb-16 font-montserrat font-extrabold relative pb-4 bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] bg-clip-text text-transparent">
           Our Domains
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-primary rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] rounded"></span>
         </h2>
 
         {/* Domain Cards with Bouncing Animation */}
@@ -192,7 +192,7 @@ const TeamPage = () => {
 
             {/* Domain Title */}
             <div className="px-8 pt-6 pb-4">
-              <h2 className="text-4xl font-bold text-center mb-2 font-montserrat" style={{ color: '#8B7355' }}>
+              <h2 className="text-4xl font-bold text-center mb-2 font-montserrat text-[#8B7355] dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:bg-clip-text dark:text-transparent">
                 {selectedDomainConfig.title} Team
               </h2>
             </div>
@@ -257,7 +257,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#0077B5] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#0077B5] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#0077B5] dark:hover:to-[#0077B5]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <i className="fab fa-linkedin text-sm"></i>
@@ -268,7 +268,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#333] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#333] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#333] dark:hover:to-[#333]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <i className="fab fa-github text-sm"></i>
@@ -279,7 +279,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#E1306C] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#E1306C] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#E1306C] dark:hover:to-[#E1306C]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <i className="fab fa-instagram text-sm"></i>

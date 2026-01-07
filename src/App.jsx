@@ -5,11 +5,13 @@ import Register from './pages/Register'
 import Team from './pages/Team'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './contexts/ThemeContext'
+import SplineBackground from './components/SplineBackground'
 import './App.css'
 
 function App() {
   return (
     <ThemeProvider>
+      <SplineBackground />
       <Router>
         <ScrollToTop />
         <Routes>
