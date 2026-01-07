@@ -12,8 +12,8 @@ const TalentSpotlight = () => {
     >
       <div
         className={`transition-all duration-1000 ease-out w-full ${isVisible
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10'
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-10'
           }`}
       >
         <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
@@ -68,7 +68,7 @@ const LeadCard = ({ lead }) => {
                 href={lead.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#0077B5] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#0077B5] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#0077B5] dark:hover:to-[#0077B5]"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -78,7 +78,7 @@ const LeadCard = ({ lead }) => {
                 href={lead.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#333] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#333] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#333] dark:hover:to-[#333]"
               >
                 <i className="fab fa-github"></i>
               </a>
@@ -88,7 +88,7 @@ const LeadCard = ({ lead }) => {
                 href={lead.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 glass-effect rounded-full flex items-center justify-center text-accent-2 hover:bg-[#E1306C] hover:text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-effect text-accent-2 hover:bg-[#E1306C] hover:text-white dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:glass-effect-none dark:text-white dark:hover:from-[#E1306C] dark:hover:to-[#E1306C]"
               >
                 <i className="fab fa-instagram"></i>
               </a>

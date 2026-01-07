@@ -31,7 +31,7 @@ const EventsPreview = () => {
 
             <Link
               to="/events"
-              className="inline-block px-8 py-4 bg-gradient-primary dark:!bg-none dark:!bg-brand-blue text-white dark:text-white rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+              className="inline-block px-8 py-4 bg-gradient-primary dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue text-white rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all"
             >
               View All Events
             </Link>

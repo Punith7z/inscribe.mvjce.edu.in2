@@ -14,9 +14,9 @@ const Domains = () => {
       className="py-20 px-5 relative overflow-hidden"
     >
       <div>
-        <h2 className="section-title text-4xl mb-12 text-center text-heading dark:text-white dark:bg-none font-montserrat font-bold relative pb-4">
+        <h2 className="section-title text-4xl mb-12 text-center text-heading dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:!text-transparent font-montserrat font-bold relative pb-4">
           Our Domains
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-heading dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
         </h2>
 
         <div className="max-w-7xl mx-auto overflow-hidden">

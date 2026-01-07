@@ -33,7 +33,7 @@ const TalentTree = () => {
                 <div className="flex justify-center">
                     <Link
                         to="/team"
-                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full no-underline font-bold text-xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-2 border-[#8B7355] dark:border-brand-blue bg-gradient-primary dark:bg-none dark:bg-brand-blue text-white"
+                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full no-underline font-bold text-xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-2 border-[#8B7355] dark:border-brand-blue bg-gradient-primary dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue text-white"
                     >
                         <i className="fas fa-users text-2xl"></i>
                         Explore Our Talent Universe

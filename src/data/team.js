@@ -49,9 +49,9 @@ export const domainLeads = [
     domain: "Web Development",
     image: "/images/Hari.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "#",
+      github: "#",
+      linkedin: "#"
     }
   },
   {
@@ -85,9 +85,9 @@ export const domainLeads = [
     domain: "Content Writing",
     image: "/images/musrat.jpg",
     social: {
-      instagram: "",
-      github: "",
-      linkedin: ""
+      instagram: "#",
+      github: "#",
+      linkedin: "#"
     }
   },
   {
