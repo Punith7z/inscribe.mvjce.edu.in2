@@ -33,7 +33,7 @@
 
   /* Dark Theme */
   [data-theme="dark"] body {
-    background: transparent; /* Transparent to show Spline background */
+    background: #0a0a0a;
     color: #e5e7eb;      /* Light text */
   }
 
@@ -362,4 +362,85 @@
 .scroll-stagger-3 { transition-delay: 0.3s; }
 .scroll-stagger-4 { transition-delay: 0.4s; }
 .scroll-stagger-5 { transition-delay: 0.5s; }
+
+@layer utilities {
+  .snap-container {
+    /* scroll-snap-type: y mandatory; - Removed as per user request */
+    min-height: 100vh;
+    /* overflow-y: scroll; - Removed to allow normal document scroll */
+    scroll-behavior: smooth;
+  }
+
+  .snap-section {
+    /* scroll-snap-align: start; - Removed as per user request */
+    min-height: 100vh;
+    /* Ensure content is centered or laid out properly */
+    width: 100%;
+    position: relative;
+    padding: 2rem 0; /* Add some padding so content isn't too cramped if we lose the centering */
+  }
+
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border-radius: 12px;
+  }
+  
+  [data-theme="dark"] .liquid-glass {
+    background: rgba(10, 10, 25, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+  .animate-scroll-vertical {
+    animation: scroll-vertical 30s linear infinite;
+  }
+
+  .animate-scroll-vertical:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Vertical Scroll Animation */
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Glassmorphic Social Button */
+.glass-social-btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glass-social-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .glass-social-btn {
+  background: rgba(10, 10, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .glass-social-btn:hover {
+  background: rgba(20, 20, 30, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 

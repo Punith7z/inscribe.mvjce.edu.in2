@@ -155,43 +155,48 @@ const Hero = ({ onVideoEnd }) => {
           </div>
         )}
 
-        {/* Tech Animations - only show after video */}
-        {!showVideo && <TechAnimations />}
+
 
         <div className="relative z-10 text-center px-5">
-          <h1
-            className={`text-5xl md:text-7xl font-bold mb-4 font-montserrat transition-colors duration-1000 flex justify-center gap-1 flex-wrap ${showVideo ? 'text-white' : theme === 'dark' ? 'text-white' : 'text-heading'
-              }`}
-          >
-            {/* Pattern: Red, White, Blue, White, Blend, White, Blue, White */}
-            {"INSCRIBE".split('').map((char, index) => {
-              let colorClass = ''
-              // Only apply colors if not showing video (or maybe even if showing video? User said "in the hero section" usually implies the final state. 
-              // But during video it might be better white. 
-              // The original code toggled text-white.
-              // Let's assume we want the colors in the final state (theme dark/light) but maybe White during video?
-              // The prompt says "color used in dark theme" etc.
-              // Let's keep it simple: Use dynamic classes.
+          {theme !== 'dark' && !showVideo ? (
+            <h1 className="section-title text-5xl md:text-7xl mb-8 text-center text-heading font-montserrat font-bold relative pb-4">
+              INSCRIBE
+            </h1>
+          ) : (
+            <h1
+              className={`text-5xl md:text-7xl font-bold mb-4 font-montserrat transition-colors duration-1000 flex justify-center gap-1 flex-wrap ${showVideo ? 'text-white' : theme === 'dark' ? 'text-white' : 'text-heading'
+                }`}
+            >
+              {/* Pattern: Red, White, Blue, White, Blend, White, Blue, White */}
+              {"INSCRIBE".split('').map((char, index) => {
+                let colorClass = ''
+                // Only apply colors if not showing video (or maybe even if showing video? User said "in the hero section" usually implies the final state. 
+                // But during video it might be better white. 
+                // The original code toggled text-white.
+                // Let's assume we want the colors in the final state (theme dark/light) but maybe White during video?
+                // The prompt says "color used in dark theme" etc.
+                // Let's keep it simple: Use dynamic classes.
 
-              const blendClass = 'bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] bg-clip-text !text-transparent'
-              const redClass = '!text-[#FF4B4B]'
-              const blueClass = '!text-[#4B7BFF]'
+                const blendClass = 'bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] bg-clip-text !text-transparent'
+                const redClass = '!text-[#FF4B4B]'
+                const blueClass = '!text-[#4B7BFF]'
 
-              if (!showVideo) {
-                if (index % 4 === 0) colorClass = redClass // I, R - Red
-                else if (index % 4 === 2) colorClass = blueClass // S, B - Blue
-                else colorClass = blendClass // N, C, I, E - Blend
-              } else {
-                colorClass = 'text-white'
-              }
+                if (!showVideo) {
+                  if (index % 4 === 0) colorClass = redClass // I, R - Red
+                  else if (index % 4 === 2) colorClass = blueClass // S, B - Blue
+                  else colorClass = blendClass // N, C, I, E - Blend
+                } else {
+                  colorClass = 'text-white'
+                }
 
-              return (
-                <span key={index} className={colorClass}>
-                  {char}
-                </span>
-              )
-            })}
-          </h1>
+                return (
+                  <span key={index} className={colorClass}>
+                    {char}
+                  </span>
+                )
+              })}
+            </h1>
+          )}
           <p
             className={`text-xl md:text-2xl max-w-2xl mx-auto transition-colors duration-1000 ${showVideo ? 'text-white/90' : theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
               }`}
@@ -204,122 +209,6 @@ const Hero = ({ onVideoEnd }) => {
   )
 }
 
-// Tech Animations Component
-const TechAnimations = () => {
-  const { theme } = useTheme()
-  // Generate fixed particle data to avoid re-renders
-  const particles = [
-    { id: 1, left: 15, top: 20, delay: 0, duration: 12, code: '&lt;/&gt;' },
-    { id: 2, left: 85, top: 15, delay: 1, duration: 18, code: '{ }' },
-    { id: 3, left: 25, top: 60, delay: 2, duration: 15, code: '[]' },
-    { id: 4, left: 75, top: 70, delay: 0.5, duration: 20, code: '()' },
-    { id: 5, left: 45, top: 35, delay: 1.5, duration: 14, code: '=>' },
-    { id: 6, left: 10, top: 80, delay: 2.5, duration: 16, code: 'const' },
-    { id: 7, left: 90, top: 45, delay: 1, duration: 22, code: 'function' },
-    { id: 8, left: 30, top: 10, delay: 3, duration: 13, code: 'class' },
-    { id: 9, left: 65, top: 25, delay: 0.8, duration: 17, code: '&lt;/&gt;' },
-    { id: 10, left: 20, top: 50, delay: 2.2, duration: 19, code: '{ }' },
-    { id: 11, left: 80, top: 60, delay: 1.2, duration: 21, code: '[]' },
-    { id: 12, left: 50, top: 85, delay: 0.3, duration: 14, code: '()' },
-    { id: 13, left: 35, top: 30, delay: 2.8, duration: 16, code: '=>' },
-    { id: 14, left: 70, top: 75, delay: 1.8, duration: 18, code: 'const' },
-    { id: 15, left: 5, top: 40, delay: 0.6, duration: 15, code: 'function' },
-  ]
 
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
-      {/* Floating code-like particles */}
-      <div className="absolute inset-0">
-        {particles.map((particle) => (
-          <div
-            key={particle.id}
-            className={`absolute font-mono text-base md:text-lg font-bold drop-shadow-md ${theme === 'dark' ? 'text-white/40' : 'text-accent-2/60'
-              }`}
-            style={{
-              left: `${particle.left}%`,
-              top: `${particle.top}%`,
-              animation: `floatParticle ${particle.duration}s infinite ease-in-out`,
-              animationDelay: `${particle.delay}s`,
-            }}
-          >
-            {particle.code === '&lt;/&gt;' ? '</>' : particle.code}
-          </div>
-        ))}
-      </div>
-
-      {/* Geometric shapes - more visible and dynamic */}
-      <div
-        className="absolute top-20 left-10 w-20 h-20 border-2 rotate-45 shadow-lg"
-        style={{
-          animation: 'spin-slow 20s linear infinite',
-          borderColor: theme === 'dark' ? 'rgba(255, 75, 75, 0.4)' : 'rgba(212,163,115,0.45)'
-        }}
-      ></div>
-      <div
-        className="absolute bottom-32 right-16 w-16 h-16 border-2 rounded-full shadow-lg"
-        style={{
-          animation: 'pulse-glow 3s ease-in-out infinite',
-          borderColor: theme === 'dark' ? 'rgba(75, 123, 255, 0.4)' : 'rgba(212,163,115,0.45)'
-        }}
-      ></div>
-      <div
-        className="absolute top-1/3 right-1/4 w-14 h-14 border-2 rotate-12 shadow-lg"
-        style={{
-          animation: 'bounce-slow 4s ease-in-out infinite',
-          borderColor: theme === 'dark' ? 'rgba(255, 75, 75, 0.4)' : 'rgba(212,163,115,0.45)'
-        }}
-      ></div>
-      <div
-        className="absolute top-2/3 left-1/5 w-12 h-12 border-2 rounded-full shadow-lg"
-        style={{
-          animation: 'pulse-glow 3.5s ease-in-out infinite 1s',
-          borderColor: theme === 'dark' ? 'rgba(75, 123, 255, 0.4)' : 'rgba(212,163,115,0.45)'
-        }}
-      ></div>
-      <div
-        className="absolute bottom-1/4 left-1/3 w-10 h-10 border-2 rotate-45 shadow-md"
-        style={{
-          animation: 'spin-slow 30s linear infinite reverse',
-          borderColor: theme === 'dark' ? 'rgba(255, 75, 75, 0.4)' : 'rgba(212,163,115,0.35)'
-        }}
-      ></div>
-      <div
-        className="absolute top-1/2 right-1/5 w-8 h-8 border-2 rounded-full shadow-md"
-        style={{
-          animation: 'pulse-glow 4s ease-in-out infinite 2s',
-          borderColor: theme === 'dark' ? 'rgba(75, 123, 255, 0.4)' : 'rgba(212,163,115,0.35)'
-        }}
-      ></div>
-
-      {/* Enhanced grid pattern - REMOVED as per user request */}
-      {/* Grid lines used to be here */}
-
-      <style>{`
-        @keyframes floatParticle {
-          0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.6; }
-          25% { transform: translateY(-20px) translateX(12px) rotate(90deg); opacity: 0.7; }
-          50% { transform: translateY(-40px) translateX(-12px) rotate(180deg); opacity: 0.6; }
-          75% { transform: translateY(-20px) translateX(8px) rotate(270deg); opacity: 0.65; }
-        }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0) rotate(12deg); }
-          50% { transform: translateY(-25px) rotate(12deg); }
-        }
-        @keyframes pulse-glow {
-          0%, 100% { transform: scale(1); opacity: 0.45; }
-          50% { transform: scale(1.1); opacity: 0.6; }
-        }
-        @keyframes grid-float {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-      `}</style>
-    </div>
-  )
-}
 
 export default Hero
