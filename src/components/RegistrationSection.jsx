@@ -4,7 +4,11 @@ import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 const RegistrationSection = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
+<<<<<<< HEAD
     type: 'slide-right'
+=======
+    type: 'slide-left'
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
   })
 
   return (
@@ -19,7 +23,11 @@ const RegistrationSection = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto glass-effect card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 group overflow-hidden relative">
+=======
+        <div className="max-w-4xl mx-auto liquid-glass card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 group overflow-hidden relative">
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
           <div className="relative z-10">
             <p className="text-gray-700 mb-8 text-lg leading-relaxed">
@@ -30,7 +38,11 @@ const RegistrationSection = () => {
 
             <Link
               to="/register"
+<<<<<<< HEAD
               className="inline-block px-8 py-4 bg-gradient-primary dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue text-white rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+=======
+              className="inline-block px-8 py-4 bg-transparent border-2 border-transparent dark:border-[#ED3E21] text-[#73634F] dark:text-white rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all dark:hover:bg-[#ED3E21]/60"
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
             >
               <i className="fas fa-edit mr-2"></i>
               Open Registration

@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@studio-freight/react-lenis": "^0.0.47",
+    "framer-motion": "^12.24.8",
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0"
@@ -28,4 +33,7 @@
     "vite": "^5.0.8"
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164

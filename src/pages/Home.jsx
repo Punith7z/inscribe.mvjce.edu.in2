@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
+<<<<<<< HEAD
 import AnimatedBackground from '../components/AnimatedBackground'
+=======
+
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
 import Hero from '../components/Hero'
 import About from '../components/About'
 import WhatWeDo from '../components/WhatWeDo'
@@ -27,6 +31,7 @@ const Home = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen home-root" style={{ position: 'relative' }}>
       <AnimatedBackground />
       <Hero onVideoEnd={handleVideoEnd} />
@@ -51,6 +56,54 @@ const Home = () => {
       <ReadyToInscribe />
       <Contact />
       <Footer />
+=======
+    <div className="home-root snap-container overflow-x-hidden" style={{ position: 'relative' }}>
+
+      <section className="snap-section">
+        <Hero onVideoEnd={handleVideoEnd} />
+        <Navbar videoEnded={videoEnded} />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <About />
+        <WhatWeDo />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <WhoWeAre />
+        <Domains />
+      </section>
+
+      <section id="teams" className="snap-section flex flex-col justify-center">
+        <Leadership />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <TalentSpotlight />
+        <TalentTree />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <EventsPreview />
+        <RegistrationSection />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <WhatsNext />
+        <WhyJoin />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <Gallery />
+        <ReadyToInscribe />
+      </section>
+
+      <section className="w-full flex flex-col">
+        <Contact />
+        <Footer />
+      </section>
+
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
     </div>
   )
 }

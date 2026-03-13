@@ -155,6 +155,7 @@ const Hero = ({ onVideoEnd }) => {
           </div>
         )}
 
+<<<<<<< HEAD
         {/* Tech Animations - only show after video */}
         {!showVideo && <TechAnimations />}
 
@@ -192,6 +193,50 @@ const Hero = ({ onVideoEnd }) => {
               )
             })}
           </h1>
+=======
+
+
+        <div className="relative z-10 text-center px-5">
+          {theme !== 'dark' && !showVideo ? (
+            <h1 className="section-title text-5xl md:text-7xl mb-8 text-center text-heading font-montserrat font-bold relative pb-4">
+              INSCRIBE
+            </h1>
+          ) : (
+            <h1
+              className={`text-5xl md:text-7xl font-bold mb-4 font-montserrat transition-colors duration-1000 flex justify-center gap-1 flex-wrap ${showVideo ? 'text-white' : theme === 'dark' ? 'text-white' : 'text-heading'
+                }`}
+            >
+              {/* Pattern: Red, White, Blue, White, Blend, White, Blue, White */}
+              {"INSCRIBE".split('').map((char, index) => {
+                let colorClass = ''
+                // Only apply colors if not showing video (or maybe even if showing video? User said "in the hero section" usually implies the final state. 
+                // But during video it might be better white. 
+                // The original code toggled text-white.
+                // Let's assume we want the colors in the final state (theme dark/light) but maybe White during video?
+                // The prompt says "color used in dark theme" etc.
+                // Let's keep it simple: Use dynamic classes.
+
+                const blendClass = 'bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] bg-clip-text !text-transparent'
+                const redClass = '!text-[#FF4B4B]'
+                const blueClass = '!text-[#4B7BFF]'
+
+                if (!showVideo) {
+                  if (index % 4 === 0) colorClass = redClass // I, R - Red
+                  else if (index % 4 === 2) colorClass = blueClass // S, B - Blue
+                  else colorClass = blendClass // N, C, I, E - Blend
+                } else {
+                  colorClass = 'text-white'
+                }
+
+                return (
+                  <span key={index} className={colorClass}>
+                    {char}
+                  </span>
+                )
+              })}
+            </h1>
+          )}
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           <p
             className={`text-xl md:text-2xl max-w-2xl mx-auto transition-colors duration-1000 ${showVideo ? 'text-white/90' : theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
               }`}
@@ -204,6 +249,7 @@ const Hero = ({ onVideoEnd }) => {
   )
 }
 
+<<<<<<< HEAD
 // Tech Animations Component
 const TechAnimations = () => {
   const { theme } = useTheme()
@@ -321,5 +367,8 @@ const TechAnimations = () => {
     </div>
   )
 }
+=======
+
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
 
 export default Hero

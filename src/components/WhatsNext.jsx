@@ -3,7 +3,11 @@ import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 const WhatsNext = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
+<<<<<<< HEAD
     type: 'rotate'
+=======
+    type: 'slide-right'
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
   })
 
   const nextItems = [
@@ -40,7 +44,11 @@ const WhatsNext = () => {
           {nextItems.map((item, index) => (
             <div
               key={index}
+<<<<<<< HEAD
               className="glass-effect card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
+=======
+              className="liquid-glass card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
 

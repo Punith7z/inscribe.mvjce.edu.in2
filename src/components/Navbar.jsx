@@ -8,6 +8,7 @@ const Navbar = ({ videoEnded = false }) => {
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+<<<<<<< HEAD
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
   const [activeSection, setActiveSection] = useState('')
@@ -17,6 +18,14 @@ const Navbar = ({ videoEnded = false }) => {
   const shouldShow = isHomePage ? videoEnded : true
 
   // Scroll detection for navbar visibility and styling
+=======
+  const [activeSection, setActiveSection] = useState('')
+  const { theme, toggleTheme, mode, cycleTheme } = useTheme()
+  const isHomePage = location.pathname === '/'
+  const shouldShow = isHomePage ? videoEnded : true
+
+  // Scroll detection for navbar style
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
   useEffect(() => {
     let ticking = false
 
@@ -24,6 +33,7 @@ const Navbar = ({ videoEnded = false }) => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY
+<<<<<<< HEAD
 
           // Check if scrolled past threshold
           setIsScrolled(currentScrollY > 50)
@@ -41,6 +51,10 @@ const Navbar = ({ videoEnded = false }) => {
 
           setLastScrollY(currentScrollY)
 
+=======
+          setIsScrolled(currentScrollY > 50)
+
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           // Detect active section
           if (isHomePage) {
             const sections = ['about', 'teams', 'events', 'gallery', 'contact']
@@ -65,7 +79,11 @@ const Navbar = ({ videoEnded = false }) => {
     handleScroll() // Initial check
 
     return () => window.removeEventListener('scroll', handleScroll)
+<<<<<<< HEAD
   }, [lastScrollY, isHomePage])
+=======
+  }, [isHomePage])
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
 
   const handleNavClick = (sectionId) => {
     setIsMenuOpen(false)
@@ -88,7 +106,11 @@ const Navbar = ({ videoEnded = false }) => {
     <>
       <nav
         id="navbar"
+<<<<<<< HEAD
         className={`fixed top-0 left-0 w-full px-5 py-4 flex items-center justify-between transition-all duration-500 ease-out ${shouldShow && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+=======
+        className={`fixed top-0 left-0 w-full px-5 py-4 flex items-center justify-between transition-all duration-500 ease-out ${shouldShow ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           }`}
         style={{
           background: isScrolled
@@ -111,8 +133,13 @@ const Navbar = ({ videoEnded = false }) => {
               ? '0 4px 16px rgba(0, 0, 0, 0.2)'
               : '0 4px 16px rgba(0, 0, 0, 0.05)',
           zIndex: 1000,
+<<<<<<< HEAD
           pointerEvents: shouldShow && isVisible ? 'auto' : 'none',
           transform: shouldShow && isVisible ? 'translateY(0)' : 'translateY(-100%)',
+=======
+          pointerEvents: shouldShow ? 'auto' : 'none',
+          transform: shouldShow ? 'translateY(0)' : 'translateY(-100%)',
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
         }}
       >
         <Link
@@ -205,7 +232,11 @@ const Navbar = ({ videoEnded = false }) => {
 
       {/* Dropdown Menu */}
       <div
+<<<<<<< HEAD
         className={`fixed top-16 right-5 backdrop-blur-xl rounded-2xl shadow-2xl transition-all duration-300 ease-out z-[999] ${isMenuOpen && shouldShow && isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
+=======
+        className={`fixed top-16 right-5 backdrop-blur-xl rounded-2xl shadow-2xl transition-all duration-300 ease-out z-[999] ${isMenuOpen && shouldShow ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
+>>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           }`}
         style={{
           minWidth: '200px',
