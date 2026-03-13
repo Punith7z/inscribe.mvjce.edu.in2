@@ -3,11 +3,7 @@ import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 const About = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
-<<<<<<< HEAD
-    type: 'scale'
-=======
     type: 'fade-in'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
   })
 
   return (
@@ -22,11 +18,7 @@ const About = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto glass-effect card-gradient rounded-3xl p-10 text-center relative z-10 hover-glow glass-card group overflow-hidden">
-=======
         <div className="max-w-4xl mx-auto liquid-glass card-gradient rounded-3xl p-10 text-center relative z-10 hover-glow glass-card group overflow-hidden">
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
           <p className="text-base leading-relaxed text-gray-800 relative z-10">
             Welcome to Inscribe — where tech meets creativity, and ideas become reality.

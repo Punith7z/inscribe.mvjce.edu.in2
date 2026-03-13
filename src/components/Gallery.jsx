@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
-
-const Gallery = () => {
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
-
-=======
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 
 const Gallery = () => {
@@ -15,7 +7,6 @@ const Gallery = () => {
   })
 
   // Original images
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
   const galleryImages = [
     '/images/gallery 1.jpg',
     '/images/gallery 2.jpg',
@@ -25,69 +16,13 @@ const Gallery = () => {
     '/images/gallery 6.jpg'
   ]
 
-<<<<<<< HEAD
-  const [selectedImage, setSelectedImage] = useState(null)
-=======
   // Double the images for seamless infinite scroll
   const scrollImages = [...galleryImages, ...galleryImages]
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
 
   return (
     <section
       id="gallery"
       ref={ref}
-<<<<<<< HEAD
-      className="py-16 px-5 relative min-h-[60vh] flex flex-col items-center justify-center"
-    >
-      <div
-        className={`transition-all duration-1000 ease-out ${isVisible
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10'
-          }`}
-      >
-        <h2 className="section-title text-4xl mb-12 text-center text-heading font-montserrat font-bold relative pb-4">
-          Gallery
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedImage(image)}
-              className="relative overflow-hidden rounded-2xl cursor-pointer group glass-effect card-gradient border border-black/5 hover-glow glass-card"
-            >
-              <img
-                src={image}
-                alt={`Gallery ${index + 1}`}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Lightbox Modal */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              className="absolute top-5 right-5 text-white text-4xl font-bold hover:text-accent-2 transition-colors"
-              onClick={() => setSelectedImage(null)}
-            >
-              &times;
-            </button>
-            <img
-              src={selectedImage}
-              alt="Gallery"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        )}
-=======
       className={`py-20 px-5 relative min-h-screen flex items-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
         }`}
     >
@@ -148,7 +83,6 @@ const Gallery = () => {
           </div>
         </div>
 
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
       </div>
     </section>
   )

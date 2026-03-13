@@ -1,10 +1,5 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-<<<<<<< HEAD
-import AnimatedBackground from '../components/AnimatedBackground'
-=======
-
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
 import Hero from '../components/Hero'
 import About from '../components/About'
 import WhatWeDo from '../components/WhatWeDo'
@@ -31,32 +26,6 @@ const Home = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen home-root" style={{ position: 'relative' }}>
-      <AnimatedBackground />
-      <Hero onVideoEnd={handleVideoEnd} />
-      <Navbar videoEnded={videoEnded} />
-      <About />
-        
-      <WhatWeDo />
-      <WhoWeAre />
-      <Domains />
-      
-      <section id="teams">
-               <Leadership />
-      </section>
-
-      <TalentSpotlight />
-      <TalentTree />
-      <EventsPreview />
-      <RegistrationSection />
-      <WhatsNext />
-      <WhyJoin />
-      <Gallery />
-      <ReadyToInscribe />
-      <Contact />
-      <Footer />
-=======
     <div className="home-root snap-container overflow-x-hidden" style={{ position: 'relative' }}>
 
       <section className="snap-section">
@@ -103,7 +72,6 @@ const Home = () => {
         <Footer />
       </section>
 
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
     </div>
   )
 }
