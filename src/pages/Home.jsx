@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import AnimatedBackground from '../components/AnimatedBackground'
+
 import Hero from '../components/Hero'
 import About from '../components/About'
 import WhatWeDo from '../components/WhatWeDo'
@@ -27,30 +27,52 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen home-root" style={{ position: 'relative' }}>
-      <AnimatedBackground />
-      <Hero onVideoEnd={handleVideoEnd} />
-      <Navbar videoEnded={videoEnded} />
-      <About />
-        
-      <WhatWeDo />
-      <WhoWeAre />
-      <Domains />
-      
-      <section id="teams">
-               <Leadership />
+    <div className="home-root snap-container overflow-x-hidden" style={{ position: 'relative' }}>
+
+      <section className="snap-section">
+        <Hero onVideoEnd={handleVideoEnd} />
+        <Navbar videoEnded={videoEnded} />
       </section>
 
-      <TalentSpotlight />
-      <TalentTree />
-      <EventsPreview />
-      <RegistrationSection />
-      <WhatsNext />
-      <WhyJoin />
-      <Gallery />
-      <ReadyToInscribe />
-      <Contact />
-      <Footer />
+      <section className="snap-section flex flex-col justify-center">
+        <About />
+        <WhatWeDo />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <WhoWeAre />
+        <Domains />
+      </section>
+
+      <section id="teams" className="snap-section flex flex-col justify-center">
+        <Leadership />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <TalentSpotlight />
+        <TalentTree />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <EventsPreview />
+        <RegistrationSection />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <WhatsNext />
+        <WhyJoin />
+      </section>
+
+      <section className="snap-section flex flex-col justify-center">
+        <Gallery />
+        <ReadyToInscribe />
+      </section>
+
+      <section className="w-full flex flex-col">
+        <Contact />
+        <Footer />
+      </section>
+
     </div>
   )
 }

@@ -131,7 +131,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#E1306C] hover:text-white"
               >
                 <i className="fab fa-instagram"></i>
               </a>
@@ -141,7 +141,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#333] hover:text-white"
               >
                 <i className="fab fa-github"></i>
               </a>
@@ -151,7 +151,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5"
+                className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#0077B5] hover:text-white"
               >
                 <i className="fab fa-linkedin"></i>
               </a>

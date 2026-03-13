@@ -3,7 +3,7 @@ import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 const WhyJoin = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
-    type: 'fade-in'
+    type: 'scale'
   })
 
   const reasons = [
@@ -66,7 +66,7 @@ const WhyJoin = () => {
               {[...reasons, ...reasons].map((reason, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-[350px] glass-effect card-gradient rounded-3xl p-8 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
+                  className="flex-shrink-0 w-[350px] liquid-glass card-gradient rounded-3xl p-8 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
 
