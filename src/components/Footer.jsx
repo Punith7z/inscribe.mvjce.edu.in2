@@ -18,21 +18,12 @@ const Footer = () => {
 
   return (
     <footer
-<<<<<<< HEAD
-      className={`w-full py-12 px-5 border-t transition-all duration-300 ${theme === 'dark'
-          ? 'border-green-500/20'
-          : 'border-black/10'
-        }`}
-      style={{
-        backgroundColor: theme === 'dark' ? '#0a0f1c' : '#fcf4d7'
-=======
       className={`w-full py-12 px-5 border-t transition-all duration-300 liquid-glass mt-12 ${theme === 'dark'
         ? 'border-green-500/20'
         : 'border-black/10'
         }`}
       style={{
         backgroundColor: theme === 'dark' ? 'rgba(10, 15, 28, 0.4)' : 'rgba(252, 244, 215, 0.4)'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
       }}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -65,13 +56,8 @@ const Footer = () => {
           <a
             href="mailto:inscribe.mvjce@gmail.com"
             className={`footer-link text-sm font-medium inline-block ${theme === 'dark'
-<<<<<<< HEAD
-                ? 'text-gray-300'
-                : 'text-accent-2 hover:text-heading'
-=======
               ? 'text-gray-300'
               : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
               }`}
           >
             inscribe.mvjce@gmail.com
@@ -89,13 +75,8 @@ const Footer = () => {
               <Link
                 to="/team"
                 className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-<<<<<<< HEAD
-                    ? 'text-gray-300'
-                    : 'text-accent-2 hover:text-heading'
-=======
                   ? 'text-gray-300'
                   : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
                   }`}
               >
                 Our Domains
@@ -105,13 +86,8 @@ const Footer = () => {
               <button
                 onClick={() => handleNavClick('leadership')}
                 className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-<<<<<<< HEAD
-                    ? 'text-gray-300'
-                    : 'text-accent-2 hover:text-heading'
-=======
                   ? 'text-gray-300'
                   : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
                   }`}
               >
                 Meet Our Team
@@ -121,13 +97,8 @@ const Footer = () => {
               <Link
                 to="/events"
                 className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-<<<<<<< HEAD
-                    ? 'text-gray-300'
-                    : 'text-accent-2 hover:text-heading'
-=======
                   ? 'text-gray-300'
                   : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
                   }`}
               >
                 Events
@@ -137,13 +108,8 @@ const Footer = () => {
               <Link
                 to="/register"
                 className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-<<<<<<< HEAD
-                    ? 'text-gray-300'
-                    : 'text-accent-2 hover:text-heading'
-=======
                   ? 'text-gray-300'
                   : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
                   }`}
               >
                 Registration
@@ -153,13 +119,8 @@ const Footer = () => {
               <button
                 onClick={() => handleNavClick('contact')}
                 className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-<<<<<<< HEAD
-                    ? 'text-gray-300'
-                    : 'text-accent-2 hover:text-heading'
-=======
                   ? 'text-gray-300'
                   : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
                   }`}
               >
                 Contact Us
@@ -179,15 +140,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/inscribe-mvjce"
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
-                theme === 'dark'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-blue text-white hover:from-[#0077B5] hover:to-[#0077B5]'
-                  : 'bg-accent-2/10 hover:bg-[#0077B5] text-accent-2 hover:text-white'
-              }`}
-=======
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#0077B5] hover:text-white"
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
             >
               <i className="fab fa-linkedin text-lg"></i>
             </a>
@@ -195,15 +148,7 @@ const Footer = () => {
               href="https://github.com/inscribe-mvjce"
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
-                theme === 'dark'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-blue text-white hover:from-[#333] hover:to-[#333]'
-                  : 'bg-accent-2/10 hover:bg-[#333] text-accent-2 hover:text-white'
-              }`}
-=======
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#333] hover:text-white"
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
             >
               <i className="fab fa-github text-lg"></i>
             </a>
@@ -211,15 +156,7 @@ const Footer = () => {
               href="https://www.instagram.com/inscribe_mvjce"
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 ${
-                theme === 'dark'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-blue text-white hover:from-[#E1306C] hover:to-[#E1306C]'
-                  : 'bg-accent-2/10 hover:bg-[#E1306C] text-accent-2 hover:text-white'
-              }`}
-=======
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#E1306C] hover:text-white"
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
             >
               <i className="fab fa-instagram text-lg"></i>
             </a>
@@ -241,13 +178,8 @@ const Footer = () => {
         <div className="flex gap-6 text-sm">
           <button
             className={`footer-link cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-<<<<<<< HEAD
-                ? 'text-gray-300'
-                : 'text-accent-2 hover:text-heading'
-=======
               ? 'text-gray-300'
               : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
               }`}
           >
             Privacy Policy
@@ -255,13 +187,8 @@ const Footer = () => {
           <span className={theme === 'dark' ? 'text-gray-600' : 'text-gray-400'}>•</span>
           <button
             className={`footer-link cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-<<<<<<< HEAD
-                ? 'text-gray-300'
-                : 'text-accent-2 hover:text-heading'
-=======
               ? 'text-gray-300'
               : 'text-accent-2 hover:text-heading'
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
               }`}
           >
             Terms of Service

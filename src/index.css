@@ -33,11 +33,7 @@
 
   /* Dark Theme */
   [data-theme="dark"] body {
-<<<<<<< HEAD
-    background: transparent; /* Transparent to show Spline background */
-=======
     background: #0a0a0a;
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
     color: #e5e7eb;      /* Light text */
   }
 
@@ -367,8 +363,6 @@
 .scroll-stagger-4 { transition-delay: 0.4s; }
 .scroll-stagger-5 { transition-delay: 0.5s; }
 
-<<<<<<< HEAD
-=======
 @layer utilities {
   .snap-container {
     /* scroll-snap-type: y mandatory; - Removed as per user request */
@@ -450,4 +444,3 @@
 }
 
 
->>>>>>> edd1fe69b5b00448b228ce57f35a6e8bde864164
