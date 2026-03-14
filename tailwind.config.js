@@ -23,8 +23,8 @@ export default {
         'brand-dark': '#0a0a0a',
       },
       fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        'montserrat': ['Lora', 'serif'],
+        'poppins': ['Lora', 'serif'],
       },
       backgroundImage: {
         'gradient-bg': 'linear-gradient(135deg, #FFFCE0 0%, #FCF4D7 50%, #FAEDCD 100%)',
