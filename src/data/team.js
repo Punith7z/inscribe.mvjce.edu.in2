@@ -49,9 +49,9 @@ export const domainLeads = [
     domain: "Web Development",
     image: "/images/Hari.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/harismitha24/?hl=en",
+      github: "https://github.com/Harismitha24",
+      linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"
     }
   },
   {
@@ -85,9 +85,9 @@ export const domainLeads = [
     domain: "Content Writing",
     image: "/images/musrat.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+      github: "https://github.com/Mussarrat-cod",
+      linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
   },
   {
@@ -101,18 +101,6 @@ export const domainLeads = [
       github: "https://github.com/dev-1708",
       linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275",
     }
-  },
-  {
-    id: 6,
-    name: "Mohammad Sahif Beary",
-    role: "Hack Lead",
-    domain: "Hackathon",
-    image: "/images/sahib.jpg",
-    social: {
-      instagram: "https://www.instagram.com/sahifmohammad12",
-      github:"https://github.com/sahifmohammad12 ",
-      linkedin: "https://www.linkedin.com/in/mohammad-sahif-beary-53983230a",
-    }
   }
 ];
 
@@ -122,6 +110,31 @@ export const teamMembers = [
   // Structure: { domain: 'Domain Name', members: [{ id, name, role, image, social: {} }] } {
   {
     domain: 'animation', members: [
+      {
+      id: 2,
+      name: "Manjula P",
+      role: "Animation Lead",
+      domain: "Animation",
+      image: "/images/manjula.jpg",
+      social:{
+        instagram: "https://www.instagram.com/mount_dragon67?igsh=dWN3NXMyMGJmeXVt",
+        github:"https://github.com/ManjulaP1563" ,
+        linkedin: "https://www.linkedin.com/in/manjula-p-bb1924340",
+      }
+
+      },
+      {
+      id: 2,
+      name: 'Nithish',
+      role: 'Vice President',
+      image: '/images/nithish.jpg',
+      domain: '',
+      social :{
+        linkedin:"https://www.linkedin.com/in/nitesh-patil-11b338297/" ,
+        github:"https://github.com/Nitishkumar-eng ",
+        instagram: "https://www.instagram.com/niteshpatil_5518/",
+      }
+      },
       {
         id: 1,
         name: "Bhuvana Shree N",
@@ -177,6 +190,30 @@ export const teamMembers = [
   },
   {
     domain: 'content', members: [
+      {
+      id: 4,
+      name: "Mussarrat Kittur",
+      role: "Content Lead",
+      domain: "Content Writing",
+      image: "/images/musrat.jpg",
+      social: {
+          instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+          github: "https://github.com/Mussarrat-cod",
+          linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        }
+      },
+      {
+      id: 1,
+      name: 'Anu V',
+      role: 'President',
+      image: '/images/Anu.jpg',
+      domain: '',
+      social:{
+        linkedin:"https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+        github: "https://github.com/anuv90730",
+        instagram: ""
+      }
+      },
       {
         id: 6,
         name: "Tanushitha V",
@@ -241,6 +278,18 @@ export const teamMembers = [
   },
   {
     domain: 'development', members: [
+      {
+      id: 1,
+      name: "Harismitha G",
+      role: "Development Lead",
+      domain: "Web Development",
+      image: "/images/Hari.jpg",
+      social:{
+        instagram: "https://www.instagram.com/harismitha24/?hl=en",
+        github: "https://github.com/Harismitha24",
+        linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"     
+      }
+      },
       {
         id: 12,
         name: "L V Nivethan",
@@ -372,6 +421,18 @@ export const teamMembers = [
   {
     domain: 'design', members: [
       {
+        id: 3,
+        name: "Diya Mariam Oommen",
+        role: "Digital Design Lead",
+        domain: "Design & Arts",
+        image: "/images/diya.jpg",
+        social: {
+          instagram: "https://www.instagram.com/torrous_29/",
+          github: "https://github.com/D1yaMO",
+          linkedin: "http://www.linkedin.com/in/diya-oommen-428279302"
+        }
+      },
+      {
         id: 25,
         name: "Johanaz Nadaf",
         image: "/images/Johanaz_Nadaf.jpg",
@@ -478,7 +539,7 @@ export const teamMembers = [
       {
         id: 33,
         name: "GURUDEV S HIREMATH",
-        image: "/images/sahib.jpg",
+        image: "/images/dev.jpg",
         social: { instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
            github: "https://github.com/dev-1708", 
           linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275" }
