@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider>
       <SmoothScroll>
         <Router>
-          <div className="w-full overflow-x-hidden relative">
+          <div className="w-full relative">
             <Background3D />
             <ScrollToTop />
             <Routes>

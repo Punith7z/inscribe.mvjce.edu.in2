@@ -29,7 +29,7 @@ export const leadership = [
   },
   {
     id: 2,
-    name: 'Nithish',
+    name: 'Nitishkumar Patil',
     role: 'Vice President',
     image: '/images/nithish.jpg',
     domain: '',

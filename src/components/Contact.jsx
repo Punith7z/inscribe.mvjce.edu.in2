@@ -27,7 +27,7 @@ const Contact = () => {
 
             <div className="flex flex-wrap justify-center gap-6">
               <a
-                href="mailto:contact@inscribe.com"
+                href="mailto:inscribe.mvjce24@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-[#73634F] dark:text-white bg-transparent border-2 border-transparent dark:border-[#ED3E21] shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 dark:hover:bg-[#ED3E21]/60"
               >
                 <i className="fas fa-envelope text-2xl"></i>

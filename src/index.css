@@ -8,7 +8,7 @@
   }
   
   html {
-    @apply scroll-smooth;
+    
   }
   
   /* Light Theme (Default) */
@@ -28,6 +28,10 @@
 
   .hero-bg {
     background-color: #fcf4d7;
+    background-image: url('/images/light_theme_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: background-color 0.3s ease;
   }
 
@@ -42,7 +46,8 @@
   }
 
   [data-theme="dark"] .hero-bg {
-    background-color: transparent;
+    background-color: #0a0a0a;
+    background-image: none !important;
   }
 
   [data-theme="dark"] .bg-bg-1,
@@ -122,7 +127,7 @@
   .glass-effect:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 48px 0 rgba(255, 75, 75, 0.25);
     transform: translateY(-4px);
   }
 
@@ -202,7 +207,7 @@
 
   .hover-glow:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(255, 75, 75, 0.3);
   }
 
   [data-theme="dark"] .hover-glow:hover {
@@ -368,7 +373,7 @@
     /* scroll-snap-type: y mandatory; - Removed as per user request */
     min-height: 100vh;
     /* overflow-y: scroll; - Removed to allow normal document scroll */
-    scroll-behavior: smooth;
+    
   }
 
   .snap-section {
@@ -443,4 +448,23 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
