@@ -49,9 +49,9 @@ export const domainLeads = [
     domain: "Web Development",
     image: "/images/Hari.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/harismitha24/?hl=en",
+      github: "https://github.com/Harismitha24",
+      linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"
     }
   },
   {
@@ -85,9 +85,9 @@ export const domainLeads = [
     domain: "Content Writing",
     image: "/images/musrat.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+      github: "https://github.com/Mussarrat-cod",
+      linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
   },
   {
@@ -131,6 +131,30 @@ export const teamMembers = [
           github: "https://github.com/Bhuvana2505",
           linkedin: "https://www.linkedin.com/in/bhuvana-shree-n-4bba42259"
         }
+      },
+       {
+      id: 2,
+      name: "Manjula P",
+      role: "Animation Lead",
+      domain: "Animation",
+      image: "/images/manjula.jpg",
+      social:{
+        instagram: "https://www.instagram.com/mount_dragon67?igsh=dWN3NXMyMGJmeXVt",
+        github:"https://github.com/ManjulaP1563" ,
+        linkedin: "https://www.linkedin.com/in/manjula-p-bb1924340",
+      }
+    },
+    {
+      id: 3,
+      name: 'Nithish',
+      role: 'Vice President',
+      image: '/images/nithish.jpg',
+      domain: '',
+      social :{
+        linkedin:"https://www.linkedin.com/in/nitesh-patil-11b338297/" ,
+        github:"https://github.com/Nitishkumar-eng ",
+        instagram: "https://www.instagram.com/niteshpatil_5518/",
+      }
       },
       {
         id: 2,
@@ -177,8 +201,32 @@ export const teamMembers = [
   },
   {
     domain: 'content', members: [
+       {
+      id:6 ,
+      name: "Mussarrat Kittur",
+      role: "Content Lead",
+      domain: "Content Writing",
+      image: "/images/musrat.jpg",
+      social: {
+          instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+          github: "https://github.com/Mussarrat-cod",
+          linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        }
+      },
       {
-        id: 6,
+      id: 7,
+      name: 'Anu V',
+      role: 'President',
+      image: '/images/Anu.jpg',
+      domain: '',
+      social:{
+        linkedin:"https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+        github: "https://github.com/anuv90730",
+        instagram: ""
+      }
+      },
+      {
+        id: 8,
         name: "Tanushitha V",
         image: "/images/Tanushitha V.jpg",
         social: {
@@ -188,7 +236,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 7,
+        id: 9,
         name: "Chandana Shree",
         image: "/images/Chandana Shree.jpg",
         social: {
@@ -198,7 +246,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 8,
+        id: 10,
         name: "Divyashree R",
         image: "/images/Divyashree R.jpg",
         social: {
@@ -208,7 +256,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 9,
+        id: 11,
         name: "A Lavanya",
         image: "/images/A LAVANYA.jpeg",
         social: {
@@ -218,7 +266,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 10,
+        id: 12,
         name: "Pallavi vajramatti",
         image: "/images/Pallavi Vajramatti.jpg",
         social: {
@@ -228,7 +276,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 11,
+        id: 13,
         name: "Riya",
         image: "/images/RIYA.jpg",
         social: {
@@ -242,7 +290,19 @@ export const teamMembers = [
   {
     domain: 'development', members: [
       {
-        id: 12,
+      id: 14,
+      name: "Harismitha G",
+      role: "Development Lead",
+      domain: "Web Development",
+      image: "/images/Hari.jpg",
+      social:{
+        instagram: "https://www.instagram.com/harismitha24/?hl=en",
+        github: "https://github.com/Harismitha24",
+        linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"     
+      }
+      },
+      {
+        id: 15,
         name: "L V Nivethan",
         image: "/images/Nivethan.jpg",
         social: {
@@ -252,7 +312,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 13,
+        id: 16,
         name: "Nityashree Shanbhag",
         image: "/images/Nityashree.jpg",
         social: {
@@ -262,7 +322,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 14,
+        id: 17,
         name: "Rajaneesh G A",
         image: "/images/Rajaneesh G A .jpg",
         social: {
@@ -272,7 +332,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 15,
+        id: 18,
         name: "Soujanya Maharudra",
         image: "/images/Soujanya_Maharudra.jpeg",
         social: {
@@ -282,7 +342,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 16,
+        id: 19,
         name: "Rohan Badmi",
         image: "/images/inslogo.jpg",
         social: {
@@ -292,7 +352,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 17,
+        id: 20,
         name: "Jeevitha A",
         image: "/images/Jeevitha A.jpg",
         social: {
@@ -302,7 +362,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 18,
+        id: 21,
         name: "Maclin Florida S",
         image: "/images/Maclin.jpg",
         social: {
@@ -312,7 +372,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 19,
+        id: 22,
         name: "C Varun",
         image: "/images/C Varun.png",
         social: {
@@ -322,7 +382,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 20,
+        id: 23,
         name: "Chinthan M",
         image: "/images/chinthan.jpg",
         social: {
@@ -332,7 +392,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 21,
+        id: 24,
         name: "Chithra R",
         image: "/images/Chitra.jpg",
         social: {
@@ -342,7 +402,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 22,
+        id: 25,
         name: "Dhanush N",
         image: "/images/Dhanush N.jpg",
         social: {
@@ -352,7 +412,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 23,
+        id: 26,
         name: "Manojna M Bhat",
         image: "/images/manojna.png",
         social: {
@@ -362,7 +422,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 24,
+        id: 27,
         name: "Aravind VS",
         image: "/images/arvind.jpg",
         social: {
@@ -372,7 +432,7 @@ export const teamMembers = [
         }
       },
        {
-        id: 25,
+        id: 28,
         name: "Akashay H",
         image: "/images/Akshay H.png",
         social: {
@@ -382,7 +442,7 @@ export const teamMembers = [
         }
       },
        {
-        id: 26,
+        id: 29,
         name: "Basavakiran",
         image: "/images/Baswakiran.jpg",
         social: {
@@ -392,7 +452,7 @@ export const teamMembers = [
         }
       },
        {
-        id: 27,
+        id: 30,
         name: "Aishwarya s",
         image: "/images/Nivethan.jpg",
         social: {
@@ -402,7 +462,7 @@ export const teamMembers = [
         }
       },
        {
-        id: 28,
+        id: 31,
         name: "Arjun BS",
         image: "/images/A^2BS.jpg",
         social: {
@@ -415,8 +475,20 @@ export const teamMembers = [
   },
   {
     domain: 'design', members: [
+       {
+        id: 32,
+        name: "Diya Mariam Oommen",
+        role: "Digital Design Lead",
+        domain: "Design & Arts",
+        image: "/images/diya.jpg",
+        social: {
+          instagram: "https://www.instagram.com/torrous_29/",
+          github: "https://github.com/D1yaMO",
+          linkedin: "http://www.linkedin.com/in/diya-oommen-428279302"
+        }
+      },
       {
-        id: 29,
+        id: 33,
         name: "Johanaz Nadaf",
         image: "/images/Johanaz_Nadaf.jpg",
         social: {
@@ -426,7 +498,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 30,
+        id: 34,
         name: "KHUSHWANTH K K",
         image: "/images/KHUSHWANTH.JPG",
         social: {
@@ -436,7 +508,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 31,
+        id: 35,
         name: "Drishti Luthra",
         image: "/images/inslogo.jpg",
         social: {
@@ -446,7 +518,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 32,
+        id: 36,
         name: "Lekhana Gowda",
         image: "/images/lekhana.jpg",
         social: {
@@ -456,7 +528,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 33,
+        id: 37,
         name: "Poornisha Purushothaman",
         image: "/images/Poornisha Purushothaman.jpg",
         social: {
@@ -466,7 +538,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 34,
+        id: 38,
         name: "Akshatha M Shet",
         image: "/images/Akshatha M Shet_.jpg",
         social: {
@@ -476,7 +548,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 35,
+        id: 39,
         name: "Siri Reddy K",
         image: "/images/Siri Reddy K.jpg",
         social: {
@@ -486,7 +558,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 36,
+        id: 40,
         name: "Vismaya M",
         image: "/images/Vismaya M.jpg",
         social: {
@@ -496,7 +568,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 41,
         name: "Vaishnavi Solpure",
         image: "/images/Vaishnavi Solpure.png",
         social: {
@@ -506,7 +578,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 38,
+        id: 42,
         name: "Charitha S",
         image: "/images/Charitha S.jpg",
         social: {
@@ -520,7 +592,7 @@ export const teamMembers = [
   {
     domain: 'media', members: [
       {
-        id: 39,
+        id: 43,
         name: "GURUDEV S HIREMATH",
         image: "/images/sahib.jpg",
         social: { instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
@@ -528,7 +600,7 @@ export const teamMembers = [
           linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275" }
       },
       {
-        id: 40,
+        id: 44,
         name: "Naveen R",
         image: "/images/Naveen R.jpg",
         social: {
@@ -538,7 +610,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 41,
+        id: 45,
         name: "Peerzada Muhammad Akeel Masoodi",
         image: "/images/Akeel.jpg",
         social: {
@@ -548,7 +620,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 42,
+        id: 46,
         name: "Chiranthan M",
         image: "/images/Chiranthan M.png",
         social: {
@@ -558,7 +630,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 43,
+        id: 47,
         name: "Nivetha.H",
         image: "/images/Nivetha.H.jpg",
         social: {
