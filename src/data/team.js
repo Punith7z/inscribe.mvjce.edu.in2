@@ -22,9 +22,9 @@ export const leadership = [
     image: '/images/Anu.jpg',
     domain: '',
     social: {
-      linkedin:"https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+      linkedin: "https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
       github: "https://github.com/anuv90730",
-      instagram: "",
+      instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
     }
   },
   {
@@ -34,8 +34,8 @@ export const leadership = [
     image: '/images/nithish.jpg',
     domain: '',
     social: {
-      linkedin:"https://www.linkedin.com/in/nitesh-patil-11b338297/" ,
-      github:"https://github.com/Nitishkumar-eng ",
+      linkedin: "https://www.linkedin.com/in/nitesh-patil-11b338297/",
+      github: "https://github.com/Nitishkumar-eng ",
       instagram: "https://www.instagram.com/niteshpatil_5518/",
     }
   }
@@ -49,9 +49,9 @@ export const domainLeads = [
     domain: "Web Development",
     image: "/images/Hari.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/harismitha24/?hl=en",
+      github: "https://github.com/Harismitha24",
+      linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"
     }
   },
   {
@@ -62,7 +62,7 @@ export const domainLeads = [
     image: "/images/manjula.jpg",
     social: {
       instagram: "https://www.instagram.com/mount_dragon67?igsh=dWN3NXMyMGJmeXVt",
-      github:"https://github.com/ManjulaP1563" ,
+      github: "https://github.com/ManjulaP1563",
       linkedin: "https://www.linkedin.com/in/manjula-p-bb1924340",
     }
   },
@@ -85,9 +85,9 @@ export const domainLeads = [
     domain: "Content Writing",
     image: "/images/musrat.jpg",
     social: {
-      instagram: "#",
-      github: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+      github: "https://github.com/Mussarrat-cod",
+      linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
   },
   {
@@ -100,18 +100,6 @@ export const domainLeads = [
       instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
       github: "https://github.com/dev-1708",
       linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275",
-    }
-  },
-  {
-    id: 6,
-    name: "Mohammad Sahif Beary",
-    role: "Hack Lead",
-    domain: "Hackathon",
-    image: "/images/sahib.jpg",
-    social: {
-      instagram: "https://www.instagram.com/sahifmohammad12",
-      github:"https://github.com/sahifmohammad12 ",
-      linkedin: "https://www.linkedin.com/in/mohammad-sahif-beary-53983230a",
     }
   }
 ];
@@ -134,11 +122,35 @@ export const teamMembers = [
       },
       {
         id: 2,
+        name: "Manjula P",
+        role: "Animation Lead",
+        domain: "Animation",
+        image: "/images/manjula.jpg",
+        social: {
+          instagram: "https://www.instagram.com/mount_dragon67?igsh=dWN3NXMyMGJmeXVt",
+          github: "https://github.com/ManjulaP1563",
+          linkedin: "https://www.linkedin.com/in/manjula-p-bb1924340",
+        }
+      },
+      {
+        id: 3,
+        name: 'Nithish',
+        role: 'Vice President',
+        image: '/images/nithish.jpg',
+        domain: '',
+        social: {
+          linkedin: "https://www.linkedin.com/in/nitesh-patil-11b338297/",
+          github: "https://github.com/Nitishkumar-eng ",
+          instagram: "https://www.instagram.com/niteshpatil_5518/",
+        }
+      },
+      {
+        id: 2,
         name: "janani.m",
         image: "/images/janani.jpg",
         social: {
           instagram: "https://www.instagram.com/arts.ncats?igsh=M2xta2hibDBtcDdk",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         }
       },
@@ -148,7 +160,7 @@ export const teamMembers = [
         image: "/images/Sree Lakshmi U Krishnan - Copy.jpg",
         social: {
           instagram: "https://www.instagram.com/sree_lak05?igsh=bjlqdWhsM2wxd2Y0",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         }
       },
@@ -171,6 +183,36 @@ export const teamMembers = [
           github: "https://github.com/kamalsrinivasan04",
           linkedin: "https://www.linkedin.com/in/kamal-nayan-579445259",
         }
+      },
+      {
+        id: 6,
+        name: "Soumya",
+        image: "/images/Sowmyad.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 7,
+        name: "Sana",
+        image: "/images/sana.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 8,
+        name: "Lokesh",
+        image:"/images/Lokesh Rao S B .jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
       }
     ],
 
@@ -179,8 +221,32 @@ export const teamMembers = [
     domain: 'content', members: [
       {
         id: 6,
+        name: "Mussarrat Kittur",
+        role: "Content Lead",
+        domain: "Content Writing",
+        image: "/images/musrat.jpg",
+        social: {
+          instagram: "https://www.instagram.com/mussarat.kittur?igsh=dTVtdGRxMnd5ZWVq",
+          github: "https://github.com/Mussarrat-cod",
+          linkedin: "https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        }
+      },
+      {
+        id: 7,
+        name: 'Anu V',
+        role: 'President',
+        image: '/images/Anu.jpg',
+        domain: '',
+        social: {
+          linkedin: "https://www.linkedin.com/in/anu-v-795403318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+          github: "https://github.com/anuv90730",
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng=="
+        }
+      },
+      {
+        id: 8,
         name: "Tanushitha V",
-        image: "/images/Tanushitha V.jpg",
+        image: "/images/thanushitha.jpeg",
         social: {
           instagram: "https://www.instagram.com/thanos_1647/",
           github: "https://github.com/Chandana-033",
@@ -188,7 +254,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 7,
+        id: 9,
         name: "Chandana Shree",
         image: "/images/Chandana Shree.jpg",
         social: {
@@ -198,7 +264,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 8,
+        id: 10,
         name: "Divyashree R",
         image: "/images/Divyashree R.jpg",
         social: {
@@ -208,7 +274,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 9,
+        id: 11,
         name: "A Lavanya",
         image: "/images/A LAVANYA.jpeg",
         social: {
@@ -218,22 +284,42 @@ export const teamMembers = [
         }
       },
       {
-        id: 10,
+        id: 12,
         name: "Pallavi vajramatti",
         image: "/images/Pallavi Vajramatti.jpg",
         social: {
           instagram: "https://www.instagram.com/_pallavi_.v_",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/pallavi-vajramatti-763455361?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
       {
-        id: 11,
+        id: 13,
         name: "Riya",
         image: "/images/RIYA.jpg",
         social: {
           instagram: "https://www.instagram.com/iriya766?igsh=ZWtsOTU0N3F2azht",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 14,
+        name: "Anusha R K",
+        image: "/images/anusha r k.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/anusha-kulkarni-29678634b?"
+        }
+      },
+      {
+        id: 15,
+        name: "Meghana",
+        image: "/images/Meghana.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       }
@@ -242,17 +328,29 @@ export const teamMembers = [
   {
     domain: 'development', members: [
       {
-        id: 12,
-        name: "L V Nivethan",
-        image: "/images/Nivethan.jpg",
+        id: 14,
+        name: "Harismitha G",
+        role: "Development Lead",
+        domain: "Web Development",
+        image: "/images/Hari.jpg",
         social: {
-          instagram: "thatcurlyboiii",
+          instagram: "https://www.instagram.com/harismitha24/?hl=en",
+          github: "https://github.com/Harismitha24",
+          linkedin: "https://www.linkedin.com/in/harismitha-g-08a166306/"
+        }
+      },
+      {
+        id: 15,
+        name: "L V Nivethan",
+        image: "/images/NIVETHAN.png",
+        social: {
+          instagram: "https://www.instagram.com/thatcurlyboiii",
           github: "https://github.com/Nivethan-41",
           linkedin: "http://linkedin.com/in/iamnivethan/"
         }
       },
       {
-        id: 13,
+        id: 16,
         name: "Nityashree Shanbhag",
         image: "/images/Nityashree.jpg",
         social: {
@@ -262,17 +360,17 @@ export const teamMembers = [
         }
       },
       {
-        id: 14,
+        id: 17,
         name: "Rajaneesh G A",
         image: "/images/Rajaneesh G A .jpg",
         social: {
           instagram: "https://www.instagram.com/_rajaneesh_ga_?igsh=MTdieW82N21wYmwxYg==",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/rajaneesh-ga-786753299"
         }
       },
       {
-        id: 15,
+        id: 18,
         name: "Soujanya Maharudra",
         image: "/images/Soujanya_Maharudra.jpeg",
         social: {
@@ -282,17 +380,17 @@ export const teamMembers = [
         }
       },
       {
-        id: 16,
+        id: 19,
         name: "Rohan Badmi",
-        image: "/images/inslogo.jpg",
+        image: "/images/RohanBadami.jpg.jpeg",
         social: {
-          instagram: "",
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/badmirohan01",
           linkedin: "https://linkedin.com/in/rohan-badmi-57504827a"
         }
       },
       {
-        id: 17,
+        id: 20,
         name: "Jeevitha A",
         image: "/images/Jeevitha A.jpg",
         social: {
@@ -302,7 +400,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 18,
+        id: 21,
         name: "Maclin Florida S",
         image: "/images/Maclin.jpg",
         social: {
@@ -312,17 +410,17 @@ export const teamMembers = [
         }
       },
       {
-        id: 19,
+        id: 22,
         name: "C Varun",
         image: "/images/C Varun.png",
         social: {
-          instagram: "",
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/c-varun14/",
           linkedin: "https://www.linkedin.com/in/c-varun/"
         }
       },
       {
-        id: 20,
+        id: 23,
         name: "Chinthan M",
         image: "/images/chinthan.jpg",
         social: {
@@ -332,7 +430,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 21,
+        id: 24,
         name: "Chithra R",
         image: "/images/Chitra.jpg",
         social: {
@@ -342,37 +440,144 @@ export const teamMembers = [
         }
       },
       {
-        id: 22,
+        id: 25,
         name: "Dhanush N",
         image: "/images/Dhanush N.jpg",
-        social: { instagram: "", github: "", linkedin: "" }
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
       },
       {
-        id: 23,
+        id: 26,
         name: "Manojna M Bhat",
         image: "/images/manojna.png",
         social: {
           instagram: "https://www.instagram.com/manojna_m_bhat?igsh=cnFjcmtpNmVkeXRx",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/manojna-m-bhat/"
         }
       },
       {
-        id: 24,
-        name: "Aravind VS",
-        image: "/images/arvind.jpg",
+        id: 52,
+        name: "Hithashree B C",
+        image: "/images/hithashree.jpg.jpeg",
         social: {
-          instagram: "https://www.instagram.com/aravind_vadekkemadom?igsh=MWVkZXp1enh0ZGlhag==",
-          github: "",
-          linkedin: "https://www.linkedin.com/in/aravind-vadekkemadom"
+          instagram: "https://www.instagram.com/hitha_.c._gowda/?hl=en",
+          github: "https://github.com/Hithashree1023",
+          linkedin: "https://www.linkedin.com/in/hithashree-b-c-13a6b735a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
         }
-      }
+      },
+      {
+        id: 28,
+        name: "Akshay H",
+        image: "/images/Akshay H.png",
+        social: {
+          instagram: "https://www.instagram.com/akshay_20052024/",
+          github: "https://github.com/Akshayikify",
+          linkedin: "www.linkedin.com/in/akshay-h-335abb293"
+        }
+      },
+      {
+        id: 29,
+        name: "Baswakiran",
+        image: "/images/Baswakiran.jpg",
+        social: {
+          instagram: "https://www.instagram.com/baswakiran__hattyal/",
+          github: "https://github.com/Baswakiran-BH",
+          linkedin: "https://www.linkedin.com/in/baswakiran-hattyal-1485a9318/"
+        }
+      },
+      {
+        id: 30,
+        name: "Aishwarya s",
+        image: "/images/aishwarya S.jpg (1).jpeg",
+        social: {
+          instagram: "https://www.instagram.com/_.aishwarya_achar._?igsh=YWI3NDJvMm1raWU0&utm_source=ig_contact_invite",
+          github: "https://github.com/aishsrinu5826-sys",
+          linkedin: "https://www.linkedin.com/in/aishwarya-s-15b6a8301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        }
+      },
+      {
+        id: 31,
+        name: "Arjun BS",
+        image: "/images/A^2BS.jpg",
+        social: {
+          instagram: "https://www.instagram.com/arjunbs2006/",
+          github: "https://www.instagram.com/arjunbs2006/",
+          linkedin: "https://www.linkedin.com/in/arjun-b-s-42b862324/"
+        }
+      },
+      {
+        id: 48,
+        name: "Nikhil Reddy",
+        image: "/images/Nikhilreddy.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 49,
+        name: "Saptaparno Ghosh",
+        image: "/images/Saptaparno.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 50,
+        name: "Yashwanth Reddy B S",
+        image: "/images/Yashwanth.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 51,
+        name: "Punith M",
+        image: "/images/PUNITH.png",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/Punith7z",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 51,
+        name: "Hemalatha S",
+        image: "/images/hemalatha.jpg",
+        social: {
+          instagram: "https://www.instagram.com/_justt.hemzz_?igsh=Yjg5ZzA3MzNvZ3B2",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/hemalatha-s-74850a320 "
+        }
+      },
+    
     ],
   },
   {
     domain: 'design', members: [
       {
-        id: 25,
+        id: 32,
+        name: "Diya Mariam Oommen",
+        role: "Digital Design Lead",
+        domain: "Design & Arts",
+        image: "/images/diya.jpg",
+        social: {
+          instagram: "https://www.instagram.com/torrous_29/",
+          github: "https://github.com/D1yaMO",
+          linkedin: "http://www.linkedin.com/in/diya-oommen-428279302"
+        }
+      },
+      {
+        id: 33,
         name: "Johanaz Nadaf",
         image: "/images/Johanaz_Nadaf.jpg",
         social: {
@@ -382,7 +587,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 26,
+        id: 34,
         name: "KHUSHWANTH K K",
         image: "/images/KHUSHWANTH.JPG",
         social: {
@@ -391,18 +596,9 @@ export const teamMembers = [
           linkedin: "https://www.linkedin.com/in/khushwanth-k-k-0a1163281"
         }
       },
+    
       {
-        id: 27,
-        name: "Drishti Luthra",
-        image: "/images/inslogo.jpg",
-        social: {
-          instagram: "https://www.instagram.com/drishti.luthra?igsh=ZDN4aG5odHhxZmFk",
-          github: "",
-          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-        }
-      },
-      {
-        id: 28,
+        id: 36,
         name: "Lekhana Gowda",
         image: "/images/lekhana.jpg",
         social: {
@@ -412,37 +608,37 @@ export const teamMembers = [
         }
       },
       {
-        id: 27,
+        id: 37,
         name: "Poornisha Purushothaman",
         image: "/images/Poornisha Purushothaman.jpg",
         social: {
           instagram: "https://www.instagram.com/__.poornisha.__?igsh=eXE5ZHNhN2pubTds",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
       {
-        id: 28,
+        id: 38,
         name: "Akshatha M Shet",
         image: "/images/Akshatha M Shet_.jpg",
         social: {
           instagram: "https://www.instagram.com/akshatha._.shet?igsh=MTJ2ZGNudHpza2U5OQ==",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/akshatha-m-shet-21b17a398?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
       {
-        id: 29,
+        id: 39,
         name: "Siri Reddy K",
         image: "/images/Siri Reddy K.jpg",
         social: {
           instagram: "https://www.instagram.com/siriii_rk?igsh=MWU5MmF1ZHpwZWR1dA==",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
       {
-        id: 30,
+        id: 40,
         name: "Vismaya M",
         image: "/images/Vismaya M.jpg",
         social: {
@@ -452,17 +648,17 @@ export const teamMembers = [
         }
       },
       {
-        id: 31,
+        id: 41,
         name: "Vaishnavi Solpure",
         image: "/images/Vaishnavi Solpure.png",
         social: {
           instagram: "https://www.instagram.com/vaish_solpure",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/vaishnavi-solpure-686791357?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
         }
       },
       {
-        id: 32,
+        id: 42,
         name: "Charitha S",
         image: "/images/Charitha S.jpg",
         social: {
@@ -470,59 +666,185 @@ export const teamMembers = [
           github: "httphttps://github.com/charithacherrie",
           linkedin: "https://www.linkedin.com/in/charitha-s-5b51192ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
         }
-      }
+      },
+      {
+        id: 37,
+        name: "Charushree P",
+        image: "/images/Charu shree_.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Monika T",
+        image: "/images/Monika T.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Dharani vellaboina",
+        image: "/images/Dharani_vellaboina.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Manasa j y",
+        image: "/images/manasa.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Deeksha N",
+        image: "/images/Deeksha N.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Pranav",
+        image: "/images/Pranav.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+
     ],
   },
   {
     domain: 'media', members: [
       {
-        id: 33,
+        id: 43,
         name: "GURUDEV S HIREMATH",
-        image: "/images/sahib.jpg",
-        social: { instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
-           github: "https://github.com/dev-1708", 
-          linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275" }
+        image: "/images/dev1.jpg",
+        social: {
+          instagram: "https://www.instagram.com/dev_.1.7?igsh=MWFmZWJpdjFucDl2cA==",
+          github: "https://github.com/dev-1708",
+          linkedin: "https://www.linkedin.com/in/gurudev-s-hiremath-055588275"
+        }
       },
       {
-        id: 34,
+        id: 44,
         name: "Naveen R",
         image: "/images/Naveen R.jpg",
         social: {
           instagram: "https://www.instagram.com/naveenstar__?igsh=MjE2MWRtM3R4ZmJh",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/naveen-ramachandran-3067a2273"
         }
       },
       {
-        id: 35,
-        name: "Peerzada Muhammad Akeel Masoodi",
-        image: "/images/Akeel.jpg",
+        id: 45,
+        name: "Sanjana J ",
+        image: "/images/Sanjana J.jpg",
         social: {
-          instagram: "https://www.instagram.com/masoodiakeel?igsh=MW9id3E5cTYydjZhOQ==",
-          github: "",
-          linkedin: "https://www.linkedin.com/in/akeel-masoodi-4b332433b"
+          instagram: "https://www.instagram.com/itz.sanju_j?igsh=MWt5bTZkaHd3c3Y5Nw==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
       {
-        id: 36,
-        name: "Chiranthan M",
-        image: "/images/Chiranthan M.png",
-        social: {
-          instagram: "https://www.instagram.com/chiranthan._/",
-          github: "",
-          linkedin: "https://www.linkedin.com/in/chiranthan-m-210863328"
-        }
-      },
-      {
-        id: 37,
+        id: 47,
         name: "Nivetha.H",
         image: "/images/Nivetha.H.jpg",
         social: {
           instagram: "https://www.instagram.com/nivetha_.310._?igsh=MWJrMTY2Z2tlNWMweg==",
-          github: "",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/nivetha-harikrishnan-3ba671353"
         }
-      }
+      },
+      {
+        id: 47,
+        name: "Harini Y S ",
+        image: "/images/HARINI Y S.jpg",
+        social: {
+          instagram: "https://www.instagram.com/herarchivemaybe?igsh=MWpsZzdhb3R0c2h5MA==",
+          github: "https://github.com/harini-ys",
+          linkedin: "https://www.linkedin.com/in/harini-y-s-b23873358?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Ankitha",
+        image: "/images/Ankitha H P Gowda.jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name: "Shreya",
+        image: "/images/Shreya.C .jpg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name:"Subhasish Pothal",
+        image: "/images/Subhasish Pothal.jpg",
+        social: {
+          instagram: "https://www.instagram.com/subu_sai_asish?igsh=dGUyYm0yZ3ZoeWE3",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name:"Vaishnavi CK",
+        image: "/images/Vaishnavi C Kulkarni .jpg",
+        social: {
+          instagram: "https://www.instagram.com/vais_h1506?igsh=aHJ3YTYzb3F0dHJ3",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/vaishnavi-kulkarni-99aa49358?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name:"Varun S M",
+        image: "/images/Varun SM.jpg",
+        social: {
+          instagram: "https://www.instagram.com/varunn._.gowda?igsh=anRxc2hqam0weG5m",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        id: 37,
+        name:"Yashas D U",
+        image: "/images/Yashas D U.jpg",
+        social: {
+          instagram: "https://www.instagram.com/yashas_d_u?igsh=ZmVzNHpzd2k2b2Ni&utm_source=qr",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/yashas-d-u-a3642b38b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+      },
+
+
+
     ]
   }
 ]
