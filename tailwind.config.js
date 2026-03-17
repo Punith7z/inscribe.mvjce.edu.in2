@@ -28,8 +28,9 @@ export default {
         'brand-dark': '#0a0a0a',
       },
       fontFamily: {
-        'montserrat': ['Lora', 'serif'],
-        'poppins': ['Lora', 'serif'],
+        'montserrat': ['Apple Garamond', 'serif'],
+        'poppins': ['Apple Garamond', 'serif'],
+        'apple-garamond': ['Apple Garamond', 'serif'],
       },
       backgroundImage: {
         'gradient-bg': 'linear-gradient(135deg, #FDFBF9 0%, #F5EBE6 50%, #DAC1B1 100%)',
