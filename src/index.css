@@ -8,27 +8,43 @@
   }
   
   html {
-    @apply scroll-smooth;
+    
   }
   
   /* Light Theme (Default) */
   body {
     @apply m-0 p-0 overflow-x-hidden;
-    background: #fcf4d7;
-    color: theme('colors.accent-2');
+    background: #FDFBF9;
+    color: #A58570;
     font-family: 'Lora', serif;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .home-root {
-    background-color: #fcf4d7;
+    background-color: #FDFBF9;
     transition: background-color 0.3s ease;
   }
 
   .hero-bg {
-    background-color: #fcf4d7;
+    background-color: #FDFBF9;
+    position: relative;
+    overflow: hidden;
     transition: background-color 0.3s ease;
+  }
+
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/light_theme_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+    opacity: 0.7;
+    transform: scale(1.05);
+    z-index: -1;
   }
 
   /* Dark Theme */
@@ -42,7 +58,12 @@
   }
 
   [data-theme="dark"] .hero-bg {
-    background-color: transparent;
+    background-color: #0a0a0a;
+    background-image: none !important;
+  }
+
+  [data-theme="dark"] .hero-bg::before {
+    display: none;
   }
 
   [data-theme="dark"] .bg-bg-1,
@@ -107,22 +128,47 @@
                 backdrop-filter 0.3s ease,
                 box-shadow 0.3s ease;
   }
+  /* Global Light Theme Text Consistency - Specifically targeting light mode only */
+  /* Excluding Hero section to maintain visibility against red background */
+  html[data-theme="light"] .text-gray-900:not(#hero-video-section *),
+  html[data-theme="light"] .text-gray-800:not(#hero-video-section *),
+  html[data-theme="light"] .text-gray-700:not(#hero-video-section *) {
+    color: #3D0A05 !important;
+  }
+
+  html[data-theme="light"] .text-gray-600:not(#hero-video-section *),
+  html[data-theme="light"] .text-gray-500:not(#hero-video-section *) {
+    color: #A58570 !important;
+  }
+
+  html[data-theme="light"] p:not(#hero-video-section *),
+  html[data-theme="light"] span:not(#hero-video-section *) {
+    color: #A58570;
+  }
+
+  html[data-theme="light"] .section-title:not(#hero-video-section *),
+  html[data-theme="light"] h1:not(#hero-video-section *),
+  html[data-theme="light"] h2:not(#hero-video-section *),
+  html[data-theme="light"] h3:not(#hero-video-section *),
+  html[data-theme="light"] h4:not(#hero-video-section *) {
+    color: #3D0A05 !important;
+  }
 }
 
 @layer utilities {
   .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-effect:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 48px 0 rgba(61, 10, 5, 0.1);
     transform: translateY(-4px);
   }
 
@@ -142,10 +188,11 @@
   }
   
   .card-gradient {
-    background: radial-gradient(650px 650px at 0% 0%, rgba(193,131,93,0.22), transparent 70%),
-                radial-gradient(650px 650px at 100% 100%, rgba(193,131,93,0.18), transparent 70%),
-                linear-gradient(135deg, #FFF5D6 0%, #FFF9E3 55%, #E9D2A7 100%);
+    background: radial-gradient(650px 650px at 0% 0%, rgba(255,255,255,0.4), transparent 70%),
+                radial-gradient(650px 650px at 100% 100%, rgba(61,10,5,0.05), transparent 70%),
+                rgba(253, 251, 249, 0.9);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   [data-theme="dark"] .card-gradient {
@@ -202,7 +249,7 @@
 
   .hover-glow:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(255, 75, 75, 0.3);
   }
 
   [data-theme="dark"] .hover-glow:hover {
@@ -256,10 +303,10 @@
 .floating-shape {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, #E7C8A0, #D4A373);
+  background: linear-gradient(45deg, #A58570, #3D0A05);
   opacity: 0.25;
   animation: floatShape 20s infinite linear;
-  box-shadow: 0 0 40px 20px #D4A373, 0 0 60px 30px #E7C8A0;
+  box-shadow: 0 0 40px 20px #3D0A05, 0 0 60px 30px #A58570;
   transition: all 0.3s ease;
 }
 
@@ -368,7 +415,7 @@
     /* scroll-snap-type: y mandatory; - Removed as per user request */
     min-height: 100vh;
     /* overflow-y: scroll; - Removed to allow normal document scroll */
-    scroll-behavior: smooth;
+    
   }
 
   .snap-section {
@@ -443,4 +490,52 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+html[data-theme="light"] .glass-social-btn {
+  background: rgba(61, 10, 5, 0.08);
+  border: 1px solid rgba(61, 10, 5, 0.15);
+  color: #3D0A05;
+}
 
+html[data-theme="light"] .glass-social-btn:hover {
+  background: rgba(61, 10, 5, 0.15);
+  border-color: rgba(61, 10, 5, 0.3);
+  color: #3D0A05;
+}
+
+/* Dark Theme Button Hover Effects */
+[data-theme="dark"] .dark-hover-effect:hover {
+  background-color: rgba(237, 62, 33, 0.2) !important;
+}
+
+[data-theme="dark"] .hover-email:hover {
+  background-color: rgba(237, 62, 33, 0.2) !important;
+}
+
+[data-theme="dark"] .hover-instagram:hover {
+  background-color: rgba(225, 48, 108, 0.2) !important;
+}
+
+[data-theme="dark"] .hover-linkedin:hover {
+  background-color: rgba(0, 119, 181, 0.2) !important;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

@@ -16,7 +16,7 @@ const Domains = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="section-title text-4xl text-center text-heading dark:text-transparent dark:bg-dark-blend-gradient dark:bg-clip-text font-montserrat font-bold relative pb-4"
+            className="section-title text-4xl text-center text-light-maroon dark:text-transparent dark:bg-dark-blend-gradient dark:bg-clip-text font-montserrat font-bold relative pb-4"
           >
             Our Domain
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
@@ -49,15 +49,15 @@ const Domains = () => {
                 {[...domains, ...domains].map((domain, index) => (
                   <div
                     key={`${domain.id}-${index}`}
-                    className="flex-shrink-0 w-[350px] liquid-glass card-gradient rounded-3xl p-8 border-2 border-accent-2 hover-glow glass-card relative overflow-hidden group"
+                    className="flex-shrink-0 w-[350px] liquid-glass card-gradient rounded-3xl p-8 border-2 border-light-maroon hover-glow glass-card relative overflow-hidden group"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/10 to-transparent transform -translate-x-full transition-transform duration-600 group-hover:translate-x-full opacity-0 group-hover:opacity-100 z-0"></div>
 
-                    <div className="text-5xl text-accent-2 mb-5 text-center drop-shadow-lg">
+                    <div className="text-5xl text-light-maroon mb-5 text-center drop-shadow-lg">
                       <i className={`fas ${domain.icon}`}></i>
                     </div>
 
-                    <h3 className="text-2xl text-heading mb-4 text-center font-bold">
+                    <h3 className="text-2xl text-light-maroon mb-4 text-center font-bold">
                       {domain.title}
                     </h3>
 

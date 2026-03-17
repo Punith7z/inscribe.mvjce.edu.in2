@@ -17,6 +17,11 @@ export default {
         'beige-soft': '#FFF5D6',
         'beige-cream': '#FFF9E3',
         'heading': '#73634F',
+        // New Palette for Light Theme Consistency
+        'light-maroon': '#3D0A05',
+        'light-brown': '#A58570',
+        'light-beige': '#DAC1B1',
+        'light-bg': '#FDFBF9',
         // New Brand Colors for Dark Mode
         'brand-red': '#FF4B4B',
         'brand-blue': '#4B7BFF',
@@ -27,10 +32,10 @@ export default {
         'poppins': ['Lora', 'serif'],
       },
       backgroundImage: {
-        'gradient-bg': 'linear-gradient(135deg, #FFFCE0 0%, #FCF4D7 50%, #FAEDCD 100%)',
-        'gradient-primary': 'linear-gradient(135deg, #C1835D, #FFF5D6)',
-        'card-gradient': 'linear-gradient(135deg, #FFF5D6 0%, #C1835D 100%)',
-        'card-light-corners': 'radial-gradient(650px 650px at 0% 0%, rgba(193,131,93,0.22), transparent 70%), radial-gradient(650px 650px at 100% 100%, rgba(193,131,93,0.18), transparent 70%), linear-gradient(135deg, #FFF5D6 0%, #FFF9E3 55%, #E9D2A7 100%)',
+        'gradient-bg': 'linear-gradient(135deg, #FDFBF9 0%, #F5EBE6 50%, #DAC1B1 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #3D0A05, #A58570)',
+        'card-gradient': 'linear-gradient(135deg, #F5EBE6 0%, #DAC1B1 100%)',
+        'card-light-corners': 'radial-gradient(650px 650px at 0% 0%, rgba(165,133,112,0.22), transparent 70%), radial-gradient(650px 650px at 100% 100%, rgba(61,10,5,0.18), transparent 70%), linear-gradient(135deg, #FDFBF9 0%, #F5EBE6 55%, #DAC1B1 100%)',
         // Dark mode gradients
         'dark-card-gradient': 'linear-gradient(135deg, rgba(255, 75, 75, 0.05) 0%, rgba(75, 123, 255, 0.05) 100%)',
         'dark-blend-gradient': 'linear-gradient(135deg, #FF4B4B 0%, #7B4BFF 50%, #4B7BFF 100%)',

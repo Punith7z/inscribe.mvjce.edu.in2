@@ -23,7 +23,7 @@ const Leadership = () => {
           {/* Faculty Coordinator */}
           {facultyCoordinator.length > 0 && (
             <div className="mb-20">
-              <h3 className="text-2xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
+              <h3 className="text-2xl text-center mb-10 text-light-maroon font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
                 Faculty Coordinator
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
               </h3>
@@ -38,7 +38,7 @@ const Leadership = () => {
           {/* Leadership */}
           {leadership.length > 0 && (
             <div>
-              <h3 className="text-2xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
+              <h3 className="text-2xl text-center mb-10 text-light-maroon font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
                 Leadership
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
               </h3>
@@ -72,7 +72,7 @@ const TeamCard = ({ member }) => {
         <h4 className="text-heading font-bold mb-2 text-xl">
           {member.name}
         </h4>
-        <p className="text-accent-2 font-semibold mb-2 text-base">
+        <p className="text-light-maroon font-semibold mb-2 text-base">
           {member.role}
         </p>
         {member.domain && (
