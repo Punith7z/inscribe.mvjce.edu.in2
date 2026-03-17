@@ -660,7 +660,7 @@ export const teamMembers = [
       {
         id: 42,
         name: "Charitha S",
-        image: "/images/Charitha S.jpg",
+        image: "/images/Charitha.jpeg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "httphttps://github.com/charithacherrie",
@@ -727,7 +727,27 @@ export const teamMembers = [
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       },
+      {
+        id: 80,
+        name: "Aanuj",
+        image: "/images/Aanuj.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
 
+      {
+        id: 82,
+        name: "Harini",
+        image: "/images/Harini.jpeg",
+        social: {
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
+          linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
     ],
   },
   {
