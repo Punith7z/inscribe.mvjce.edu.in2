@@ -10,35 +10,35 @@ const domainConfig = [
     id: 'development',
     title: 'Development',
     subtitle: 'Creating responsive and dynamic web experiences',
-    image: '/images/dev team.jpg',
+    image: '/images/Development Domain grp photos.jpeg',
     icon: 'fa-code'
   },
   {
     id: 'animation',
     title: 'Animation',
     subtitle: 'Bringing stories to life through motion',
-    image: '/images/animation team.jpg',
+    image: '/images/Animation team.jpeg',
     icon: 'fa-film'
   },
   {
     id: 'design',
     title: 'Digital Design & Arts',
     subtitle: 'Visual storytelling through design',
-    image: '/images/design team.jpg',
+    image: '/images/Design Team.jpeg',
     icon: 'fa-paint-brush'
   },
   {
     id: 'media',
     title: 'Media',
     subtitle: 'Creating engaging digital content',
-    image: '/images/meadia team.jpg',
+    image: '/images/Media Team.jpeg',
     icon: 'fa-camera'
   },
   {
     id: 'content',
     title: 'Content Writing',
     subtitle: 'Crafting impactful stories and articles',
-    image: '/images/Content.jpg',
+    image: '/images/Content Team.jpeg',
     icon: 'fa-pen-fancy'
   }
 ]

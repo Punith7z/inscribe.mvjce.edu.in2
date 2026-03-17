@@ -36,10 +36,10 @@ export const domains = [
   },
   {
     id: 6,
-    icon: 'fa-microchip',
-    title: 'AI & ML',
-    description: 'Where algorithms meet creativity and data tells stories.',
-    fullDescription: 'Dive into artificial intelligence and machine learning. Build intelligent systems, explore neural networks, and create AI-powered solutions that solve real-world problems.'
+    icon: 'fa-photo-video',
+    title: 'Media',
+    description: 'Capture moments and broadcast creativity.',
+    fullDescription: 'From storytelling to event coverage, explore the art of visual media. Master editing, broadcasting, and content curation to showcase technology through a captivating lens.'
   }
 ]
 

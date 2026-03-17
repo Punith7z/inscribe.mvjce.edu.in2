@@ -25,7 +25,13 @@ export const events = [
     image: '/images/Tech titan.png',
     title: 'Tech Titan – Machine Learning Quiz',
     tagline: 'Not your average quiz.',
-    description: 'Tech Titan was a high-stakes ML-powered quiz that put coding and logic skills to the ultimate test. A true battle of brains where techies competed to claim the Titan title!'
+  },
+  {
+    id: 5,
+    image: '/images/meme_arena.jpg',
+    title: 'Meme Arena',
+    tagline: 'Presented by Dept. of Computer Science and Design x VertechX.',
+    description: 'MEME ARENA was a fun and creative event where participants designed memes using a predefined theme and template. It challenged contestants to blend humor with creativity, turning simple ideas into engaging and relatable memes.'
   }
 ]
 

@@ -76,10 +76,10 @@ const Navbar = ({ videoEnded = false }) => {
           background: isScrolled
             ? theme === 'dark'
               ? 'rgba(0, 0, 0, 0.65)'
-              : 'rgba(255, 245, 214, 0.85)'
+              : 'rgba(253, 251, 249, 0.85)'
             : theme === 'dark'
               ? 'rgba(0, 0, 0, 0.3)'
-              : 'rgba(255, 245, 214, 0.6)',
+              : 'rgba(253, 251, 249, 0.6)',
           backdropFilter: isScrolled ? 'blur(24px) saturate(140%)' : 'blur(16px) saturate(120%)',
           WebkitBackdropFilter: isScrolled ? 'blur(24px) saturate(140%)' : 'blur(16px) saturate(120%)',
           borderBottom: theme === 'dark'
@@ -101,7 +101,7 @@ const Navbar = ({ videoEnded = false }) => {
           to="/"
           className={`flex items-center gap-3 text-2xl font-black font-montserrat uppercase tracking-wide no-underline transition-colors ${theme === 'dark'
             ? 'text-white hover:text-gray-200'
-            : 'text-heading hover:text-accent-2'
+            : 'text-light-maroon hover:opacity-80'
             }`}
         >
           <img src="/images/inslogo.jpg" alt="Inscribe Logo" className="h-10 w-10 rounded-full object-cover shadow-md" />
@@ -139,16 +139,16 @@ const Navbar = ({ videoEnded = false }) => {
             style={{
               background: theme === 'dark'
                 ? 'rgba(255,255,255,0.1)'
-                : 'rgba(212,163,115,0.2)',
+                : 'rgba(61, 10, 5, 0.1)',
               border: theme === 'dark'
                 ? '1px solid rgba(255,255,255,0.2)'
-                : '1px solid rgba(212,163,115,0.4)',
+                : '1px solid rgba(61, 10, 5, 0.3)',
             }}
             aria-label={`Current mode: ${mode}. Click to cycle theme.`}
             title={`Current mode: ${mode}. Click to cycle: Light -> Dark -> System`}
           >
             {mode === 'light' && (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#D4A373' }}>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#3D0A05' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             )}
@@ -158,7 +158,7 @@ const Navbar = ({ videoEnded = false }) => {
               </svg>
             )}
             {mode === 'system' && (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: theme === 'dark' ? '#ffffff' : '#D4A373' }}>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: theme === 'dark' ? '#ffffff' : '#3D0A05' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             )}
@@ -171,15 +171,15 @@ const Navbar = ({ videoEnded = false }) => {
           >
             <span
               className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
-              style={{ background: theme === 'dark' ? '#e5e7eb' : '#73634F' }}
+              style={{ background: theme === 'dark' ? '#e5e7eb' : '#3D0A05' }}
             ></span>
             <span
               className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}
-              style={{ background: theme === 'dark' ? '#e5e7eb' : '#73634F' }}
+              style={{ background: theme === 'dark' ? '#e5e7eb' : '#3D0A05' }}
             ></span>
             <span
               className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
-              style={{ background: theme === 'dark' ? '#e5e7eb' : '#73634F' }}
+              style={{ background: theme === 'dark' ? '#e5e7eb' : '#3D0A05' }}
             ></span>
           </button>
         </div>
@@ -194,7 +194,7 @@ const Navbar = ({ videoEnded = false }) => {
           padding: '0.75rem 0',
           background: theme === 'dark'
             ? 'rgba(15, 23, 42, 0.8)'
-            : 'rgba(255, 255, 255, 0.9)',
+            : '#FDFBF9',
           backdropFilter: 'blur(20px) saturate(180%)',
           WebkitBackdropFilter: 'blur(20px) saturate(180%)',
           border: theme === 'dark'
@@ -254,7 +254,7 @@ const NavLink = ({ children, onClick, to, isActive = false }) => {
 
   const activeUnderlineStyle = {
     width: isActive ? '100%' : '0',
-    background: theme === 'dark' ? '#ffffff' : '#D4A373'
+    background: theme === 'dark' ? '#ffffff' : '#3D0A05'
   }
 
   if (to) {
@@ -266,7 +266,7 @@ const NavLink = ({ children, onClick, to, isActive = false }) => {
           if (!isActive) {
             e.currentTarget.style.background = theme === 'dark'
               ? 'rgba(255, 255, 255, 0.1)'
-              : 'rgba(212, 163, 115, 0.1)'
+              : 'rgba(61, 10, 5, 0.05)'
           }
         }}
         onMouseLeave={(e) => {
@@ -282,7 +282,7 @@ const NavLink = ({ children, onClick, to, isActive = false }) => {
           <span
             className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full rounded-full"
             style={{
-              background: theme === 'dark' ? '#ffffff' : '#D4A373'
+              background: theme === 'dark' ? '#ffffff' : '#3D0A05'
             }}
           ></span>
         )}
@@ -314,7 +314,7 @@ const NavLink = ({ children, onClick, to, isActive = false }) => {
         <span
           className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full rounded-full"
           style={{
-            background: theme === 'dark' ? '#ffffff' : '#D4A373'
+            background: theme === 'dark' ? '#ffffff' : '#3D0A05'
           }}
         ></span>
       )}
@@ -329,7 +329,7 @@ const MenuLink = ({ children, onClick, to, icon }) => {
     : 'text-gray-800 hover:bg-accent-2/10 hover:text-heading'
     }`
 
-  const iconColor = theme === 'dark' ? '#ffffff' : '#D4A373'
+  const iconColor = theme === 'dark' ? '#ffffff' : '#3D0A05'
 
   if (to) {
     return (

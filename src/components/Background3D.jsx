@@ -11,20 +11,24 @@ const Background3D = () => {
 
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none hidden dark:block" style={{ zIndex: -1 }}>
-            {/* Home Page Background - Abstract Nirvana */}
+            {/* Home Page Background - Particle Nebula */}
             <div
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isHome ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute inset-0 ${isHome ? 'opacity-100' : 'opacity-0'}`}
             >
-                <iframe
-                    src='https://my.spline.design/abstractnirvana-okn4087NKgzTjfVTg7QuEgFM/'
-                    frameBorder='0'
-                    width='100%'
+                <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
+                <iframe 
+                    src='https://my.spline.design/particlenebula-VdukAca4T5r8ipRYZHIXwqD0/' 
+                    frameBorder='0' 
+                    width='100%' 
                     height='100%'
-                    className="absolute top-0 left-0 w-full h-[115%] md:h-[120%]"
-                    style={{ border: 'none' }}
+                    fetchpriority='high'
+                    loading='lazy'
+                    className="absolute top-0 left-0 w-full h-[115%] md:h-[120%] opacity-60 mix-blend-screen"
+                    style={{ border: 'none', pointerEvents: 'none' }}
                     title="Home Background"
                 ></iframe>
             </div>
+
 
             {/* Other Pages Background - Square Chips */}
             <div
@@ -35,8 +39,9 @@ const Background3D = () => {
                     frameBorder='0'
                     width='100%'
                     height='100%'
+                    loading='lazy'
                     className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%]"
-                    style={{ border: 'none' }}
+                    style={{ border: 'none', pointerEvents: 'none' }}
                     title="Pages Background"
                 ></iframe>
             </div>
