@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
+import { useTheme } from '../contexts/ThemeContext'
 
 const ReadyToInscribe = () => {
+  const { theme } = useTheme()
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
     type: 'fade-in'
@@ -27,7 +29,12 @@ const ReadyToInscribe = () => {
             </p>
             <Link
               to="/register"
-              className="inline-block px-8 py-4 bg-transparent border-2 border-transparent dark:border-[#ED3E21] text-[#73634F] dark:text-white rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all dark:hover:bg-[#ED3E21]/60"
+              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white dark-hover-effect"
+              style={{
+                backgroundColor: theme === 'dark' ? 'transparent' : '#3D0A05',
+                color: '#FFFFFF',
+                border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
+              }}
             >
               Join Us Now
             </Link>

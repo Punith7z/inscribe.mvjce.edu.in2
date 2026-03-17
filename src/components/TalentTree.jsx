@@ -1,8 +1,10 @@
 
 import { Link } from 'react-router-dom'
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
+import { useTheme } from '../contexts/ThemeContext'
 
 const TalentTree = () => {
+    const { theme } = useTheme()
     const [ref, isVisible] = useScrollAnimationEnhanced({
         threshold: 0.1,
         type: 'fade-in'
@@ -22,7 +24,7 @@ const TalentTree = () => {
                 {/* Description Card */}
                 <div className="liquid-glass card-gradient rounded-[2rem] p-8 mb-8 border border-black/5 shadow-lg text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 
-                    <p className="text-lg leading-relaxed text-[#c9a577] dark:text-white">
+                    <p className="text-lg leading-relaxed text-light-brown dark:text-white">
                         A vibrant cohort of designers, developers and creators collaborating on hands-on projects, workshops and showcases.
                         Explore member work, join sessions, and grow with mentorship and community support.
                     </p>
@@ -32,7 +34,12 @@ const TalentTree = () => {
                 <div className="flex justify-center">
                     <Link
                         to="/team"
-                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full no-underline font-bold text-xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-2 border-transparent dark:border-[#ED3E21] bg-transparent text-[#73634F] dark:text-white dark:hover:bg-[#ED3E21]/60"
+                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full no-underline font-bold text-xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 dark-hover-effect"
+                        style={{
+                            backgroundColor: theme === 'dark' ? 'transparent' : '#3D0A05',
+                            color: '#FFFFFF',
+                            border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
+                        }}
                     >
                         <i className="fas fa-users text-2xl"></i>
                         Explore Our Talent Universe

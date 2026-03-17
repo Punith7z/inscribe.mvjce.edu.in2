@@ -50,41 +50,34 @@ const Hero = ({ onVideoEnd }) => {
 
 
         <div className="relative z-10 text-center px-5">
-          {theme !== 'dark' && !showVideo ? (
-            <h1 className="section-title text-5xl md:text-7xl mb-8 text-center text-white drop-shadow-lg font-montserrat font-bold relative pb-4 tracking-wider">
-              INSCRIBE
-            </h1>
-          ) : (
-            <h1
-              className={`text-5xl md:text-7xl font-bold mb-4 font-montserrat transition-colors duration-1000 flex justify-center gap-1 flex-wrap ${showVideo ? 'text-white' : theme === 'dark' ? 'text-white' : 'text-heading'
-                }`}
-            >
-              {/* Pattern: Red, White, Blue, White, Blend, White, Blue, White */}
-              {"INSCRIBE".split('').map((char, index) => {
+          <h1
+            className={`text-5xl md:text-7xl font-bold mb-8 font-montserrat transition-colors duration-1000 flex justify-center gap-1 flex-wrap ${showVideo || theme === 'light' ? 'text-white' : 'text-white'
+              }`}
+          >
+            {showVideo || theme === 'light' ? (
+              "INSCRIBE"
+            ) : (
+              "INSCRIBE".split('').map((char, index) => {
                 let colorClass = ''
 
                 const blendClass = 'bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] bg-clip-text !text-transparent'
                 const redClass = '!text-[#FF4B4B]'
                 const blueClass = '!text-[#4B7BFF]'
 
-                if (!showVideo) {
-                  if (index % 4 === 0) colorClass = redClass // I, R - Red
-                  else if (index % 4 === 2) colorClass = blueClass // S, B - Blue
-                  else colorClass = blendClass // N, C, I, E - Blend
-                } else {
-                  colorClass = 'text-white'
-                }
+                if (index % 4 === 0) colorClass = redClass
+                else if (index % 4 === 2) colorClass = blueClass
+                else colorClass = blendClass
 
                 return (
                   <span key={index} className={colorClass}>
                     {char}
                   </span>
                 )
-              })}
-            </h1>
-          )}
+              })
+            )}
+          </h1>
           <p
-            className={`text-xl md:text-2xl max-w-2xl mx-auto transition-colors duration-1000 drop-shadow-md font-semibold ${showVideo ? 'text-white/90' : theme === 'dark' ? 'text-gray-200' : 'text-gray-100'
+            className={`text-xl md:text-2xl max-w-2xl mx-auto transition-colors duration-1000 drop-shadow-md font-semibold ${showVideo || theme === 'light' ? 'text-white/90' : 'text-white'
               }`}
           >
             Where creativity meets code, and imagination meets innovation.

@@ -23,7 +23,7 @@ const Footer = () => {
         : 'border-black/10'
         }`}
       style={{
-        backgroundColor: theme === 'dark' ? 'rgba(10, 15, 28, 0.4)' : 'rgba(252, 244, 215, 0.4)'
+        backgroundColor: theme === 'dark' ? 'rgba(10, 15, 28, 0.4)' : 'rgba(253, 251, 249, 0.4)'
       }}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -57,7 +57,7 @@ const Footer = () => {
             href="mailto:inscribe.mvjce@gmail.com"
             className={`footer-link text-sm font-medium inline-block ${theme === 'dark'
               ? 'text-gray-300'
-              : 'text-accent-2 hover:text-heading'
+              : 'text-light-maroon hover:opacity-80'
               }`}
           >
             inscribe.mvjce@gmail.com

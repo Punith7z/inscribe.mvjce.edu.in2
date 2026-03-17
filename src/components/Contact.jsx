@@ -1,10 +1,18 @@
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
+import { useTheme } from '../contexts/ThemeContext'
 
 const Contact = () => {
+  const { theme } = useTheme()
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
     type: 'slide-left'
   })
+
+  const buttonStyle = {
+    backgroundColor: theme === 'dark' ? 'transparent' : '#3D0A05',
+    color: '#FFFFFF',
+    border: theme === 'dark' ? '2px solid' : '2px solid transparent'
+  }
 
   return (
     <section
@@ -28,28 +36,31 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="mailto:inscribe.mvjce24@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-[#73634F] dark:text-white bg-transparent border-2 border-transparent dark:border-[#ED3E21] shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 dark:hover:bg-[#ED3E21]/60"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-email"
+                style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#ED3E21' : 'transparent' }}
               >
-                <i className="fas fa-envelope text-2xl"></i>
-                <span className="text-lg">Email Us</span>
+                <i className="fas fa-envelope text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <span className="text-lg" style={{ color: '#FFFFFF' }}>Email Us</span>
               </a>
               <a
                 href="https://www.instagram.com/inscribe.mvjce/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-[#73634F] dark:text-white bg-transparent border-2 border-transparent dark:border-[#E1306C] shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 dark:hover:bg-[#E1306C]/60"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-instagram"
+                style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#E1306C' : 'transparent' }}
               >
-                <i className="fab fa-instagram text-2xl"></i>
-                <span className="text-lg">Instagram</span>
+                <i className="fab fa-instagram text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <span className="text-lg" style={{ color: '#FFFFFF' }}>Instagram</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/inscribe-mvjce24/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold text-[#73634F] dark:text-white bg-transparent border-2 border-transparent dark:border-[#0077B5] shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 dark:hover:bg-[#0077B5]/60"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-linkedin"
+                style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#0077B5' : 'transparent' }}
               >
-                <i className="fab fa-linkedin text-2xl"></i>
-                <span className="text-lg">LinkedIn</span>
+                <i className="fab fa-linkedin text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <span className="text-lg" style={{ color: '#FFFFFF' }}>LinkedIn</span>
               </a>
             </div>
           </div>
