@@ -145,7 +145,7 @@ const Footer = () => {
               <i className="fab fa-linkedin text-lg"></i>
             </a>
             <a
-              href="https://github.com/inscribe-mvjce"
+              href="https://github.com/inscribemvjce24-prog"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#333] hover:text-white"
