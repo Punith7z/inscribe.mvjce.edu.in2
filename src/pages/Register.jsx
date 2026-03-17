@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useTheme } from '../contexts/ThemeContext'
 
 const Register = () => {
+  const { theme } = useTheme()
   const [formData, setFormData] = useState({
     name: '',
     usn: '',
@@ -126,7 +128,7 @@ const Register = () => {
 
               <button 
                 type="submit" 
-                className="mt-4 py-3.5 px-7 bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF] text-white font-extrabold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-montserrat text-lg w-full md:w-auto self-center"
+                className={`mt-4 py-3.5 px-7 text-white font-extrabold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-montserrat text-lg w-full md:w-auto self-center ${theme === 'dark' ? 'bg-gradient-to-r from-[#FF4B4B] to-[#4B7BFF]' : 'bg-[#ED3E21]'}`}
               >
                 Complete Registration
               </button>
