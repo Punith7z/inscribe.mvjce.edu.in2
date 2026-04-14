@@ -1,49 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import React from 'react'
+import { DottedSurface } from './ui/dotted-surface'
+import GeometricBlurMesh from './ui/geometric-blur-mesh'
 
 const Background3D = () => {
-    const location = useLocation()
-    const [isHome, setIsHome] = useState(true)
-
-    useEffect(() => {
-        setIsHome(location.pathname === '/')
-    }, [location])
-
     return (
-        <div className="fixed inset-0 overflow-hidden pointer-events-none hidden dark:block" style={{ zIndex: -1 }}>
-            {/* Home Page Background - Particle Nebula */}
-            <div
-                className={`absolute inset-0 ${isHome ? 'opacity-100' : 'opacity-0'}`}
-            >
-                <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
-                <iframe 
-                    src='https://my.spline.design/particlenebula-VdukAca4T5r8ipRYZHIXwqD0/' 
-                    frameBorder='0' 
-                    width='100%' 
-                    height='100%'
-                    fetchpriority='high'
-                    loading='lazy'
-                    className="absolute top-0 left-0 w-full h-[115%] md:h-[120%] opacity-60 mix-blend-screen"
-                    style={{ border: 'none', pointerEvents: 'none' }}
-                    title="Home Background"
-                ></iframe>
+        <div 
+            className="fixed inset-0 overflow-hidden pointer-events-none w-full h-full" 
+            style={{ zIndex: -1 }}
+        >
+            {/* Dark Mode Background */}
+            <div className="hidden dark:block w-full h-full absolute inset-0 z-0">
+                <DottedSurface className="w-full h-full absolute inset-0 z-0">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -top-10 left-1/2 w-full h-full -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent_50%)] blur-[30px]"
+                        />
+                    </div>
+                </DottedSurface>
             </div>
 
-
-            {/* Other Pages Background - Square Chips */}
-            <div
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${!isHome ? 'opacity-100' : 'opacity-0'}`}
-            >
-                <iframe
-                    src='https://my.spline.design/squarechipsscrollingsplinecoursecom-8S3fuy3VQaFy2bdowU2iFpXo/'
-                    frameBorder='0'
-                    width='100%'
-                    height='100%'
-                    loading='lazy'
-                    className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%]"
-                    style={{ border: 'none', pointerEvents: 'none' }}
-                    title="Pages Background"
-                ></iframe>
+            {/* Light Mode Background with Inverted Colors */}
+            <div className="block dark:hidden absolute inset-0 w-full h-full z-10 pointer-events-auto" style={{ filter: "invert(1)" }}>
+                <GeometricBlurMesh />
             </div>
         </div>
     )

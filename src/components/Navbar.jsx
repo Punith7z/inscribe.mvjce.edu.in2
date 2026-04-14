@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { scrollToSection } from '../utils/scrollToSection'
-import { useTheme } from '../contexts/ThemeContext'
+import { useTheme } from 'next-themes'
+import CinematicThemeSwitcher from './ui/cinematic-theme-switcher'
 
 const Navbar = ({ videoEnded = false }) => {
   const location = useLocation()
@@ -9,7 +10,7 @@ const Navbar = ({ videoEnded = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-  const { theme, toggleTheme, mode, cycleTheme } = useTheme()
+  const { resolvedTheme: theme } = useTheme()
   const isHomePage = location.pathname === '/'
   const shouldShow = isHomePage ? videoEnded : true
 
@@ -132,37 +133,7 @@ const Navbar = ({ videoEnded = false }) => {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Theme Toggle Button */}
-          <button
-            onClick={cycleTheme}
-            className="w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
-            style={{
-              background: theme === 'dark'
-                ? 'rgba(255,255,255,0.1)'
-                : 'rgba(61, 10, 5, 0.1)',
-              border: theme === 'dark'
-                ? '1px solid rgba(255,255,255,0.2)'
-                : '1px solid rgba(61, 10, 5, 0.3)',
-            }}
-            aria-label={`Current mode: ${mode}. Click to cycle theme.`}
-            title={`Current mode: ${mode}. Click to cycle: Light -> Dark -> System`}
-          >
-            {mode === 'light' && (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#3D0A05' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            )}
-            {mode === 'dark' && (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#ffffff' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-            )}
-            {mode === 'system' && (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: theme === 'dark' ? '#ffffff' : '#3D0A05' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            )}
-          </button>
+          <CinematicThemeSwitcher />
 
           {/* Menu Icon */}
           <button

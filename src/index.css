@@ -1,3 +1,4 @@
+/* noinspection CssUnknownAtRule, CssInvalidFunction, CssUnknownTarget */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,13 +54,13 @@
 
 @layer base {
   * {
+    /* noinspection CssUnknownAtRule */
     @apply box-border;
   }
 
-  html {}
-
   /* Light Theme (Default) */
   body {
+    /* noinspection CssUnknownAtRule */
     @apply m-0 p-0 overflow-x-hidden;
     background: #FDFBF9;
     color: #A58570;
@@ -69,34 +70,28 @@
   }
 
   .home-root {
-    background-color: #FDFBF9;
+    background-color: transparent;
     transition: background-color 0.3s ease;
   }
 
   .hero-bg {
-    background-color: #FDFBF9;
+    background-color: transparent;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease;
   }
 
   .hero-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/light_theme_bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(4px);
-    opacity: 0.7;
-    transform: scale(1.05);
-    z-index: -1;
+    display: none;
   }
 
   /* Dark Theme */
+  html[data-theme="dark"] {
+    background-color: #000;
+  }
+
   [data-theme="dark"] body {
-    background: #0a0a0a;
+    background: transparent;
     color: #e5e7eb;
     /* Light text */
   }
@@ -106,7 +101,7 @@
   }
 
   [data-theme="dark"] .hero-bg {
-    background-color: #0a0a0a;
+    background-color: transparent;
     background-image: none !important;
   }
 
@@ -116,7 +111,7 @@
 
   [data-theme="dark"] .bg-bg-1,
   [data-theme="dark"] .bg-gradient-bg {
-    background-color: #0a0a0a !important;
+    background-color: transparent !important;
     background-image: none !important;
   }
 
@@ -127,8 +122,8 @@
 
   [data-theme="dark"] .glass-effect {
     background: rgba(10, 10, 15, 0.7);
-    backdrop-filter: blur(20px) saturate(130%);
     -webkit-backdrop-filter: blur(20px) saturate(130%);
+    backdrop-filter: blur(20px) saturate(130%);
     border-color: rgba(255, 255, 255, 0.08);
   }
 
@@ -165,6 +160,7 @@
   [data-theme="dark"] .text-heading {
     background: linear-gradient(90deg, #FF4B4B, #4B7BFF);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -207,8 +203,8 @@
 @layer utilities {
   .glass-effect {
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -250,8 +246,8 @@
       radial-gradient(650px 650px at 100% 100%, rgba(75, 123, 255, 0.15), transparent 70%),
       linear-gradient(135deg, rgba(20, 20, 30, 0.4) 0%, rgba(10, 10, 15, 0.5) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
   }
 
   /* Glassmorphic card hover effect */
@@ -493,8 +489,8 @@
 
   .liquid-glass {
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     border-radius: 12px;
@@ -529,8 +525,9 @@
 /* Glassmorphic Social Button */
 .glass-social-btn {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;

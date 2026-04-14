@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react'
+import { useTheme as useNextTheme } from 'next-themes'
 
 const ThemeContext = createContext()
 
@@ -11,55 +12,35 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }) => {
-  // 'mode' can be 'light', 'dark', or 'system'
-  const [mode, setMode] = useState(() => {
-    const savedMode = localStorage.getItem('themeMode')
-    return savedMode || 'system' // Default to system if nothing saved
-  })
+  const { theme, setTheme, resolvedTheme } = useNextTheme()
+  const [mounted, setMounted] = useState(false)
 
-  // 'theme' is the actual applied style: 'light' or 'dark'
-  const [theme, setTheme] = useState('light')
-
+  // Hydration check
   useEffect(() => {
-    localStorage.setItem('themeMode', mode)
-
-    const handleThemeChange = () => {
-      if (mode === 'system') {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        setTheme(systemTheme)
-      } else {
-        setTheme(mode)
-      }
-    }
-
-    handleThemeChange() // Initial check
-
-    // Listen for system changes if in system mode
-    if (mode === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      mediaQuery.addEventListener('change', handleThemeChange)
-      return () => mediaQuery.removeEventListener('change', handleThemeChange)
-    }
-  }, [mode])
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    // Legacy support: also update 'theme' in localStorage for simple checks if needed, 
-    // though 'themeMode' is our source of truth now.
-    localStorage.setItem('theme', theme)
-  }, [theme])
+    setMounted(true)
+  }, [])
 
   const cycleTheme = () => {
     const modes = ['light', 'dark', 'system']
-    const nextIndex = (modes.indexOf(mode) + 1) % modes.length
-    setMode(modes[nextIndex])
+    const currentIndex = modes.indexOf(theme || 'system')
+    const nextIndex = (currentIndex + 1) % modes.length
+    setTheme(modes[nextIndex])
   }
 
-  // Keep toggleTheme for backward compatibility if used elsewhere, mapping it to cycle
-  const toggleTheme = cycleTheme
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+
+  // Value for the context
+  const value = {
+    theme: mounted ? resolvedTheme : 'light',
+    mode: mounted ? theme : 'system',
+    cycleTheme,
+    toggleTheme
+  }
 
   return (
-    <ThemeContext.Provider value={{ theme, mode, cycleTheme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   )

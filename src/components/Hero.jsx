@@ -26,24 +26,7 @@ const Hero = ({ onVideoEnd }) => {
               zIndex: 0
             }}
           >
-            {theme === 'dark' && (
-              <>
-                <div className="hero-glow-overlay"></div>
-                <div className="absolute inset-0 overflow-hidden pointer-events-none hidden dark:block opacity-100 mix-blend-screen opacity-80">
-                  <iframe
-                    src='https://my.spline.design/abstractnirvana-okn4087NKgzTjfVTg7QuEgFM/'
-                    frameBorder='0'
-                    width='100%'
-                    height='100%'
-                    loading='lazy'
-                    fetchpriority='high'
-                    className="absolute top-0 left-0 w-[120%] h-[120%] -translate-x-[10%] -translate-y-[10%] scale-[1.05]"
-                    style={{ border: 'none', pointerEvents: 'none' }}
-                    title="Hero Background"
-                  ></iframe>
-                </div>
-              </>
-            )}
+            {/* Transparent background to show global fixed background */}
           </div>
         )}
 
