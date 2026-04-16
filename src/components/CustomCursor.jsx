@@ -1,66 +1,68 @@
-import { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import { useTheme } from '../contexts/ThemeContext'
 
 const CustomCursor = () => {
+  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 })
+  const [isHovering, setIsHovering] = useState(false)
+  const { theme } = useTheme()
+
   useEffect(() => {
-    const cursorLens = document.createElement('div')
-    cursorLens.id = 'cursorLens'
-    cursorLens.setAttribute('aria-hidden', 'true')
-    document.body.appendChild(cursorLens)
-
-    const cursorRipples = document.createElement('div')
-    cursorRipples.id = 'cursorRipples'
-    cursorRipples.setAttribute('aria-hidden', 'true')
-    document.body.appendChild(cursorRipples)
-
-    let mouseX = 0
-    let mouseY = 0
-    let lensX = 0
-    let lensY = 0
-
-    const updateCursor = (e) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
-    const animateLens = () => {
-      lensX += (mouseX - lensX) * 0.1
-      lensY += (mouseY - lensY) * 0.1
-      cursorLens.style.left = lensX + 'px'
-      cursorLens.style.top = lensY + 'px'
-      requestAnimationFrame(animateLens)
+    const handleMouseOver = (e) => {
+      // Check if hovering over clickable elements
+      if (
+        e.target.tagName.toLowerCase() === 'a' ||
+        e.target.tagName.toLowerCase() === 'button' ||
+        e.target.closest('a') ||
+        e.target.closest('button')
+      ) {
+        setIsHovering(true)
+      } else {
+        setIsHovering(false)
+      }
     }
 
-    const createRipple = (e) => {
-      const ripple = document.createElement('div')
-      ripple.className = 'cursor-ripple'
-      ripple.style.left = e.clientX + 'px'
-      ripple.style.top = e.clientY + 'px'
-      cursorRipples.appendChild(ripple)
-      setTimeout(() => ripple.remove(), 700)
-    }
-
-    document.addEventListener('mousemove', updateCursor)
-    document.addEventListener('click', createRipple)
-
-    // Add hover class to body when hovering over interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, [role="button"]')
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'))
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'))
-    })
-
-    animateLens()
+    window.addEventListener('mousemove', updateMousePosition)
+    window.addEventListener('mouseover', handleMouseOver)
 
     return () => {
-      document.removeEventListener('mousemove', updateCursor)
-      document.removeEventListener('click', createRipple)
-      cursorLens.remove()
-      cursorRipples.remove()
+      window.removeEventListener('mousemove', updateMousePosition)
+      window.removeEventListener('mouseover', handleMouseOver)
     }
   }, [])
 
-  return null
+  // Only render on devices with a fine pointer (desktop)
+  if (typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches) {
+    return null
+  }
+
+  const color = theme === 'dark' ? '#ffffff' : '#000000'
+
+  return (
+    <>
+      {/* Inner dot - EXACTLY tracks the mouse tip to align with the particle canvas */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
+        style={{
+          width: 8,
+          height: 8,
+          backgroundColor: color,
+          borderRadius: '50%',
+        }}
+        animate={{
+          x: mousePosition.x - 4, // Center on cursor tip
+          y: mousePosition.y - 4,
+          scale: isHovering ? 0 : 1,
+          opacity: 1
+        }}
+        transition={{ type: 'tween', duration: 0, ease: 'linear' }}
+      />
+    </>
+  )
 }
 
 export default CustomCursor
-

@@ -164,9 +164,13 @@ const TeamPage = () => {
         {/* Modal */}
         {modalOpen && selectedDomainConfig && (
           <div
-            className="fixed inset-0 bg-black/80 z-[9999] flex items-start justify-center p-4 overflow-y-auto"
+            className="fixed inset-0 bg-black/80 z-[9999] flex items-start justify-center p-4 overflow-y-auto scroll-smooth"
             onClick={closeModal}
-            style={{ backdropFilter: 'blur(5px)' }}
+            style={{ 
+              backdropFilter: 'blur(5px)',
+              WebkitOverflowScrolling: 'touch',
+              overscrollBehavior: 'contain'
+            }}
             data-lenis-prevent
           >
             <div

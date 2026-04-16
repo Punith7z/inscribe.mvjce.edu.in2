@@ -157,7 +157,7 @@ export const teamMembers = [
       {
         id: 3,
         name: "Sree lakshmi U Krishnan",
-        image: "/images/Sree Lakshmi U Krishnan - Copy.jpg",
+        image: "/images/Sree Lakshmi U Krishnan.jpg",
         social: {
           instagram: "https://www.instagram.com/sree_lak05?igsh=bjlqdWhsM2wxd2Y0",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
@@ -167,7 +167,7 @@ export const teamMembers = [
       {
         id: 4,
         name: "Kamal Nayan S",
-        image: "/images/Kamal.JPG",
+        image: "/images/kamal.jpg",
         social: {
           instagram: "https://www.instagram.com/miles_morales004?igsh=MXY5bmRndzNqdjVzYw==",
           github: "https://github.com/kamalsrinivasan04",
@@ -207,7 +207,7 @@ export const teamMembers = [
       {
         id: 8,
         name: "Lokesh",
-        image:"/images/Lokesh Rao S B .jpg",
+        image:"/images/Lokesh Rao S B_.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
@@ -362,7 +362,7 @@ export const teamMembers = [
       {
         id: 17,
         name: "Rajaneesh G A",
-        image: "/images/Rajaneesh G A .jpg",
+        image: "/images/Rajaneesh G A_.jpg",
         social: {
           instagram: "https://www.instagram.com/_rajaneesh_ga_?igsh=MTdieW82N21wYmwxYg==",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
@@ -402,7 +402,7 @@ export const teamMembers = [
       {
         id: 21,
         name: "Maclin Florida S",
-        image: "/images/Maclin.jpg",
+        image: "/images/maclin.jpg",
         social: {
           instagram: "https://www.instagram.com/maclin_florida?igsh=MTg1MXV2a29oZjI3Nw==",
           github: "https://github.com/Maclin12",
@@ -432,7 +432,7 @@ export const teamMembers = [
       {
         id: 24,
         name: "Chithra R",
-        image: "/images/Chitra.jpg",
+        image: "/images/chitra.jpg",
         social: {
           instagram: "https://www.instagram.com/chithra_r_?igsh=MWNvbnMwaWJ4bXBhNw==",
           github: "https://github.com/chith-123",
@@ -462,7 +462,7 @@ export const teamMembers = [
       {
         id: 52,
         name: "Hithashree B C",
-        image: "/images/hithashree.jpg.jpeg",
+        image: "/images/hithashree.jpg",
         social: {
           instagram: "https://www.instagram.com/hitha_.c._gowda/?hl=en",
           github: "https://github.com/Hithashree1023",
@@ -482,7 +482,7 @@ export const teamMembers = [
       {
         id: 29,
         name: "Baswakiran",
-        image: "/images/Baswakiran.jpg",
+        image: "/images/Baswakiran_.jpg",
         social: {
           instagram: "https://www.instagram.com/baswakiran__hattyal/",
           github: "https://github.com/Baswakiran-BH",
@@ -492,7 +492,7 @@ export const teamMembers = [
       {
         id: 30,
         name: "Aishwarya s",
-        image: "/images/aishwarya S.jpg (1).jpeg",
+        image: "/images/aishwarya S.jpg",
         social: {
           instagram: "https://www.instagram.com/_.aishwarya_achar._?igsh=YWI3NDJvMm1raWU0&utm_source=ig_contact_invite",
           github: "https://github.com/aishsrinu5826-sys",
@@ -512,7 +512,7 @@ export const teamMembers = [
       {
         id: 48,
         name: "Nikhil Reddy",
-        image: "/images/Nikhilreddy.jpeg",
+        image: "/images/Nikhil.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
@@ -579,7 +579,7 @@ export const teamMembers = [
       {
         id: 33,
         name: "Johanaz Nadaf",
-        image: "/images/Johanaz_Nadaf.jpg",
+        image: "/images/Johanaz Nadaf.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/Johanazndf",
@@ -589,7 +589,7 @@ export const teamMembers = [
       {
         id: 34,
         name: "KHUSHWANTH K K",
-        image: "/images/KHUSHWANTH.JPG",
+        image: "/images/KHUSHWANTH.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/Khushwanth-15",
@@ -700,7 +700,7 @@ export const teamMembers = [
       {
         id: 37,
         name: "Manasa j y",
-        image: "/images/manasa.jpg",
+        image: "/images/Manasa.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
@@ -835,7 +835,7 @@ export const teamMembers = [
       {
         id: 37,
         name:"Vaishnavi CK",
-        image: "/images/Vaishnavi C Kulkarni .jpg",
+        image: "/images/Vaishnavi C Kulkarni_.jpg",
         social: {
           instagram: "https://www.instagram.com/vais_h1506?igsh=aHJ3YTYzb3F0dHJ3",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
