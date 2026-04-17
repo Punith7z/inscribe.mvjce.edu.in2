@@ -179,9 +179,9 @@ export const teamMembers = [
         name: "Mithun M",
         image: "/images/Mithun M.jpg",
         social: {
-          instagram: "https://www.instagram.com/miles_morales004?igsh=MXY5bmRndzNqdjVzYw==",
-          github: "https://github.com/kamalsrinivasan04",
-          linkedin: "https://www.linkedin.com/in/kamal-nayan-579445259",
+          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          github: "https://github.com/mithunm00q-ui",
+          linkedin: "https://www.linkedin.com/in/mithun-m-930a25344/"
         }
       },
       {
@@ -249,7 +249,7 @@ export const teamMembers = [
         image: "/images/thanushitha.jpeg",
         social: {
           instagram: "https://www.instagram.com/thanos_1647/",
-          github: "https://github.com/Chandana-033",
+          github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
           linkedin: "https://www.linkedin.com/in/tanushitha-v-066838384/"
         }
       },
@@ -476,7 +476,7 @@ export const teamMembers = [
         social: {
           instagram: "https://www.instagram.com/akshay_20052024/",
           github: "https://github.com/Akshayikify",
-          linkedin: "www.linkedin.com/in/akshay-h-335abb293"
+          linkedin: "https://www.linkedin.com/in/akshay-h-335abb293"
         }
       },
       {
@@ -505,7 +505,7 @@ export const teamMembers = [
         image: "/images/A^2BS.jpg",
         social: {
           instagram: "https://www.instagram.com/arjunbs2006/",
-          github: "https://www.instagram.com/arjunbs2006/",
+          github: "https://github.com/Arjunbs2006",
           linkedin: "https://www.linkedin.com/in/arjun-b-s-42b862324/"
         }
       },
@@ -663,7 +663,7 @@ export const teamMembers = [
         image: "/images/Charitha.jpeg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
-          github: "httphttps://github.com/charithacherrie",
+          github: "https://github.com/charithacherrie",
           linkedin: "https://www.linkedin.com/in/charitha-s-5b51192ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
         }
       },
