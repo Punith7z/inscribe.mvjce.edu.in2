@@ -167,7 +167,7 @@ export const teamMembers = [
       {
         id: 14,
         name: "Kamal Nayan S",
-        image: "/images/kamal.jpg",
+        image: "/images/Kamal.JPG",
         social: {
           instagram: "https://www.instagram.com/miles_morales004?igsh=MXY5bmRndzNqdjVzYw==",
           github: "https://github.com/kamalsrinivasan04",
@@ -402,7 +402,7 @@ export const teamMembers = [
       {
         id: 36,
         name: "Maclin Florida S",
-        image: "/images/maclin.jpg",
+        image: "/images/Maclin.jpg",
         social: {
           instagram: "https://www.instagram.com/maclin_florida?igsh=MTg1MXV2a29oZjI3Nw==",
           github: "https://github.com/Maclin12",
@@ -432,7 +432,7 @@ export const teamMembers = [
       {
         id: 39,
         name: "Chithra R",
-        image: "/images/chitra.jpg",
+        image: "/images/Chitra.jpg",
         social: {
           instagram: "https://www.instagram.com/chithra_r_?igsh=MWNvbnMwaWJ4bXBhNw==",
           github: "https://github.com/chith-123",
@@ -462,7 +462,7 @@ export const teamMembers = [
       {
         id: 42,
         name: "Hithashree B C",
-        image: "/images/hithashree.jpg",
+        image: "/images/Hithashree.jpg",
         social: {
           instagram: "https://www.instagram.com/hitha_.c._gowda/?hl=en",
           github: "https://github.com/Hithashree1023",
@@ -589,7 +589,7 @@ export const teamMembers = [
       {
         id: 54,
         name: "KHUSHWANTH K K",
-        image: "/images/KHUSHWANTH.jpg",
+        image: "/images/KHUSHWANTH.JPG",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/Khushwanth-15",
@@ -700,7 +700,7 @@ export const teamMembers = [
       {
         id: 65,
         name: "Manasa j y",
-        image: "/images/Manasa.jpg",
+        image: "/images/manasa.jpg",
         social: {
           instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
           github: "https://github.com/inscribemvjce24-prog/inscribe.mvjce.edu.in.git",
