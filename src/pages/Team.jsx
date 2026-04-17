@@ -193,40 +193,34 @@ const TeamPage = () => {
               }
             `}</style>
 
-              {/* Close Button */}
-              <button
-                onClick={closeModal}
-                className="absolute top-4 right-4 z-50 w-12 h-12 rounded-full bg-black/5 dark:bg-white/90 hover:bg-black/10 dark:hover:bg-white shadow-lg flex items-center justify-center text-accent-2 dark:text-accent-2 transition-all hover:scale-110 hover:rotate-90"
-              >
-                <i className="fas fa-times text-2xl"></i>
-              </button>
-
-              {/* Header with "Back to Domains" */}
-              <div className="p-6 border-b border-black/10">
+              {/* Header Ribbon */}
+              <div className="flex items-center justify-between p-5 border-b border-black/10 dark:border-white/10 relative">
                 <button
                   onClick={closeModal}
-                  className="inline-flex items-center gap-2 text-accent-2 hover:text-heading transition-colors font-semibold"
+                  className="inline-flex items-center gap-2 text-accent-2 hover:text-heading transition-colors font-semibold text-lg"
                 >
                   <i className="fas fa-arrow-left"></i>
-                  Back to Domains
+                  Back
+                </button>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-center font-montserrat text-[#8B7355] dark:bg-gradient-to-r dark:from-[#ED3E21] dark:to-[#0077B5] dark:bg-clip-text dark:text-transparent m-0 px-4">
+                  {selectedDomainConfig.title}
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 shadow-md flex items-center justify-center text-[#ED3E21] dark:text-white transition-all hover:scale-110 hover:rotate-90"
+                >
+                  <i className="fas fa-times text-xl"></i>
                 </button>
               </div>
 
-              {/* Domain Title */}
-              <div className="px-8 pt-6 pb-4">
-                <h2 className="text-4xl font-bold text-center mb-2 font-montserrat text-[#8B7355] dark:bg-gradient-to-r dark:from-brand-red dark:to-brand-blue dark:bg-clip-text dark:text-transparent">
-                  {selectedDomainConfig.title} Team
-                </h2>
-              </div>
-
-              {/* Team Photo */}
-              <div className="px-8 pb-6">
-                <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-accent-2/20">
+              {/* Team Photo (Minimized) */}
+              <div className="px-4 md:px-8 pt-6 pb-2">
+                <div className="w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-lg border-2 border-accent-2/20">
                   <img
                     src={selectedDomainConfig.image}
                     alt={`${selectedDomainConfig.title} Team`}
                     className="w-full h-auto object-cover"
-                    style={{ maxHeight: '400px' }}
+                    style={{ maxHeight: '250px' }}
                     onError={(e) => {
                       e.target.src = '/images/inslogo.jpg'
                     }}
@@ -235,12 +229,8 @@ const TeamPage = () => {
               </div>
 
               {/* Team Members */}
-              <div className="px-8 pb-8">
-                <div className="flex gap-6 overflow-x-auto p-4 justify-center flex-wrap">
-                  {getDomainMembers(selectedDomain).map((member) => (
-                    <MemberCard key={member.id} member={member} />
-                  ))}
-                </div>
+              <div className="px-4 md:px-8 pb-6 space-y-8">
+                <MemberCarousel members={getDomainMembers(selectedDomain)} />
               </div>
             </div>
           </div>
@@ -253,9 +243,9 @@ const TeamPage = () => {
 
 const MemberCard = ({ member }) => {
   return (
-    <div className="bg-white/60 dark:bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 flex flex-col min-w-[220px] max-w-[220px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ED3E21]/20 hover:-translate-y-1">
+    <div className="bg-white/60 dark:bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 flex flex-col min-w-[200px] max-w-[200px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ED3E21]/20 hover:-translate-y-1">
       {/* Profile Image */}
-      <div className="relative w-full h-48 overflow-hidden">
+      <div className="relative w-full h-40 overflow-hidden">
         <img
           src={member.image?.startsWith('/') ? member.image : `/images/${member.image}`}
           alt={member.name}
@@ -316,3 +306,84 @@ const MemberCard = ({ member }) => {
 }
 
 export default TeamPage
+
+const MemberCarousel = ({ members }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setItemsPerPage(1);
+      else if (window.innerWidth < 850) setItemsPerPage(2);
+      else if (window.innerWidth < 1150) setItemsPerPage(3);
+      else setItemsPerPage(4);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalPages = Math.ceil(members.length / itemsPerPage);
+  const validTotalPages = totalPages > 0 ? totalPages : 1;
+  
+  useEffect(() => {
+    if (currentIndex >= validTotalPages && validTotalPages > 0) {
+      setCurrentIndex(validTotalPages - 1);
+    }
+  }, [validTotalPages, currentIndex]);
+
+  const nextSlide = () => setCurrentIndex((p) => (p + 1) % validTotalPages);
+  const prevSlide = () => setCurrentIndex((p) => (p - 1 + validTotalPages) % validTotalPages);
+
+  if (!members || members.length === 0) return null;
+
+  return (
+    <div className="relative w-full max-w-5xl mx-auto px-4 md:px-12 py-2">
+      {/* Left Arrow */}
+      {validTotalPages > 1 && (
+        <button onClick={prevSlide} className="absolute left-0 md:-left-4 top-[40%] -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-2xl bg-white/90 dark:bg-[#1a1a1a]/90 text-[#ED3E21] dark:text-white border border-black/10 dark:border-white/10 hover:scale-110 transition-all shadow-xl backdrop-blur-sm">
+          <i className="fas fa-chevron-left text-xl"></i>
+          <span className="sr-only">Previous</span>
+        </button>
+      )}
+      
+      {/* Track */}
+      <div className="overflow-hidden relative z-0">
+        <div 
+          className="flex transition-transform duration-500 ease-out will-change-transform" 
+          style={{ width: `${validTotalPages * 100}%`, transform: `translateX(-${currentIndex * (100 / validTotalPages)}%)` }}
+        >
+          {Array.from({ length: validTotalPages }).map((_, pageIndex) => (
+             <div key={pageIndex} className="flex-shrink-0 flex gap-4 md:gap-6 justify-center px-2 py-6" style={{ width: `${100 / validTotalPages}%` }}>
+                {members.slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage).map(member => (
+                   <MemberCard key={member.id} member={member} />
+                ))}
+             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Arrow */}
+      {validTotalPages > 1 && (
+        <button onClick={nextSlide} className="absolute right-0 md:-right-4 top-[40%] -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-2xl bg-white/90 dark:bg-[#1a1a1a]/90 text-[#ED3E21] dark:text-white border border-black/10 dark:border-white/10 hover:scale-110 transition-all shadow-xl backdrop-blur-sm">
+          <i className="fas fa-chevron-right text-xl"></i>
+          <span className="sr-only">Next</span>
+        </button>
+      )}
+
+      {/* Dot Indicators */}
+      {validTotalPages > 1 && (
+        <div className="flex justify-center gap-3 mt-2 mb-2">
+          {Array.from({ length: validTotalPages }).map((_, idx) => (
+            <button 
+              key={idx} 
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-2.5 rounded-full transition-all duration-300 ${currentIndex === idx ? 'bg-[#ED3E21] w-8' : 'w-2.5 bg-black/20 dark:bg-white/30 hover:bg-black/40 dark:hover:bg-white/50'}`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}

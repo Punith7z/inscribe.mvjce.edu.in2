@@ -59,6 +59,10 @@
     @apply box-border;
   }
 
+  html {
+    zoom: 80%;
+  }
+
   /* Light Theme (Default) */
   body {
     /* noinspection CssUnknownAtRule */
@@ -215,7 +219,7 @@
   html[data-theme="light"] .bounce-card:hover {
     box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.15), 0 0 25px rgba(0, 0, 0, 0.08) !important;
     transform: translateY(-4px);
-    border-border-color: rgba(0, 0, 0, 0.1) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
   }
 }
 

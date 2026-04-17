@@ -16,7 +16,7 @@ export const facultyCoordinator = [
 
 export const leadership = [
   {
-    id: 1,
+    id: 2,
     name: 'Anu V',
     role: 'President',
     image: '/images/Anu.jpg',
@@ -28,7 +28,7 @@ export const leadership = [
     }
   },
   {
-    id: 2,
+    id: 3,
     name: 'Nitishkumar Patil',
     role: 'Vice President',
     image: '/images/nithish.jpg',
@@ -43,7 +43,7 @@ export const leadership = [
 
 export const domainLeads = [
   {
-    id: 1,
+    id: 4,
     name: "Harismitha G",
     role: "Development Lead",
     domain: "Web Development",
@@ -55,7 +55,7 @@ export const domainLeads = [
     }
   },
   {
-    id: 2,
+    id: 5,
     name: "Manjula P",
     role: "Animation Lead",
     domain: "Animation",
@@ -67,7 +67,7 @@ export const domainLeads = [
     }
   },
   {
-    id: 3,
+    id: 6,
     name: "Diya Mariam Oommen",
     role: "Digital Design Lead",
     domain: "Design & Arts",
@@ -79,7 +79,7 @@ export const domainLeads = [
     }
   },
   {
-    id: 4,
+    id: 7,
     name: "Mussarrat Kittur",
     role: "Content Lead",
     domain: "Content Writing",
@@ -91,7 +91,7 @@ export const domainLeads = [
     }
   },
   {
-    id: 5,
+    id: 8,
     name: "Gurudev S Hiremath",
     role: "Media Lead",
     domain: "Photography & Videography",
@@ -111,7 +111,7 @@ export const teamMembers = [
   {
     domain: 'animation', members: [
       {
-        id: 1,
+        id: 9,
         name: "Bhuvana Shree N",
         image: "/images/BhuvanaShree (1).jpg",
         social: {
@@ -121,7 +121,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 2,
+        id: 10,
         name: "Manjula P",
         role: "Animation Lead",
         domain: "Animation",
@@ -133,7 +133,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 3,
+        id: 11,
         name: 'Nithish',
         role: 'Vice President',
         image: '/images/nithish.jpg',
@@ -145,7 +145,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 2,
+        id: 12,
         name: "janani.m",
         image: "/images/janani.jpg",
         social: {
@@ -155,7 +155,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 3,
+        id: 13,
         name: "Sree lakshmi U Krishnan",
         image: "/images/Sree Lakshmi U Krishnan.jpg",
         social: {
@@ -165,7 +165,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 4,
+        id: 14,
         name: "Kamal Nayan S",
         image: "/images/kamal.jpg",
         social: {
@@ -175,7 +175,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 5,
+        id: 15,
         name: "Mithun M",
         image: "/images/Mithun M.jpg",
         social: {
@@ -185,7 +185,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 6,
+        id: 16,
         name: "Soumya",
         image: "/images/Sowmyad.jpg",
         social: {
@@ -195,7 +195,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 7,
+        id: 17,
         name: "Sana",
         image: "/images/sana.jpeg",
         social: {
@@ -205,7 +205,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 8,
+        id: 18,
         name: "Lokesh",
         image:"/images/Lokesh Rao S B_.jpg",
         social: {
@@ -220,7 +220,7 @@ export const teamMembers = [
   {
     domain: 'content', members: [
       {
-        id: 6,
+        id: 19,
         name: "Mussarrat Kittur",
         role: "Content Lead",
         domain: "Content Writing",
@@ -232,7 +232,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 7,
+        id: 20,
         name: 'Anu V',
         role: 'President',
         image: '/images/Anu.jpg',
@@ -244,7 +244,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 8,
+        id: 21,
         name: "Tanushitha V",
         image: "/images/thanushitha.jpeg",
         social: {
@@ -254,7 +254,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 9,
+        id: 22,
         name: "Chandana Shree",
         image: "/images/Chandana Shree.jpg",
         social: {
@@ -264,7 +264,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 10,
+        id: 23,
         name: "Divyashree R",
         image: "/images/Divyashree R.jpg",
         social: {
@@ -274,7 +274,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 11,
+        id: 24,
         name: "A Lavanya",
         image: "/images/A LAVANYA.jpeg",
         social: {
@@ -284,7 +284,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 12,
+        id: 25,
         name: "Pallavi vajramatti",
         image: "/images/Pallavi Vajramatti.jpg",
         social: {
@@ -294,7 +294,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 13,
+        id: 26,
         name: "Riya",
         image: "/images/RIYA.jpg",
         social: {
@@ -304,7 +304,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 14,
+        id: 27,
         name: "Anusha R K",
         image: "/images/anusha r k.jpg",
         social: {
@@ -314,7 +314,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 15,
+        id: 28,
         name: "Meghana",
         image: "/images/Meghana.jpg",
         social: {
@@ -328,7 +328,7 @@ export const teamMembers = [
   {
     domain: 'development', members: [
       {
-        id: 14,
+        id: 29,
         name: "Harismitha G",
         role: "Development Lead",
         domain: "Web Development",
@@ -340,7 +340,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 15,
+        id: 30,
         name: "L V Nivethan",
         image: "/images/NIVETHAN.png",
         social: {
@@ -350,7 +350,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 16,
+        id: 31,
         name: "Nityashree Shanbhag",
         image: "/images/Nityashree.jpg",
         social: {
@@ -360,7 +360,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 17,
+        id: 32,
         name: "Rajaneesh G A",
         image: "/images/Rajaneesh G A_.jpg",
         social: {
@@ -370,7 +370,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 18,
+        id: 33,
         name: "Soujanya Maharudra",
         image: "/images/Soujanya_Maharudra.jpeg",
         social: {
@@ -380,7 +380,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 19,
+        id: 34,
         name: "Rohan Badmi",
         image: "/images/RohanBadami.jpg.jpeg",
         social: {
@@ -390,7 +390,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 20,
+        id: 35,
         name: "Jeevitha A",
         image: "/images/Jeevitha A.jpg",
         social: {
@@ -400,7 +400,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 21,
+        id: 36,
         name: "Maclin Florida S",
         image: "/images/maclin.jpg",
         social: {
@@ -410,7 +410,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 22,
+        id: 37,
         name: "C Varun",
         image: "/images/C Varun.png",
         social: {
@@ -420,7 +420,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 23,
+        id: 38,
         name: "Chinthan M",
         image: "/images/chinthan.jpg",
         social: {
@@ -430,7 +430,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 24,
+        id: 39,
         name: "Chithra R",
         image: "/images/chitra.jpg",
         social: {
@@ -440,7 +440,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 25,
+        id: 40,
         name: "Dhanush N",
         image: "/images/Dhanush N.jpg",
         social: {
@@ -450,7 +450,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 26,
+        id: 41,
         name: "Manojna M Bhat",
         image: "/images/manojna.png",
         social: {
@@ -460,7 +460,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 52,
+        id: 42,
         name: "Hithashree B C",
         image: "/images/hithashree.jpg",
         social: {
@@ -470,7 +470,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 28,
+        id: 43,
         name: "Akshay H",
         image: "/images/Akshay H.png",
         social: {
@@ -480,7 +480,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 29,
+        id: 44,
         name: "Baswakiran",
         image: "/images/Baswakiran_.jpg",
         social: {
@@ -490,7 +490,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 30,
+        id: 45,
         name: "Aishwarya s",
         image: "/images/aishwarya S.jpg",
         social: {
@@ -500,7 +500,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 31,
+        id: 46,
         name: "Arjun BS",
         image: "/images/A^2BS.jpg",
         social: {
@@ -510,7 +510,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 48,
+        id: 47,
         name: "Nikhil Reddy",
         image: "/images/Nikhil.jpg",
         social: {
@@ -520,7 +520,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 49,
+        id: 48,
         name: "Saptaparno Ghosh",
         image: "/images/Saptaparno.jpeg",
         social: {
@@ -530,7 +530,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 50,
+        id: 49,
         name: "Yashwanth Reddy B S",
         image: "/images/Yashwanth.jpeg",
         social: {
@@ -540,7 +540,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 51,
+        id: 50,
         name: "Punith M",
         image: "/images/PUNITH.png",
         social: {
@@ -565,7 +565,7 @@ export const teamMembers = [
   {
     domain: 'design', members: [
       {
-        id: 32,
+        id: 52,
         name: "Diya Mariam Oommen",
         role: "Digital Design Lead",
         domain: "Design & Arts",
@@ -577,7 +577,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 33,
+        id: 53,
         name: "Johanaz Nadaf",
         image: "/images/Johanaz Nadaf.jpg",
         social: {
@@ -587,7 +587,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 34,
+        id: 54,
         name: "KHUSHWANTH K K",
         image: "/images/KHUSHWANTH.jpg",
         social: {
@@ -598,7 +598,7 @@ export const teamMembers = [
       },
     
       {
-        id: 36,
+        id: 55,
         name: "Lekhana Gowda",
         image: "/images/lekhana.jpg",
         social: {
@@ -608,7 +608,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 56,
         name: "Poornisha Purushothaman",
         image: "/images/Poornisha Purushothaman.jpg",
         social: {
@@ -618,7 +618,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 38,
+        id: 57,
         name: "Akshatha M Shet",
         image: "/images/Akshatha M Shet_.jpg",
         social: {
@@ -628,7 +628,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 39,
+        id: 58,
         name: "Siri Reddy K",
         image: "/images/Siri Reddy K.jpg",
         social: {
@@ -638,7 +638,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 40,
+        id: 59,
         name: "Vismaya M",
         image: "/images/Vismaya M.jpg",
         social: {
@@ -648,7 +648,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 41,
+        id: 60,
         name: "Vaishnavi Solpure",
         image: "/images/Vaishnavi Solpure.png",
         social: {
@@ -658,7 +658,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 42,
+        id: 61,
         name: "Charitha S",
         image: "/images/Charitha.jpeg",
         social: {
@@ -668,7 +668,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 62,
         name: "Charushree P",
         image: "/images/Charu shree_.jpg",
         social: {
@@ -678,7 +678,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 63,
         name: "Monika T",
         image: "/images/Monika T.jpg",
         social: {
@@ -688,7 +688,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 64,
         name: "Dharani vellaboina",
         image: "/images/Dharani_vellaboina.jpg",
         social: {
@@ -698,7 +698,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 65,
         name: "Manasa j y",
         image: "/images/Manasa.jpg",
         social: {
@@ -708,7 +708,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 66,
         name: "Deeksha N",
         image: "/images/Deeksha N.jpg",
         social: {
@@ -718,7 +718,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 67,
         name: "Pranav",
         image: "/images/Pranav.jpg",
         social: {
@@ -728,7 +728,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 80,
+        id: 68,
         name: "Aanuj",
         image: "/images/Aanuj.jpeg",
         social: {
@@ -739,7 +739,7 @@ export const teamMembers = [
       },
 
       {
-        id: 82,
+        id: 69,
         name: "Harini",
         image: "/images/Harini.jpeg",
         social: {
@@ -753,7 +753,7 @@ export const teamMembers = [
   {
     domain: 'media', members: [
       {
-        id: 43,
+        id: 70,
         name: "GURUDEV S HIREMATH",
         image: "/images/dev1.jpg",
         social: {
@@ -763,7 +763,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 44,
+        id: 71,
         name: "Naveen R",
         image: "/images/Naveen R.jpg",
         social: {
@@ -773,7 +773,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 45,
+        id: 72,
         name: "Sanjana J ",
         image: "/images/Sanjana J.jpg",
         social: {
@@ -783,7 +783,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 47,
+        id: 73,
         name: "Nivetha.H",
         image: "/images/Nivetha.H.jpg",
         social: {
@@ -793,7 +793,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 47,
+        id: 74,
         name: "Harini Y S ",
         image: "/images/HARINI Y S.jpg",
         social: {
@@ -803,7 +803,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 75,
         name: "Ankitha",
         image: "/images/Ankitha H P Gowda.jpg",
         social: {
@@ -813,7 +813,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 76,
         name: "Shreya",
         image: "/images/Shreya.C .jpg",
         social: {
@@ -823,7 +823,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 77,
         name:"Subhasish Pothal",
         image: "/images/Subhasish Pothal.jpg",
         social: {
@@ -833,7 +833,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 78,
         name:"Vaishnavi CK",
         image: "/images/Vaishnavi C Kulkarni_.jpg",
         social: {
@@ -843,7 +843,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 79,
         name:"Varun S M",
         image: "/images/Varun SM.jpg",
         social: {
@@ -853,7 +853,7 @@ export const teamMembers = [
         }
       },
       {
-        id: 37,
+        id: 80,
         name:"Yashas D U",
         image: "/images/Yashas D U.jpg",
         social: {
