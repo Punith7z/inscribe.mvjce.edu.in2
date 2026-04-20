@@ -141,7 +141,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/inscribe-mvjce"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#0077B5] hover:text-white"
+              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#0077B5] hover:text-white text-gray-600 dark:text-gray-400"
             >
               <Linkedin size={16} />
             </a>
@@ -149,7 +149,7 @@ const Footer = () => {
               href="https://github.com/inscribemvjce24-prog"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#333] hover:text-white"
+              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#333333] hover:text-white text-gray-600 dark:text-gray-400"
             >
               <Github size={16} />
             </a>
@@ -157,7 +157,7 @@ const Footer = () => {
               href="https://www.instagram.com/inscribe_mvjce"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#E1306C] hover:text-white"
+              className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white text-gray-600 dark:text-gray-400"
             >
               <Instagram size={16} />
             </a>

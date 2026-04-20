@@ -186,7 +186,7 @@ const TeamPage = () => {
         {/* Modal */}
         {modalOpen && selectedDomainConfig && (
           <div
-            className="fixed inset-0 bg-black/80 z-[9999] flex items-start justify-center p-4 overflow-y-auto scroll-smooth"
+            className="fixed inset-0 bg-black/80 z-[9999] flex items-start justify-center p-4 pt-24 md:pt-32 overflow-y-auto scroll-smooth"
             onClick={closeModal}
             style={{ 
               backdropFilter: 'blur(5px)',
@@ -292,7 +292,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#0077B5] hover:text-white"
+                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#0077B5] hover:text-white text-gray-600 dark:text-gray-400"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Linkedin size={14} />
@@ -303,7 +303,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#333] hover:text-white"
+                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#333333] hover:text-white text-gray-600 dark:text-gray-400"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Github size={14} />
@@ -314,7 +314,7 @@ const MemberCard = ({ member }) => {
                 href={member.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#E1306C] hover:text-white"
+                className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white text-gray-600 dark:text-gray-400"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Instagram size={14} />

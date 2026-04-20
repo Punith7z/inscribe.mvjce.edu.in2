@@ -60,7 +60,7 @@ const Team = () => {
                 Domain Leads
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="flex justify-center gap-10 max-w-4xl mx-auto">
                 {domainLeads.map((member) => (
                   <TeamCard key={member.id} member={member} />
                 ))}
@@ -132,7 +132,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-social-btn  hover:bg-[#E1306C] hover:text-white"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
               >
                 <Instagram size={16} />
               </a>
@@ -142,7 +142,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5  glass-social-btn  hover:bg-[#333] hover:text-white"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#333333] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
               >
                 <Github size={16} />
               </a>
@@ -152,7 +152,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-social-btn  hover:bg-[#0077B5] hover:text-white"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#0077B5] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
               >
                 <Linkedin size={16} />
               </a>

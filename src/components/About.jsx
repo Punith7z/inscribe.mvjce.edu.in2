@@ -1,16 +1,35 @@
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
+import { useEffect, useState } from 'react'
 
 const About = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
     threshold: 0.1,
     type: 'fade-in'
   })
+  const [scrollPastHero, setScrollPastHero] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero-video-section')
+      if (heroSection) {
+        const heroHeight = heroSection.offsetHeight
+        setScrollPastHero(window.scrollY > heroHeight * 0.8)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const shouldShow = isVisible && scrollPastHero
 
   return (
     <section
       id="about"
       ref={ref}
-      className="py-16 px-5 relative min-h-[40vh] flex flex-col items-center justify-center"
+      className={`pt-32 pb-16 px-5 relative min-h-[40vh] flex flex-col items-center justify-center transition-all duration-1000 ease-out ${
+        shouldShow ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
     >
       <div>
         <h2 className="section-title text-4xl mb-8 text-center text-heading font-montserrat font-bold relative pb-4">
