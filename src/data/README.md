@@ -37,7 +37,11 @@ export const leadership = [
     role: 'President',
     image: '/images/path.jpg',
     domain: '',
-    social: {}
+    social: {
+      instagram: 'https://instagram.com/...',
+      github: 'https://github.com/...',
+      linkedin: 'https://linkedin.com/in/...'
+    }
   }
 ]
 
@@ -48,7 +52,9 @@ export const domainLeads = [
     role: 'Domain Lead',
     domain: 'Web Development',
     image: '/images/path.jpg',
-    social: {}
+    social: {instagram: 'https://instagram.com/...',
+      github: 'https://github.com/...',
+      linkedin: 'https://linkedin.com/in/...'}
   }
 ]
 
@@ -61,7 +67,10 @@ export const teamMembers = [
         name: 'Name',
         role: 'Member',
         image: '/images/path.jpg',
-        social: {}
+        social: {
+                instagram: 'https://instagram.com/...',
+                github: 'https://github.com/...',
+                linkedin: 'https://linkedin.com/in/...'}
       }
     ]
   }
