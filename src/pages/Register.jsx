@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowLeft, CircleCheck } from 'lucide-react'
 
 import Footer from '../components/Footer'
 import { useTheme } from '../contexts/ThemeContext'
@@ -46,7 +47,7 @@ const Register = () => {
           to="/"
           className="absolute top-24 left-5 md:top-28 md:left-10 px-6 py-2.5 bg-transparent border border-transparent dark:border-[#ED3E21] text-[#73634F] dark:text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl dark:hover:bg-[#ED3E21]/10"
         >
-          <i className="fas fa-arrow-left mr-2"></i>
+          <ArrowLeft size={18} className="mr-2 inline-block align-text-bottom" />
           Back to Home
         </Link>
 
@@ -58,7 +59,7 @@ const Register = () => {
           
           {isSubmitted ? (
             <div className="bg-green-500/20 border border-green-500/50 text-green-700 dark:text-green-400 p-6 rounded-2xl mb-4 transition-all duration-300">
-              <i className="fas fa-check-circle text-4xl mb-3"></i>
+              <CircleCheck size={36} className="mb-3 mx-auto" />
               <h2 className="text-xl font-bold font-montserrat mb-2">Registration Successful!</h2>
               <p>Thank you for registering. We will contact you shortly with more details.</p>
             </div>

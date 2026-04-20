@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowLeft, ChevronLeft, ChevronRight, Users, X } from 'lucide-react'
+import { Github, Instagram, Linkedin } from '../components/icons/socialIcons'
 
 import Footer from '../components/Footer'
 import { teamMembers } from '../data/team'
@@ -113,7 +115,7 @@ const TeamPage = () => {
             to="/"
             className="inline-flex items-center gap-2 mb-8 px-6 py-2.5 bg-transparent dark:bg-white/5 backdrop-blur-md border border-transparent dark:border-[#ED3E21] text-[#73634F] dark:text-white rounded-full no-underline font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg dark:hover:bg-white/10"
           >
-            <i className="fas fa-arrow-left"></i>
+            <ArrowLeft size={18} />
             Back to Home
           </Link>
 
@@ -165,7 +167,7 @@ const TeamPage = () => {
                       }}
                     />
                     <div className="w-full h-full bg-gradient-to-br from-accent-2/20 to-accent-2/40 items-center justify-center hidden">
-                      <i className={`fas ${domain.icon} text-5xl text-accent-2`}></i>
+                      <Users size={48} className="text-accent-2" />
                     </div>
                   </div>
 
@@ -219,7 +221,7 @@ const TeamPage = () => {
                   onClick={closeModal}
                   className="inline-flex items-center gap-2 text-accent-2 hover:text-heading transition-colors font-semibold text-lg"
                 >
-                  <i className="fas fa-arrow-left"></i>
+                  <ArrowLeft size={18} />
                   Back
                 </button>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-center font-montserrat text-[#8B7355] dark:bg-gradient-to-r dark:from-[#ED3E21] dark:to-[#0077B5] dark:bg-clip-text dark:text-transparent m-0 px-4">
@@ -229,7 +231,7 @@ const TeamPage = () => {
                   onClick={closeModal}
                   className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 shadow-md flex items-center justify-center text-[#ED3E21] dark:text-white transition-all hover:scale-110 hover:rotate-90"
                 >
-                  <i className="fas fa-times text-xl"></i>
+                  <X size={20} />
                 </button>
               </div>
 
@@ -293,7 +295,7 @@ const MemberCard = ({ member }) => {
                 className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#0077B5] hover:text-white"
                 onClick={(e) => e.stopPropagation()}
               >
-                <i className="fab fa-linkedin text-sm"></i>
+                <Linkedin size={14} />
               </a>
             )}
             {member.social.github && (
@@ -304,7 +306,7 @@ const MemberCard = ({ member }) => {
                 className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#333] hover:text-white"
                 onClick={(e) => e.stopPropagation()}
               >
-                <i className="fab fa-github text-sm"></i>
+                <Github size={14} />
               </a>
             )}
             {member.social.instagram && (
@@ -315,7 +317,7 @@ const MemberCard = ({ member }) => {
                 className="w-8 h-8 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#E1306C] hover:text-white"
                 onClick={(e) => e.stopPropagation()}
               >
-                <i className="fab fa-instagram text-sm"></i>
+                <Instagram size={14} />
               </a>
             )}
           </div>
@@ -362,7 +364,7 @@ const MemberCarousel = ({ members }) => {
       {/* Left Arrow */}
       {validTotalPages > 1 && (
         <button onClick={prevSlide} className="absolute left-0 md:-left-4 top-[40%] -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-2xl bg-white/90 dark:bg-[#1a1a1a]/90 text-[#ED3E21] dark:text-white border border-black/10 dark:border-white/10 hover:scale-110 transition-all shadow-xl backdrop-blur-sm">
-          <i className="fas fa-chevron-left text-xl"></i>
+          <ChevronLeft size={20} />
           <span className="sr-only">Previous</span>
         </button>
       )}
@@ -386,7 +388,7 @@ const MemberCarousel = ({ members }) => {
       {/* Right Arrow */}
       {validTotalPages > 1 && (
         <button onClick={nextSlide} className="absolute right-0 md:-right-4 top-[40%] -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-2xl bg-white/90 dark:bg-[#1a1a1a]/90 text-[#ED3E21] dark:text-white border border-black/10 dark:border-white/10 hover:scale-110 transition-all shadow-xl backdrop-blur-sm">
-          <i className="fas fa-chevron-right text-xl"></i>
+          <ChevronRight size={20} />
           <span className="sr-only">Next</span>
         </button>
       )}

@@ -1,5 +1,6 @@
 import { facultyCoordinator, leadership } from '../data/team'
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
+import { Github, Instagram, Linkedin } from './icons/socialIcons'
 
 const Leadership = () => {
   const [ref, isVisible] = useScrollAnimationEnhanced({
@@ -91,7 +92,7 @@ const TeamCard = ({ member }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#0077B5] hover:text-white"
               >
-                <i className="fab fa-linkedin"></i>
+                <Linkedin size={16} />
               </a>
             )}
             {member.social.github && (
@@ -101,7 +102,7 @@ const TeamCard = ({ member }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#333] hover:text-white"
               >
-                <i className="fab fa-github"></i>
+                <Github size={16} />
               </a>
             )}
             {member.social.instagram && (
@@ -111,7 +112,7 @@ const TeamCard = ({ member }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 glass-social-btn rounded-full flex items-center justify-center transition-all hover:-translate-y-1 hover:scale-110 hover:bg-[#E1306C] hover:text-white"
               >
-                <i className="fab fa-instagram"></i>
+                <Instagram size={16} />
               </a>
             )}
           </div>

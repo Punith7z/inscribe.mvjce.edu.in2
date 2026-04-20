@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SquarePen } from 'lucide-react'
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -39,7 +40,7 @@ const RegistrationSection = () => {
                 border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
               }}
             >
-              <i className="fas fa-edit mr-2"></i>
+              <SquarePen size={18} className="mr-2 inline-block align-text-bottom" />
               Open Registration
             </Link>
           </div>

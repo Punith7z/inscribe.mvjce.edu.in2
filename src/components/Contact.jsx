@@ -1,5 +1,7 @@
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 import { useTheme } from '../contexts/ThemeContext'
+import { Mail } from 'lucide-react'
+import { Instagram, Linkedin } from './icons/socialIcons'
 
 const Contact = () => {
   const { theme } = useTheme()
@@ -39,7 +41,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-email"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#ED3E21' : 'transparent' }}
               >
-                <i className="fas fa-envelope text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <Mail size={20} style={{ color: '#FFFFFF' }} />
                 <span className="text-lg" style={{ color: '#FFFFFF' }}>Email Us</span>
               </a>
               <a
@@ -49,7 +51,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-instagram"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#E1306C' : 'transparent' }}
               >
-                <i className="fab fa-instagram text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <Instagram size={20} style={{ color: '#FFFFFF' }} />
                 <span className="text-lg" style={{ color: '#FFFFFF' }}>Instagram</span>
               </a>
               <a
@@ -59,7 +61,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-linkedin"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#0077B5' : 'transparent' }}
               >
-                <i className="fab fa-linkedin text-2xl" style={{ color: '#FFFFFF' }}></i>
+                <Linkedin size={20} style={{ color: '#FFFFFF' }} />
                 <span className="text-lg" style={{ color: '#FFFFFF' }}>LinkedIn</span>
               </a>
             </div>

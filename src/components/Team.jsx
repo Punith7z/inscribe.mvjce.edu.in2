@@ -1,5 +1,6 @@
 import { facultyCoordinator, leadership, domainLeads, teamMembers } from '../data/team'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Github, Instagram, Linkedin } from './icons/socialIcons'
 
 const Team = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
@@ -133,7 +134,7 @@ const TeamCard = ({ member, compact = false }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-social-btn  hover:bg-[#E1306C] hover:text-white"
               >
-                <i className="fab fa-instagram"></i>
+                <Instagram size={16} />
               </a>
             )}
             {member.social.github && (
@@ -143,7 +144,7 @@ const TeamCard = ({ member, compact = false }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5  glass-social-btn  hover:bg-[#333] hover:text-white"
               >
-                <i className="fab fa-github"></i>
+                <Github size={16} />
               </a>
             )}
             {member.social.linkedin && (
@@ -153,7 +154,7 @@ const TeamCard = ({ member, compact = false }) => {
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gradient-to-r from-brand-red to-brand-blue rounded-full flex items-center justify-center text-white transition-all hover:-translate-y-1 hover:scale-110 border border-black/5 glass-social-btn  hover:bg-[#0077B5] hover:text-white"
               >
-                <i className="fab fa-linkedin"></i>
+                <Linkedin size={16} />
               </a>
             )}
           </div>

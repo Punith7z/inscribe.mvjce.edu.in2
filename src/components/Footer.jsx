@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Github, Instagram, Linkedin } from './icons/socialIcons'
 import { scrollToSection } from '../utils/scrollToSection'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -142,7 +143,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#0077B5] hover:text-white"
             >
-              <i className="fab fa-linkedin text-lg"></i>
+              <Linkedin size={16} />
             </a>
             <a
               href="https://github.com/inscribemvjce24-prog"
@@ -150,7 +151,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#333] hover:text-white"
             >
-              <i className="fab fa-github text-lg"></i>
+              <Github size={16} />
             </a>
             <a
               href="https://www.instagram.com/inscribe_mvjce"
@@ -158,7 +159,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 glass-social-btn rounded-full flex items-center justify-center transition-all hover:scale-110 hover:bg-[#E1306C] hover:text-white"
             >
-              <i className="fab fa-instagram text-lg"></i>
+              <Instagram size={16} />
             </a>
           </div>
         </div>

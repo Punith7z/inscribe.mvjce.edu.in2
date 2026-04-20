@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom'
+import { Users } from 'lucide-react'
 import { useScrollAnimationEnhanced } from '../hooks/useScrollAnimation'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -41,7 +42,7 @@ const TalentTree = () => {
                             border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
                         }}
                     >
-                        <i className="fas fa-users text-2xl"></i>
+                        <Users size={20} />
                         Explore Our Talent Universe
                     </Link>
                 </div>
