@@ -16,6 +16,10 @@ const Contact = () => {
     border: theme === 'dark' ? '2px solid' : '2px solid transparent'
   }
 
+  const textStyle = {
+    color: '#FFFFFF'
+  }
+
   return (
     <section
       id="contact"
@@ -38,31 +42,31 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="mailto:inscribe.mvjce24@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-email"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:-translate-y-1"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#ED3E21' : 'transparent' }}
               >
-                <Mail size={20} style={{ color: '#FFFFFF' }} />
-                <span className="text-lg" style={{ color: '#FFFFFF' }}>Email Us</span>
+                <Mail size={20} style={textStyle} />
+                <span className="text-lg" style={textStyle}>Email Us</span>
               </a>
               <a
                 href="https://www.instagram.com/inscribe.mvjce/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-instagram"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#E1306C' : 'transparent' }}
               >
-                <Instagram size={20} style={{ color: '#FFFFFF' }} />
-                <span className="text-lg" style={{ color: '#FFFFFF' }}>Instagram</span>
+                <Instagram size={20} style={textStyle} />
+                <span className="text-lg" style={textStyle}>Instagram</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/inscribe-mvjce24/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover-linkedin"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full no-underline font-semibold shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover:bg-[#0077B5] hover:text-white"
                 style={{ ...buttonStyle, borderColor: theme === 'dark' ? '#0077B5' : 'transparent' }}
               >
-                <Linkedin size={20} style={{ color: '#FFFFFF' }} />
-                <span className="text-lg" style={{ color: '#FFFFFF' }}>LinkedIn</span>
+                <Linkedin size={20} style={textStyle} />
+                <span className="text-lg" style={textStyle}>LinkedIn</span>
               </a>
             </div>
           </div>
