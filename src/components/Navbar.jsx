@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { scrollToSection } from '../utils/scrollToSection'
 import { useTheme } from 'next-themes'
@@ -9,44 +9,54 @@ const Navbar = ({ videoEnded = false }) => {
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const lastScrollY = useRef(0)
   const [activeSection, setActiveSection] = useState('')
   const { resolvedTheme: theme } = useTheme()
   const isHomePage = location.pathname === '/'
-  const shouldShow = isHomePage ? videoEnded : true
+  const isVideoScreen = isHomePage && !videoEnded
+  
+  // Final visibility combines: overall visibility, video state, and scroll state
+  const shouldHide = !isVisible && !isMenuOpen
+  const shouldShow = isVideoScreen ? false : !shouldHide
 
-  // Scroll detection for navbar style
+  // Scroll detection for navbar style and direction
   useEffect(() => {
-    let ticking = false
-
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY
-          setIsScrolled(currentScrollY > 50)
+      const currentScrollY = window.scrollY
+      
+      // Determine background state
+      setIsScrolled(currentScrollY > 50)
 
-          // Detect active section
-          if (isHomePage) {
-            const sections = ['about', 'teams', 'events', 'gallery', 'contact']
-            const currentSection = sections.find(section => {
-              const element = document.getElementById(section)
-              if (element) {
-                const rect = element.getBoundingClientRect()
-                return rect.top <= 150 && rect.bottom >= 150
-              }
-              return false
-            })
-            setActiveSection(currentSection || '')
+      // Instant Reveal Logic: Show on any upward scroll, hide on downward scroll after threshold
+      if (currentScrollY <= 50) {
+        setIsVisible(true)
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling UP
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY.current + 5 && currentScrollY > 120) {
+        // Scrolling DOWN (with tiny 5px buffer to prevent flicker)
+        setIsVisible(false)
+      }
+
+      lastScrollY.current = currentScrollY
+
+      // Detect active section
+      if (isHomePage) {
+        const sections = ['about', 'teams', 'events', 'gallery', 'contact']
+        const currentSection = sections.find(section => {
+          const element = document.getElementById(section)
+          if (element) {
+            const rect = element.getBoundingClientRect()
+            return rect.top <= 150 && rect.bottom >= 150
           }
-
-          ticking = false
+          return false
         })
-        ticking = true
+        setActiveSection(currentSection || '')
       }
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll() // Initial check
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isHomePage])
 
@@ -74,15 +84,9 @@ const Navbar = ({ videoEnded = false }) => {
         className={`fixed top-0 left-0 w-full px-5 py-4 flex items-center justify-between transition-all duration-500 ease-out ${shouldShow ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         style={{
-          background: isScrolled
-            ? theme === 'dark'
-              ? 'rgba(0, 0, 0, 0.65)'
-              : 'rgba(253, 251, 249, 0.85)'
-            : theme === 'dark'
-              ? 'rgba(0, 0, 0, 0.3)'
-              : 'rgba(253, 251, 249, 0.6)',
-          backdropFilter: isScrolled ? 'blur(24px) saturate(140%)' : 'blur(16px) saturate(120%)',
-          WebkitBackdropFilter: isScrolled ? 'blur(24px) saturate(140%)' : 'blur(16px) saturate(120%)',
+          background: 'transparent',
+          backdropFilter: isScrolled ? 'blur(12px) saturate(100%)' : 'blur(4px)',
+          WebkitBackdropFilter: isScrolled ? 'blur(12px) saturate(100%)' : 'blur(4px)',
           borderBottom: theme === 'dark'
             ? `1px solid rgba(255,255,255,${isScrolled ? '0.1' : '0.05'})`
             : `1px solid rgba(0,0,0,${isScrolled ? '0.08' : '0.04'})`,
@@ -158,28 +162,30 @@ const Navbar = ({ videoEnded = false }) => {
 
       {/* Dropdown Menu */}
       <div
-        className={`fixed top-16 right-5 backdrop-blur-xl rounded-2xl shadow-2xl transition-all duration-300 ease-out z-[999] ${isMenuOpen && shouldShow ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
+        className={`fixed top-20 right-4 backdrop-blur-2xl rounded-2xl shadow-2xl transition-all duration-300 ease-out z-[1001] ${isMenuOpen && shouldShow ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
         style={{
-          minWidth: '200px',
+          minWidth: '240px',
+          maxHeight: 'calc(100vh - 100px)',
+          overflowY: 'auto',
           padding: '0.75rem 0',
           background: theme === 'dark'
-            ? 'rgba(15, 23, 42, 0.8)'
-            : '#FDFBF9',
+            ? 'rgba(15, 23, 42, 0.9)'
+            : 'rgba(253, 251, 249, 0.95)',
           backdropFilter: 'blur(20px) saturate(180%)',
           WebkitBackdropFilter: 'blur(20px) saturate(180%)',
           border: theme === 'dark'
-            ? '1px solid rgba(255,255,255,0.1)'
+            ? '1px solid rgba(255,255,255,0.15)'
             : '1px solid rgba(0,0,0,0.1)',
           boxShadow: theme === 'dark'
-            ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.05) inset'
-            : '0 8px 32px rgba(0, 0, 0, 0.15)'
+            ? '0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.05) inset'
+            : '0 20px 40px rgba(0, 0, 0, 0.12)'
         }}
       >
         <div className="flex flex-col">
 
-          {/* Mobile Nav */}
-          <div className="md:hidden">
+          {/* Navigation Items (Visible on all screens now) */}
+          <div className="">
             <MenuLink onClick={() => handleNavClick('about')} icon="fa-info-circle">About</MenuLink>
 
             {/* Corrected Teams – was wrong earlier */}
@@ -214,7 +220,7 @@ const Navbar = ({ videoEnded = false }) => {
 
 const NavLink = ({ children, onClick, to, isActive = false }) => {
   const { theme } = useTheme()
-  const baseClasses = `font-medium no-underline transition-all duration-300 relative px-3 py-2 rounded-lg group cursor-pointer text-sm md:text-base ${theme === 'dark'
+  const baseClasses = `font-cinzel font-bold uppercase tracking-widest no-underline transition-all duration-300 relative px-3 py-2 rounded-lg group cursor-pointer text-sm md:text-base ${theme === 'dark'
     ? isActive
       ? 'text-white'
       : 'text-gray-200 hover:text-white'
@@ -295,7 +301,7 @@ const NavLink = ({ children, onClick, to, isActive = false }) => {
 
 const MenuLink = ({ children, onClick, to, icon }) => {
   const { theme } = useTheme()
-  const baseClasses = `flex items-center gap-3 px-5 py-3 transition-colors duration-200 cursor-pointer ${theme === 'dark'
+  const baseClasses = `font-cinzel font-bold uppercase tracking-widest flex items-center gap-3 px-5 py-3 transition-colors duration-200 cursor-pointer text-sm ${theme === 'dark'
     ? 'text-gray-200 hover:bg-white/10 hover:text-white'
     : 'text-gray-800 hover:bg-accent-2/10 hover:text-heading'
     }`

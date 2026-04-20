@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+
 import Footer from '../components/Footer'
 import { teamMembers } from '../data/team'
+import { NavyGridBackground } from '../components/ui/navy-grid-background'
+import { useTheme } from '../contexts/ThemeContext'
 
 // Domain configuration matching the data structure
 const domainConfig = [
@@ -46,6 +48,25 @@ const domainConfig = [
 const TeamPage = () => {
   const [selectedDomain, setSelectedDomain] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  // Forced Dark Mode logic for Team Page
+  useEffect(() => {
+    // Capture the theme state when entering the page
+    const originalTheme = theme;
+    
+    // Compulsorily transition to dark mode
+    if (theme !== 'dark') {
+      setTheme('dark');
+    }
+
+    // Revert back to the original theme when leaving the page
+    return () => {
+      if (originalTheme && originalTheme !== 'dark') {
+        setTheme(originalTheme);
+      }
+    };
+  }, []); // Run only on mount/unmount
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -79,13 +100,12 @@ const TeamPage = () => {
 
   return (
     <div className="min-h-screen relative">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
-        {/* Background handled globally in App.jsx */}
-      </div>
+      {/* Navy Grid Shader — Team page only, overrides the global Background3D */}
+      <NavyGridBackground />
 
       {/* Overlay for readability if needed, or purely relying on z-index */}
       <div className="relative z-10">
-        <Navbar />
+
 
         <div className="container mx-auto px-5 py-10 pt-24 max-w-7xl">
           {/* Back Button */}

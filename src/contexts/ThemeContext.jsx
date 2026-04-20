@@ -36,7 +36,8 @@ export const ThemeProvider = ({ children }) => {
     theme: mounted ? resolvedTheme : 'light',
     mode: mounted ? theme : 'system',
     cycleTheme,
-    toggleTheme
+    toggleTheme,
+    setTheme
   }
 
   return (

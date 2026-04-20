@@ -53,6 +53,39 @@
   font-display: swap;
 }
 
+/* Tex Gyre Adventor Font Face Declarations */
+@font-face {
+  font-family: 'Tex Gyre Adventor';
+  src: url('/tex-gyre-adventor/texgyreadventor-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tex Gyre Adventor';
+  src: url('/tex-gyre-adventor/texgyreadventor-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tex Gyre Adventor';
+  src: url('/tex-gyre-adventor/texgyreadventor-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tex Gyre Adventor';
+  src: url('/tex-gyre-adventor/texgyreadventor-bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   * {
     /* noinspection CssUnknownAtRule */
@@ -67,17 +100,19 @@
   body {
     /* noinspection CssUnknownAtRule */
     @apply m-0 p-0 overflow-x-hidden;
-    background: #FDFBF9;
-    color: #A58570;
+    background: #35A2FF; /* Using teal as the light-mode base to avoid white flashes during transition */
+    color: #1A1A1A; /* Darker, more contrasting color (Replaced #A58570) */
     font-family: 'Playfair Display', 'Apple Garamond', serif;
     min-height: 100vh;
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .home-root {
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
   }
 
   .hero-bg {
@@ -189,12 +224,12 @@
 
   html[data-theme="light"] .text-gray-600:not(#hero-video-section *),
   html[data-theme="light"] .text-gray-500:not(#hero-video-section *) {
-    color: #A58570 !important;
+    color: #1A1A1A !important; /* Contrasting color (was #A58570) */
   }
 
   html[data-theme="light"] p:not(#hero-video-section *),
   html[data-theme="light"] span:not(#hero-video-section *) {
-    color: #A58570;
+    color: #1A1A1A;
   }
 
   html[data-theme="light"] .section-title:not(#hero-video-section *),
@@ -361,17 +396,17 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .floating-shape {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, #A58570, #3D0A05);
+  background: linear-gradient(45deg, #1A1A1A, #3D0A05);
   opacity: 0.25;
   animation: floatShape 20s infinite linear;
-  box-shadow: 0 0 40px 20px #3D0A05, 0 0 60px 30px #A58570;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 40px 20px #3D0A05, 0 0 60px 30px #1A1A1A;
+  transition: all 0.4s ease;
 }
 
 [data-theme="dark"] .floating-shape {
@@ -606,6 +641,20 @@ html[data-theme="light"] .glass-social-btn:hover {
 }
 
 /* Lenis Recommended CSS */
+/* Increase size and apply Tex Gyre Adventor font to all subtitle small texts as requested */
+/* EXCLUDING hero section to maintain original elegant font there as requested */
+.text-xs:not(#hero-video-section *), 
+.text-sm:not(#hero-video-section *), 
+.text-base:not(#hero-video-section *), 
+p:not(.section-title):not(#hero-video-section *), 
+span:not(.section-title):not(#hero-video-section *) {
+  font-family: 'Tex Gyre Adventor', 'Playfair Display', sans-serif !important;
+}
+
+.text-xs { font-size: calc(0.75rem + 3px) !important; }
+.text-sm { font-size: calc(0.875rem + 3px) !important; }
+.text-base { font-size: calc(1rem + 3px) !important; }
+
 html.lenis,
 html.lenis body {
   height: auto;

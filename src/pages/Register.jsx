@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+
 import Footer from '../components/Footer'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -36,7 +36,7 @@ const Register = () => {
 
   return (
     <div className="relative min-h-screen text-[#73634F] dark:text-white overflow-x-hidden">
-      <Navbar />
+
 
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-5 pt-24">

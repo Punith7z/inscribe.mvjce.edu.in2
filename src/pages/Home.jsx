@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import WhatWeDo from '../components/WhatWeDo'
@@ -18,20 +17,14 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Team from '../components/Team'
 
-const Home = () => {
-  const [videoEnded, setVideoEnded] = useState(false)
-
+const Home = ({ setGlobalVideoEnded }) => {
   const handleVideoEnd = () => {
-    setVideoEnded(true)
+    setGlobalVideoEnded(true)
   }
 
   return (
     <div className="home-root snap-container overflow-x-hidden" style={{ position: 'relative' }}>
-
-      <section className="snap-section">
-        <Hero onVideoEnd={handleVideoEnd} />
-        <Navbar videoEnded={videoEnded} />
-      </section>
+      <Hero onVideoEnd={handleVideoEnd} />
 
       <section className="snap-section flex flex-col justify-center">
         <About />

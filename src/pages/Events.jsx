@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { events } from '../data/events'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 const Events = () => {
@@ -22,7 +21,7 @@ const Events = () => {
       </div>
 
       <div className="relative z-10">
-        <Navbar />
+
         <div className="container mx-auto px-5 py-10 pt-24 max-w-6xl">
           <Link
             to="/"
