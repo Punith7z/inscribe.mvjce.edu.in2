@@ -22,21 +22,16 @@ const EventsPreview = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto liquid-glass card-gradient rounded-3xl p-10 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:shadow-accent-2/15 border border-black/5 group overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-          <div className="relative z-10">
-            <p className="text-gray-700 mb-10 text-lg">
+        <div className="max-w-4xl mx-auto glass-card-base text-center">
+          <div>
+            <p className="text-glass-secondary mb-10 text-lg">
               "Explore our exciting events that bring people together to learn, share, and celebrate innovation.
               From workshops to cultural fests, there's something for everyone!"
             </p>
 
             <Link
               to="/events"
-              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white dark-hover-effect"
-              style={{
-                backgroundColor: theme === 'dark' ? 'transparent' : '#3D0A05',
-                border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
-              }}
+              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600"
             >
               View All Events
             </Link>

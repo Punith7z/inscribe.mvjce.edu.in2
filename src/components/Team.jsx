@@ -26,9 +26,9 @@ const Team = () => {
           {/* Faculty Coordinator */}
           {facultyCoordinator.length > 0 && (
             <div className="mb-20">
-              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
+              <h3 className="text-3xl text-center mb-10 text-glass-primary font-montserrat font-bold relative pb-4">
                 Faculty Coordinator
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded"></span>
               </h3>
               <div className="flex justify-center gap-8 flex-wrap">
                 {facultyCoordinator.map((member) => (
@@ -41,9 +41,9 @@ const Team = () => {
           {/* Leadership */}
           {leadership.length > 0 && (
             <div className="mb-20">
-              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
+              <h3 className="text-3xl text-center mb-10 text-glass-primary font-montserrat font-bold relative pb-4">
                 Leadership
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded"></span>
               </h3>
               <div className="flex justify-center gap-10 max-w-4xl mx-auto">
                 {leadership.map((member) => (
@@ -55,23 +55,56 @@ const Team = () => {
 
           {/* Domain Leads */}
           {domainLeads.length > 0 && (
-            <div className="mb-20">
-              <h3 className="text-3xl text-center mb-10 text-accent-2 font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
-                Domain Leads
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
-              </h3>
-              <div className="flex justify-center gap-10 max-w-4xl mx-auto">
-                {domainLeads.map((member) => (
-                  <TeamCard key={member.id} member={member} />
-                ))}
-              </div>
-            </div>
-          )}
+  <div className="mb-20">
+    <h3 className="text-3xl text-center mb-10 text-glass-primary font-montserrat font-bold relative pb-4">
+      Domain Leads
+      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded"></span>
+    </h3>
+
+    <div className="flex justify-center">
+      <div className="grid grid-cols-6 gap-10">
+
+        {/* Row 1 */}
+        {domainLeads[0] && (
+          <div className="col-span-2 col-start-1">
+            <TeamCard member={domainLeads[0]} />
+          </div>
+        )}
+
+        {domainLeads[1] && (
+          <div className="col-span-2 col-start-3">
+            <TeamCard member={domainLeads[1]} />
+          </div>
+        )}
+
+        {domainLeads[2] && (
+          <div className="col-span-2 col-start-5">
+            <TeamCard member={domainLeads[2]} />
+          </div>
+        )}
+
+        {/* Row 2 */}
+        {domainLeads[3] && (
+          < div className="flex justify-center gap-10 max-w-4xl mx-auto">
+            <TeamCard member={domainLeads[3]} />
+          </div>
+        )}
+
+        {domainLeads[4] && (
+          < div className="flex justify-center gap-10 max-w-4xl mx-auto">
+            <TeamCard member={domainLeads[4]} />
+          </div>
+        )}
+
+      </div>
+    </div>
+  </div>
+)}
 
           {/* Team Members by Domain */}
           {teamMembers.length > 0 && teamMembers.map((domainGroup, index) => (
             <div key={index} className="mb-20">
-              <h3 className="text-2xl text-center mb-8 text-accent-2 font-montserrat font-bold">
+              <h3 className="text-2xl text-center mb-8 text-glass-primary font-montserrat font-bold">
                 {domainGroup.domain}
               </h3>
               <div className="flex gap-6 overflow-x-auto pb-5 scrollbar-hide">
@@ -99,40 +132,38 @@ const Team = () => {
 const TeamCard = ({ member, compact = false }) => {
   return (
     <div
-      className={`card-gradient rounded-3xl overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:shadow-accent-2/20 border border-black/5 cursor-pointer flex flex-col ${compact ? 'min-w-[220px]' : 'w-full max-w-[280px]'
-        }`}
+      className={`glass-card-base overflow-hidden cursor-pointer flex flex-col ${compact ? 'min-w-[220px]' : 'w-full max-w-[280px]'}`}
     >
-      <div className={`relative w-full ${compact ? 'h-48' : 'h-56'} overflow-hidden`}>
+      <div className={`relative w-full ${compact ? 'h-40' : 'h-48'} overflow-hidden m-3 rounded-2xl border-2 border-white/40`}>
         <img
           src={member.image || '/images/inslogo.jpg'}
           alt={member.name}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full transition-transform duration-600 group-hover:translate-x-full"></div>
       </div>
 
-      <div className={`p-6 text-center flex flex-col flex-1 ${compact ? 'p-4' : ''}`}>
-        <h4 className={`text-heading font-bold mb-2 ${compact ? 'text-lg' : 'text-xl'}`}>
+      <div className={`flex-1 text-center flex flex-col px-4 py-3`}>
+        <h4 className={`text-glass-primary font-bold mb-1 ${compact ? 'text-base' : 'text-lg'}`}>
           {member.name}
         </h4>
-        <p className={`text-accent-2 font-semibold mb-2 ${compact ? 'text-sm' : 'text-base'}`}>
+        <p className={`text-glass-secondary font-semibold mb-1 ${compact ? 'text-xs' : 'text-sm'}`}>
           {member.role}
         </p>
         {member.domain && (
-          <p className={`text-gray-600 mb-4 ${compact ? 'text-xs' : 'text-sm'}`}>
+          <p className={`text-glass-tertiary mb-3 ${compact ? 'text-xs' : 'text-xs'}`}>
             {member.domain}
           </p>
         )}
 
         {/* Social Links */}
         {(member.social?.instagram || member.social?.github || member.social?.linkedin) && (
-          <div className="flex justify-center gap-4 mt-auto">
+          <div className="flex justify-center gap-3 mt-auto">
             {member.social.instagram && (
               <a
                 href={member.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg bg-white/80 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#E1306C] hover:to-[#833AB4] hover:text-white text-gray-700"
               >
                 <Instagram size={16} />
               </a>
@@ -142,7 +173,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#333333] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg bg-white/80 hover:bg-[#333333] hover:text-white text-gray-700"
               >
                 <Github size={16} />
               </a>
@@ -152,7 +183,7 @@ const TeamCard = ({ member, compact = false }) => {
                 href={member.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-1 hover:bg-[#0077B5] hover:text-white border border-black/5 glass-social-btn text-gray-600 dark:text-gray-400"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg bg-white/80 hover:bg-[#0077B5] hover:text-white text-gray-700"
               >
                 <Linkedin size={16} />
               </a>

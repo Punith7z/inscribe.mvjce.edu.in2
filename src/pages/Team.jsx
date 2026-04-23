@@ -152,11 +152,9 @@ const TeamPage = () => {
               <div
                 key={domain.id}
                 onClick={() => openDomainModal(domain.id)}
-                className="bounce-card bg-white/60 dark:bg-white/5 backdrop-blur-md rounded-[2rem] p-8 text-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#ED3E21]/20 border border-black/5 dark:border-white/10 group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-2/5 via-transparent to-accent-2/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
+                className="bounce-card glass-card-base text-center cursor-pointer group relative overflow-hidden">
                 <div className="relative z-10">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-accent-2 shadow-lg">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-purple-300/50 shadow-lg">
                     <img
                       src={domain.image}
                       alt={domain.title}
@@ -171,10 +169,10 @@ const TeamPage = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-2 text-heading font-montserrat">
+                  <h3 className="text-2xl font-bold mb-2 text-glass-primary font-montserrat">
                     {domain.title}
                   </h3>
-                  <p className="text-gray-600 italic text-sm">
+                  <p className="text-glass-secondary italic text-sm">
                     {domain.subtitle}
                   </p>
                 </div>
@@ -196,7 +194,7 @@ const TeamPage = () => {
             data-lenis-prevent
           >
             <div
-              className="bg-white/90 dark:bg-black/60 backdrop-blur-2xl border border-white/10 rounded-3xl max-w-6xl w-full shadow-2xl relative my-8 animate-slideIn"
+              className="glass-card-base max-w-6xl w-full relative my-8 animate-slideIn p-8\"
               onClick={(e) => e.stopPropagation()}
             >
               <style>{`
@@ -216,20 +214,20 @@ const TeamPage = () => {
             `}</style>
 
               {/* Header Ribbon */}
-              <div className="flex items-center justify-between p-5 border-b border-black/10 dark:border-white/10 relative">
+              <div className="flex items-center justify-between mb-6 border-b border-purple-200 pb-4 relative">
                 <button
                   onClick={closeModal}
-                  className="inline-flex items-center gap-2 text-accent-2 hover:text-heading transition-colors font-semibold text-lg"
+                  className="inline-flex items-center gap-2 text-glass-primary hover:text-glass-secondary transition-colors font-semibold text-lg"
                 >
                   <ArrowLeft size={18} />
                   Back
                 </button>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-center font-montserrat text-[#8B7355] dark:bg-gradient-to-r dark:from-[#ED3E21] dark:to-[#0077B5] dark:bg-clip-text dark:text-transparent m-0 px-4">
+                <h2 className="text-2xl md:text-3xl font-extrabold text-center font-montserrat text-glass-primary m-0 px-4">
                   {selectedDomainConfig.title}
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 shadow-md flex items-center justify-center text-[#ED3E21] dark:text-white transition-all hover:scale-110 hover:rotate-90"
+                  className="w-10 h-10 rounded-full bg-purple-200/30 hover:bg-purple-300/40 shadow-md flex items-center justify-center text-glass-primary transition-all hover:scale-110 hover:rotate-90"
                 >
                   <X size={20} />
                 </button>

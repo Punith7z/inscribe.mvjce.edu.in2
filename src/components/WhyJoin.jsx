@@ -66,23 +66,19 @@ const WhyJoin = () => {
               {[...reasons, ...reasons].map((reason, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-[350px] liquid-glass card-gradient rounded-3xl p-8 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
+                  className="flex-shrink-0 w-[350px] glass-card-base text-center cursor-pointer group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
-
-                  <div className="relative z-10">
-                    <div className="text-4xl text-accent-2 mb-5 drop-shadow-lg transition-transform duration-300 group-hover:scale-110">
-                      <i className={`fas ${reason.icon}`}></i>
-                    </div>
-
-                    <h3 className="text-xl text-heading mb-4 font-bold">
-                      {reason.title}
-                    </h3>
-
-                    <p className="text-gray-600 text-center leading-relaxed">
-                      {reason.description}
-                    </p>
+                  <div className="text-4xl text-purple-500 mb-5 drop-shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <i className={`fas ${reason.icon}`}></i>
                   </div>
+
+                  <h3 className="text-xl text-glass-primary mb-4 font-bold">
+                    {reason.title}
+                  </h3>
+
+                  <p className="text-glass-secondary text-center leading-relaxed">
+                    {reason.description}
+                  </p>
                 </div>
               ))}
             </div>

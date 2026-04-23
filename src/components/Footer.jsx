@@ -61,7 +61,7 @@ const Footer = () => {
               : 'text-light-maroon hover:opacity-80'
               }`}
           >
-            inscribe.mvjce@gmail.com
+            inscribe.mvjce24@gmail.com
           </a>
         </div>
 
@@ -75,10 +75,11 @@ const Footer = () => {
             <li>
               <Link
                 to="/team"
-                className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-                  ? 'text-gray-300'
-                  : 'text-accent-2 hover:text-heading'
-                  }`}
+                className={`footer-link text-sm no-underline inline-block font-semibold ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-amber-900 hover:text-amber-950'
+                }`}
               >
                 Our Domains
               </Link>
@@ -86,10 +87,11 @@ const Footer = () => {
             <li>
               <button
                 onClick={() => handleNavClick('leadership')}
-                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-                  ? 'text-gray-300'
-                  : 'text-accent-2 hover:text-heading'
-                  }`}
+                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 font-semibold ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-amber-900 hover:text-amber-950'
+                }`}
               >
                 Meet Our Team
               </button>
@@ -97,10 +99,11 @@ const Footer = () => {
             <li>
               <Link
                 to="/events"
-                className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-                  ? 'text-gray-300'
-                  : 'text-accent-2 hover:text-heading'
-                  }`}
+                className={`footer-link text-sm no-underline inline-block font-semibold ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-amber-900 hover:text-amber-950'
+                }`}
               >
                 Events
               </Link>
@@ -108,10 +111,11 @@ const Footer = () => {
             <li>
               <Link
                 to="/register"
-                className={`footer-link text-sm no-underline inline-block ${theme === 'dark'
-                  ? 'text-gray-300'
-                  : 'text-accent-2 hover:text-heading'
-                  }`}
+                className={`footer-link text-sm no-underline inline-block font-semibold ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-amber-900 hover:text-amber-950'
+                }`}
               >
                 Registration
               </Link>
@@ -119,10 +123,11 @@ const Footer = () => {
             <li>
               <button
                 onClick={() => handleNavClick('contact')}
-                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 ${theme === 'dark'
-                  ? 'text-gray-300'
-                  : 'text-accent-2 hover:text-heading'
-                  }`}
+                className={`footer-link text-sm cursor-pointer bg-transparent border-none p-0 font-semibold ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-amber-900 hover:text-amber-950'
+                }`}
               >
                 Contact Us
               </button>

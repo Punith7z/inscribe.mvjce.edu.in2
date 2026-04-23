@@ -52,13 +52,13 @@ const Register = () => {
         </Link>
 
         {/* Card */}
-        <div className="max-w-xl w-full bg-white/60 dark:bg-black/40 rounded-3xl border border-black/5 dark:border-white/10 shadow-lg p-9 text-center backdrop-blur-sm mt-16 md:mt-0">
-          <h1 className="font-montserrat text-4xl m-0 mb-6 text-[#73634F] dark:text-white">
+        <div className="max-w-xl w-full glass-card-base text-center mt-16 md:mt-0">
+          <h1 className="font-montserrat text-4xl m-0 mb-6 text-glass-primary">
             Register for Event
           </h1>
           
           {isSubmitted ? (
-            <div className="bg-green-500/20 border border-green-500/50 text-green-700 dark:text-green-400 p-6 rounded-2xl mb-4 transition-all duration-300">
+            <div className="bg-gradient-to-br from-green-400/30 to-green-300/20 border border-green-300/50 text-green-700 p-6 rounded-2xl mb-4 transition-all duration-300">
               <CircleCheck size={36} className="mb-3 mx-auto" />
               <h2 className="text-xl font-bold font-montserrat mb-2">Registration Successful!</h2>
               <p>Thank you for registering. We will contact you shortly with more details.</p>
@@ -67,7 +67,7 @@ const Register = () => {
             <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left">
               
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="font-semibold px-2">Full Name</label>
+                <label htmlFor="name" className="font-semibold px-2 text-glass-primary">Full Name</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -76,12 +76,12 @@ const Register = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your full name" 
-                  className="px-5 py-3 rounded-xl bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/20 focus:outline-none focus:ring-2 focus:ring-[#ED3E21] dark:text-white text-[#73634F] font-poppins transition-all"
+                  className="px-5 py-3 rounded-xl bg-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 text-glass-primary font-poppins transition-all placeholder-gray-500"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="usn" className="font-semibold px-2">College USN</label>
+                <label htmlFor="usn" className="font-semibold px-2 text-glass-primary">College USN</label>
                 <input 
                   type="text" 
                   id="usn" 
@@ -90,12 +90,12 @@ const Register = () => {
                   onChange={handleChange}
                   required
                   placeholder="e.g. 1MV21CS100" 
-                  className="px-5 py-3 rounded-xl bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/20 focus:outline-none focus:ring-2 focus:ring-[#ED3E21] dark:text-white text-[#73634F] font-poppins transition-all uppercase"
+                  className="px-5 py-3 rounded-xl bg-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 text-glass-primary font-poppins transition-all uppercase placeholder-gray-500"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="font-semibold px-2">Email Address</label>
+                <label htmlFor="email" className="font-semibold px-2 text-glass-primary">Email Address</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -104,19 +104,19 @@ const Register = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your email" 
-                  className="px-5 py-3 rounded-xl bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/20 focus:outline-none focus:ring-2 focus:ring-[#ED3E21] dark:text-white text-[#73634F] font-poppins transition-all"
+                  className="px-5 py-3 rounded-xl bg-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 text-glass-primary font-poppins transition-all placeholder-gray-500"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="event" className="font-semibold px-2">Select Event</label>
+                <label htmlFor="event" className="font-semibold px-2 text-glass-primary">Select Event</label>
                 <select 
                   id="event" 
                   name="event" 
                   value={formData.event}
                   onChange={handleChange}
                   required
-                  className="px-5 py-3 rounded-xl bg-white/50 dark:bg-[#1a1a1a] border border-black/10 dark:border-white/20 focus:outline-none focus:ring-2 focus:ring-[#ED3E21] dark:text-white text-[#73634F] font-poppins transition-all appearance-none cursor-pointer"
+                  className="px-5 py-3 rounded-xl bg-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 text-glass-primary font-poppins transition-all appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Choose an event...</option>
                   <option value="Meme Arena">Meme Arena</option>
