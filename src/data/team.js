@@ -7,9 +7,9 @@ export const facultyCoordinator = [
     image: '/images/veena mam.jpg',
     domain: '',
     social: {
-      linkedin: 'https://www.linkedin.com/in/veena-mam-02/',
-      github: 'https://github.com/veena-mam-02',
-      instagram: 'https://www.instagram.com/veena_mam_02/',
+      linkedin: "https://www.linkedin.com/in/veena-k-5a135b19a?trk=contact-info",
+      github: "https://github.com/inscribemvjce24-prog",
+      instagram: "https://www.instagram.com/inscribe_mvjce",
     }
   }
 ]
@@ -496,7 +496,7 @@ export const teamMembers = [
         name: "Nikhil Reddy",
         image: "/images/Nikhil.jpg",
         social: {
-          instagram: "https://www.instagram.com/inscribe.mvjce?igsh=MW90c3Aza250bHV0Ng==",
+          instagram: "https://www.instagram.com/nikks_nikhil07?igsh=MXJtaDVudmE3djFvbA==",
           github: "https://github.com/inscribemvjce24-prog",
           linkedin: "https://www.linkedin.com/in/inscribe-mvjce24?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }

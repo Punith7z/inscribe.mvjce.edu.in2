@@ -1,2 +1,151 @@
 /* App-specific styles */
 
+/* Lavender Frosted Glass Theme */
+:root {
+  --card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(230, 220, 255, 0.6));
+  --card-backdrop: blur(14px);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(180, 150, 255, 0.2);
+  --card-border: 1px solid rgba(255, 255, 255, 0.4);
+  --text-primary: #1a1a1a;
+  --text-secondary: #2d2d2d;
+  --text-tertiary: #555555;
+}
+
+/* Global heading styles with premium glow */
+h2, h3, h4 {
+  color: var(--text-primary);
+  text-shadow: 0 2px 10px rgba(180, 150, 255, 0.2);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Base card styles */
+.glass-card-base {
+  background: var(--card-bg);
+  backdrop-filter: var(--card-backdrop);
+  -webkit-backdrop-filter: var(--card-backdrop);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  border-radius: 22px;
+  padding: 24px 28px;
+  transition: all 0.3s ease;
+}
+
+.glass-card-base:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 25px rgba(180, 150, 255, 0.3);
+}
+
+/* Dark theme card styling */
+.dark .glass-card-base {
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.9), rgba(50, 35, 70, 0.85));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(180, 150, 255, 0.25);
+  border: 1px solid rgba(180, 150, 255, 0.3);
+}
+
+.dark .glass-card-base:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(180, 150, 255, 0.4);
+}
+
+/* Text color utilities */
+.text-glass-primary {
+  color: var(--text-primary);
+}
+
+.text-glass-secondary {
+  color: var(--text-secondary);
+}
+
+.text-glass-tertiary {
+  color: var(--text-tertiary);
+}
+
+/* Enhanced button styling */
+button[type="submit"],
+.btn-primary {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(167, 139, 250, 0.3);
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c084fc 0%, #d8b4fe 100%);
+  box-shadow: 0 15px 30px rgba(167, 139, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Form inputs with lavender theme */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c084fc !important;
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.1) !important;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  @keyframes floatParticle {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+    50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  /* Optimize animated background shapes */
+  .floating-shape {
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 0.6;
+  }
+  
+  /* Faster animations on mobile */
+  .glass-card-base {
+    transition: all 0.15s ease;
+  }
+  
+  .glass-card-base:hover {
+    transform: translateY(-3px) scale(1.005);
+  }
+  
+  /* Disable shadows on mobile for better performance */
+  .glass-card-base {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 0 10px rgba(180, 150, 255, 0.1);
+  }
+  
+  /* Reduce button animation complexity */
+  button, a, [role="button"] {
+    transition: all 0.2s ease;
+  }
+}
+
+/* High-end device support (iPhone 12+, Samsung S20+) */
+@media (max-width: 768px) and (min-resolution: 2dppx) {
+  .floating-shape {
+    opacity: 0.7;
+  }
+  
+  .glass-card-base {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(180, 150, 255, 0.15);
+  }
+}
+
+

@@ -40,23 +40,19 @@ const WhatsNext = () => {
           {nextItems.map((item, index) => (
             <div
               key={index}
-              className="liquid-glass card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 relative overflow-hidden cursor-pointer group"
+              className="glass-card-base text-center cursor-pointer group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
-
-              <div className="relative z-10">
-                <div className="text-5xl text-accent-2 mb-5 transition-transform duration-300 group-hover:scale-110 drop-shadow-lg">
-                  <i className={`fas ${item.icon}`}></i>
-                </div>
-
-                <h3 className="text-2xl text-heading mb-4 font-bold">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
+              <div className="text-5xl text-purple-500 mb-5 transition-transform duration-300 group-hover:scale-110 drop-shadow-lg">
+                <i className={`fas ${item.icon}`}></i>
               </div>
+
+              <h3 className="text-2xl text-glass-primary mb-4 font-bold">
+                {item.title}
+              </h3>
+
+              <p className="text-glass-secondary leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

@@ -2,8 +2,11 @@ import { motion } from 'framer-motion'
 import { domains } from '../data/domains'
 import { Link } from 'react-router-dom'
 import Reveal from './animations/Reveal'
+import { useTheme } from '../contexts/ThemeContext'
 
 const Domains = () => {
+  const { theme } = useTheme()
+  
   return (
     <section
       id="domains"
@@ -16,7 +19,10 @@ const Domains = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="section-title text-4xl text-center text-light-maroon dark:text-transparent dark:bg-dark-blend-gradient dark:bg-clip-text font-montserrat font-bold relative pb-4"
+            className={`section-title text-4xl text-center font-montserrat font-bold relative pb-4 ${theme === 'dark' ? 'text-transparent bg-clip-text' : 'text-light-maroon'}`}
+            style={theme === 'dark' ? {
+              backgroundImage: 'linear-gradient(135deg, #FF4B4B 0%, #7B4BFF 50%, #4B7BFF 100%)'
+            } : {}}
           >
             Our Domain
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
@@ -49,23 +55,21 @@ const Domains = () => {
                 {[...domains, ...domains].map((domain, index) => (
                   <div
                     key={`${domain.id}-${index}`}
-                    className="flex-shrink-0 w-[350px] liquid-glass card-gradient rounded-3xl p-8 border-2 border-light-maroon hover-glow glass-card relative overflow-hidden group"
+                    className="flex-shrink-0 w-[350px] glass-card-base relative overflow-hidden group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/10 to-transparent transform -translate-x-full transition-transform duration-600 group-hover:translate-x-full opacity-0 group-hover:opacity-100 z-0"></div>
-
-                    <div className="text-5xl text-light-maroon mb-5 text-center drop-shadow-lg">
+                    <div className="text-5xl text-purple-500 mb-5 text-center drop-shadow-lg">
                       <i className={`fas ${domain.icon}`}></i>
                     </div>
 
-                    <h3 className="text-2xl text-light-maroon mb-4 text-center font-bold">
+                    <h3 className="text-2xl text-glass-primary mb-4 text-center font-bold">
                       {domain.title}
                     </h3>
 
-                    <p className="text-gray-700 text-center mb-4 italic">
+                    <p className="text-glass-secondary text-center mb-4 italic">
                       {domain.description}
                     </p>
 
-                    <p className="text-gray-600 text-center leading-relaxed">
+                    <p className="text-glass-tertiary text-center leading-relaxed">
                       {domain.fullDescription}
                     </p>
                   </div>

@@ -4,6 +4,16 @@ import { useTheme } from '../contexts/ThemeContext'
 const AnimatedBackground = () => {
   const { theme } = useTheme()
   const [particles, setParticles] = useState([])
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     // Generate floating particles/equations for dark theme
@@ -13,14 +23,17 @@ const AnimatedBackground = () => {
         'x²', '∫', '∑', 'π', '√', 'α', 'β', 'γ', 'δ', 'ε'
       ]
 
-      const newParticles = Array.from({ length: 15 }, (_, i) => ({
+      // Reduce particle count on mobile for better performance
+      const particleCount = isMobile ? 8 : 15
+
+      const newParticles = Array.from({ length: particleCount }, (_, i) => ({
         id: i,
         text: mathExpressions[i % mathExpressions.length],
         left: Math.random() * 100,
         top: Math.random() * 100,
         delay: Math.random() * 5,
         duration: 15 + Math.random() * 10,
-        size: 12 + Math.random() * 8,
+        size: isMobile ? 10 + Math.random() * 6 : 12 + Math.random() * 8,
         color: i % 2 === 0 ? '#FF4B4B' : '#4B7BFF', // Red or Blue
         shadowColor: i % 2 === 0 ? '255, 75, 75' : '75, 123, 255'
       }))
@@ -29,16 +42,16 @@ const AnimatedBackground = () => {
     } else {
       setParticles([])
     }
-  }, [theme])
+  }, [theme, isMobile])
 
   return (
     <div className="animated-bg">
-      {/* Floating shapes - visible in both themes */}
+      {/* Floating shapes - visible in both themes - scaled for mobile */}
       <div
         className="floating-shape"
         style={{
-          width: '100px',
-          height: '100px',
+          width: isMobile ? '60px' : '100px',
+          height: isMobile ? '60px' : '100px',
           top: '10%',
           left: '10%',
           animationDelay: '0s'
@@ -47,8 +60,8 @@ const AnimatedBackground = () => {
       <div
         className="floating-shape"
         style={{
-          width: '150px',
-          height: '150px',
+          width: isMobile ? '90px' : '150px',
+          height: isMobile ? '90px' : '150px',
           top: '60%',
           right: '10%',
           animationDelay: '5s'
@@ -57,8 +70,8 @@ const AnimatedBackground = () => {
       <div
         className="floating-shape"
         style={{
-          width: '80px',
-          height: '80px',
+          width: isMobile ? '50px' : '80px',
+          height: isMobile ? '50px' : '80px',
           bottom: '20%',
           left: '50%',
           animationDelay: '10s'
@@ -67,8 +80,8 @@ const AnimatedBackground = () => {
       <div
         className="floating-shape"
         style={{
-          width: '120px',
-          height: '120px',
+          width: isMobile ? '80px' : '120px',
+          height: isMobile ? '80px' : '120px',
           top: '30%',
           right: '30%',
           animationDelay: '15s'

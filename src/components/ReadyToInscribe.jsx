@@ -20,21 +20,15 @@ const ReadyToInscribe = () => {
           Ready to Inscribe Your Mark?
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
-        <div className="max-w-4xl mx-auto liquid-glass card-gradient rounded-3xl p-10 text-center hover-glow glass-card border border-black/5 group overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-2/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 opacity-0 group-hover:opacity-100 z-0"></div>
-          <div className="relative z-10">
-            <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+        <div className="max-w-4xl mx-auto glass-card-base text-center">
+          <div>
+            <p className="text-glass-secondary mb-8 text-lg leading-relaxed">
               Join our community and be part of something amazing. Whether you're a beginner or an expert,
               there's a place for you here. Let's create, innovate, and inspire together.
             </p>
             <Link
               to="/register"
-              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white dark-hover-effect"
-              style={{
-                backgroundColor: theme === 'dark' ? 'transparent' : '#3D0A05',
-                color: '#FFFFFF',
-                border: theme === 'dark' ? '2px solid #ED3E21' : '2px solid transparent'
-              }}
+              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600"
             >
               Join Us Now
             </Link>
