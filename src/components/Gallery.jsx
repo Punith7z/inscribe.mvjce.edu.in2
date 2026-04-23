@@ -41,13 +41,13 @@ const Gallery = () => {
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-primary dark:bg-dark-blend-gradient rounded-full"></span>
           </h2>
 
-          <div className="glass-effect dark:glass-effect p-8 rounded-[2rem] space-y-6 transform hover:scale-[1.01] transition-transform duration-300 border border-white/20 dark:border-white/5 shadow-xl backdrop-blur-md">
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-poppins">
+          <div className="max-w-4xl mx-auto glass-card-base description-box">
+            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-poppins nw-color">
               Explore the memorable moments from our events, workshops, and team activities.
               From intense coding sessions to fun team-building activities, we've captured it all.
             </p>
 
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-poppins">
+            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-poppins nw-color">
               Follow our journey on social media to stay updated with our latest projects and events!
             </p>
 

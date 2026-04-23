@@ -40,17 +40,17 @@ const WhatsNext = () => {
           {nextItems.map((item, index) => (
             <div
               key={index}
-              className="glass-card-base text-center cursor-pointer group"
+              className="glass-card-base text-center cursor-pointer group description-box"
             >
               <div className="text-5xl text-purple-500 mb-5 transition-transform duration-300 group-hover:scale-110 drop-shadow-lg">
                 <i className={`fas ${item.icon}`}></i>
               </div>
 
-              <h3 className="text-2xl text-glass-primary mb-4 font-bold">
+              <h3 className="text-2xl text-glass-primary mb-4 font-bold ">
                 {item.title}
               </h3>
-
-              <p className="text-glass-secondary leading-relaxed">
+ 
+              <p className="text-glass-secondary leading-relaxed nw-color">
                 {item.description}
               </p>
             </div>

@@ -38,12 +38,15 @@ const Leadership = () => {
 
           {/* Leadership */}
           {leadership.length > 0 && (
+
+
+            
             <div>
               <h3 className="text-2xl text-center mb-10 text-light-maroon font-montserrat font-bold relative pb-4 dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] dark:bg-clip-text dark:text-transparent">
                 Leadership
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-gradient-to-r dark:from-[#FF4B4B] dark:to-[#4B7BFF] rounded"></span>
               </h3>
-              <div className="flex flex-col md:flex-row justify-center gap-10 max-w-4xl mx-auto items-center">
+              <div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 max-w-4xl mx-auto items-center">
                 {leadership.map((member) => (
                   <TeamCard key={member.id} member={member} />
                 ))}

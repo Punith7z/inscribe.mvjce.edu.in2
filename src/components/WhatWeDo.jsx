@@ -18,8 +18,8 @@ const WhatWeDo = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto glass-card-base">
-          <p className="text-base leading-relaxed text-glass-secondary">
+        <div className="max-w-4xl mx-auto glass-card-base description-box">
+          <p className="text-base leading-relaxed text-glass-secondary nw-color">
             We explore the spectrum of creation — from art that moves to ideas that build,
             from visuals that inspire to innovations that connect. Through hands-on workshops,
             collaborative projects, events and way too much caffeine we bring ideas to life,

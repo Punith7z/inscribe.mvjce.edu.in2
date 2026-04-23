@@ -37,8 +37,8 @@ const About = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto glass-card-base relative z-10 group overflow-hidden">
-          <p className="text-base leading-relaxed text-glass-secondary relative z-10">
+        <div className="max-w-4xl mx-auto glass-card-base relative z-10 group overflow-hidden description-box">
+          <p className="text-base leading-relaxed text-glass-secondary relative z-10 nw-color">
             Welcome to Inscribe — where tech meets creativity, and ideas become reality.
             We're a community of makers, thinkers, and creators who believe that the best
             solutions come from blending technical expertise with creative vision. Whether

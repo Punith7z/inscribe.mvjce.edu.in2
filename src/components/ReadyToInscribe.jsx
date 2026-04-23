@@ -20,15 +20,15 @@ const ReadyToInscribe = () => {
           Ready to Inscribe Your Mark?
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
-        <div className="max-w-4xl mx-auto glass-card-base text-center">
+        <div className="max-w-4xl mx-auto glass-card-base text-center description-box">
           <div>
-            <p className="text-glass-secondary mb-8 text-lg leading-relaxed">
+            <p className="text-glass-secondary mb-8 text-lg leading-relaxed nw-color ">
               Join our community and be part of something amazing. Whether you're a beginner or an expert,
               there's a place for you here. Let's create, innovate, and inspire together.
             </p>
             <Link
               to="/register"
-              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600"
+              className="inline-block px-8 py-4 rounded-full no-underline font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 btn-clr"
             >
               Join Us Now
             </Link>

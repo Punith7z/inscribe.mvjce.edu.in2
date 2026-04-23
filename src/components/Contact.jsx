@@ -32,9 +32,9 @@ const Contact = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto glass-card-base text-center group overflow-hidden relative">
+        <div className="max-w-4xl mx-auto glass-card-base text-center group overflow-hidden relative description-box">
           <div className="relative z-10">
-            <p className="text-glass-secondary mb-8 text-lg leading-relaxed">
+            <p className="text-glass-secondary mb-8 text-lg leading-relaxed nw-color ">
               Have questions? Want to collaborate? Or just say hello? We'd love to hear from you!
             </p>
 

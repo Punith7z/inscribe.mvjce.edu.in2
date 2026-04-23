@@ -66,17 +66,17 @@ const WhyJoin = () => {
               {[...reasons, ...reasons].map((reason, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-[350px] glass-card-base text-center cursor-pointer group"
+                  className="flex-shrink-0 w-[350px] glass-card-base text-center cursor-pointer group description-box"
                 >
                   <div className="text-4xl text-purple-500 mb-5 drop-shadow-lg transition-transform duration-300 group-hover:scale-110">
                     <i className={`fas ${reason.icon}`}></i>
                   </div>
 
-                  <h3 className="text-xl text-glass-primary mb-4 font-bold">
+                  <h3 className="text-xl text-glass-primary mb-4 font-bold nw-font-color">
                     {reason.title}
                   </h3>
 
-                  <p className="text-glass-secondary text-center leading-relaxed">
+                  <p className="text-glass-secondary text-center leading-relaxed nw-color">
                     {reason.description}
                   </p>
                 </div>

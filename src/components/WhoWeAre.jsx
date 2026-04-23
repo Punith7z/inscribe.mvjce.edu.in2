@@ -18,8 +18,8 @@ const WhoWeAre = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto glass-card-base">
-          <p className="text-base leading-relaxed text-glass-secondary">
+        <div className="max-w-4xl mx-auto glass-card-base description-box">
+          <p className="text-base leading-relaxed text-glass-secondary nw-color">
             CS majors who secretly love typography. Design students curious about code.
             Anyone who refuses to choose between logic and imagination. We're building a
             community of well-rounded creators who tackle complex problems with both technical

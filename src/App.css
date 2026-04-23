@@ -148,4 +148,127 @@ textarea:focus {
   }
 }
 
+[data-theme="dark"] .nw-font-color {
+  color: white;
+}
 
+[data-theme="dark"] .nw-color {
+  color: white;
+}
+
+[data-theme="dark"] .btn-clr {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid red;
+  border-radius: 50px;
+  padding: 12px 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .btn-clr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+[data-theme="dark"] .btn-clr:hover::before {
+  left: 150%;
+}
+
+[data-theme="dark"] .btn-clr:hover {
+  border-color: red;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  transform: translateY(-2px);
+  letter-spacing: 1.5px;
+}
+
+[data-theme="dark"] .description-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 36px 48px;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .description-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.8s ease;
+}
+
+[data-theme="dark"] .description-box:hover::before {
+  left: 150%;
+}
+[data-theme="dark"].glass-card-base {
+  background:  none;
+}
+
+[data-theme="dark"] .description-box:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+              0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Target only large screens (3-column layout) */
+/* Default grid stays same */
+
+/* Override ONLY for large screens */
+@media (min-width: 1024px) {
+  .leadership-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem; /* same as gap-10 */
+  }
+
+  .leadership-grid > * {
+    width: calc(33.333% - 2.5rem);
+    max-width: 300px;
+  }
+}
