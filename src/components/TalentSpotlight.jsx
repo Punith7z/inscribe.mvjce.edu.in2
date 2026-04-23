@@ -21,7 +21,7 @@ const TalentSpotlight = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
         </h2>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
           {domainLeads.map((lead) => (
             <LeadCard key={lead.id} lead={lead} />
           ))}

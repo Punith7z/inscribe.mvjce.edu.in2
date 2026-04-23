@@ -24,8 +24,10 @@ const Domains = () => {
               backgroundImage: 'linear-gradient(135deg, #FF4B4B 0%, #7B4BFF 50%, #4B7BFF 100%)'
             } : {}}
           >
-            Our Domain
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+          <h2 className="section-title text-4xl mb-8 text-center text-heading font-montserrat font-bold relative pb-4">
+          Our Domain
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-primary dark:bg-dark-blend-gradient rounded"></span>
+        </h2>
           </motion.h2>
         </div>
 
@@ -55,21 +57,21 @@ const Domains = () => {
                 {[...domains, ...domains].map((domain, index) => (
                   <div
                     key={`${domain.id}-${index}`}
-                    className="flex-shrink-0 w-[350px] glass-card-base relative overflow-hidden group"
+                    className="flex-shrink-0 w-[350px] glass-card-base relative overflow-hidden group description-box"
                   >
-                    <div className="text-5xl text-purple-500 mb-5 text-center drop-shadow-lg">
+                    <div className="text-5xl text-purple-500 mb-5 text-center drop-shadow-lg ">
                       <i className={`fas ${domain.icon}`}></i>
                     </div>
 
-                    <h3 className="text-2xl text-glass-primary mb-4 text-center font-bold">
+                    <h3 className="text-2xl text-glass-primary mb-4 text-center font-bold nw-font-color">
                       {domain.title}
                     </h3>
 
-                    <p className="text-glass-secondary text-center mb-4 italic">
+                    <p className="text-glass-secondary text-center mb-4 italic nw-color">
                       {domain.description}
                     </p>
 
-                    <p className="text-glass-tertiary text-center leading-relaxed">
+                    <p className="text-glass-tertiary text-center leading-relaxed nw-color">
                       {domain.fullDescription}
                     </p>
                   </div>
